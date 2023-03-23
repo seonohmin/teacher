@@ -71,6 +71,9 @@
     display: none;
 }
 
+.line_break {
+    display: block;
+}
 * {
     margin: 0;
     padding: 0;
