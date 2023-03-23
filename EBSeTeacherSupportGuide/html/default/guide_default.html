@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="language" content="ko">
+<meta name="format-detection" content="telephone=no">
+<meta id="viewport" name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1">
+<link type="text/css" rel="stylesheet" href="../css/common.css" />
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../js/ui_librarys.js"></script>
+<script type="text/javascript" src="../js/ui_chart.js"></script>
+<title>Style Guide </title>
+<style>
+/* Layout */
+.g-convention-wrap {padding:20px;}
+
+/* Section */
+.g-section {color:#222;}
+.g-section a { color:#222;}
+.g-section + .g-section {margin-top:50px;}
+.g-section-header {position:relative; padding-bottom:5px;}
+.g-section-body {margin-top:10px;}
+.g-section-tab {margin-top:20px;}
+.g-section-tab + .g-section-body {margin-top:30px;}
+
+/* 목차 */
+.g-h1 {font-size:30px; font-weight:normal; line-height:1; margin-bottom:30px;}
+.g-h2 {font-size:22px; font-weight:normal; line-height:1;}
+/* .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;} */
+.g-h3 {margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:normal;}
+.g-h3:first-child {margin-top:20px;}
+.g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#333; vertical-align:middle;}
+.g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e;}
+.g-h3 + .g-h4 {margin-top:10px;}
+.g-explain-h1 {display:none; font-size:14px; color:#aaa; font-family:'NST';}
+
+/* 컬러 */
+.g-txt-red {color:#ff0000;}
+.g-txt-primary {color:#d3002e;}
+.g-txt-disable {color:#999;}
+.g-link-basic {color:#222; border-bottom:1px solid #222;}
+.g-link-basic:hover,
+.g-link-basic:focus {color:#d3002e; border-bottom:1px solid #d3002e;}
+
+.g-desc {margin-top:10px; font-size:16px; line-height: 1.5;}
+
+/* 표 type1 - 일반컨텐츠 */
+.g-tbl-type1 {overflow:hidden; border:1px solid #333; border-width:1px 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+.g-tbl-type1 table {width:calc(100% + 2px); table-layout:fixed; margin:0 -1px -1px;}
+.g-tbl-type1 table th, .g-tbl-type1 table td {height:50px; vertical-align:middle; text-align:left; line-height:1.4; font-size:14px; background:#fff; line-height:1.5;}
+.g-tbl-type1 table th {padding:3px 15px; border-bottom:1px solid #666; background-color:#f8f8f8; text-align:center; font-weight:400; word-break:keep-all;}
+.g-tbl-type1 table td {padding:3px 15px; border:1px solid #eee; border-bottom:0;}
+.g-tbl-type1 table tbody tr:first-child td {border-top:0;}
+.g-tbl-type1 table tbody + tbody tr:first-child td {border-top:1px solid #666;}
+.g-tbl-type1 table tbody th {border-bottom:1px solid #eee; border-right:1px solid #eee;}
+.col > .g-tbl-type1 {margin-top:0;}
+
+/* 표 type2 - 강조리스트 */
+.g-tbl-type2 {overflow:hidden; border-bottom:1px solid #333; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+.g-tbl-type2 table {width:calc(100% + 2px); table-layout:fixed; margin:0 -1px -1px;}
+.g-tbl-type2 table th, .g-tbl-type2 table td {height:50px; vertical-align:middle; text-align:left; line-height:1.4; font-size:14px; background:#fff; line-height:1.5;}
+.g-tbl-type2 table th {padding:0 15px; background-color:#333; text-align:center; font-weight:700; font-size:12px; color:#fff;}
+.g-tbl-type2 table td {padding:3px 15px; border-top:1px solid #eee; border-bottom:0;}
+.g-tbl-type2 table tbody tr:first-child td {border-top:0;}
+.g-tbl-type2 table tbody + tbody tr:first-child td {border-top:1px solid #666;}
+</style>
+</head>
+<body>
+
+<div id="g-wrapper" class="g-convention-wrap">
+	<div id="g-container">
+		<!-- Content -->
+		<article id="g-content" class="">
+			<div class="g-content-header">
+				<div class="g-in-sec">
+					<h1 class="g-h1">기본정책</h1>
+					<small class="g-explain-h1">Publishing Conventions</small>
+				</div>
+			</div>
+			<div class="g-content-body">
+				<!-- section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">프로젝트 환경</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>환경정의</caption>
+								<colgroup>
+									<col style="width:200px">
+									<col>
+									<col style="width:200px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="align-l">문서 및 버전</th>
+										<td>HTML5, CSS3</td>
+										<th scope="row" class="align-l">인코딩</th>
+										<td>UTF-8</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">웹 유형</th>
+										<td>반응형 웹</td>
+										<th scope="row" class="align-l">Breakpoints</th>
+										<td>
+											<ul>
+												<li>Mobile : 360 ~ 740</li>
+												<li>Tablet : 741 ~ 980</li>
+												<li>Desctop : 981 ~ 1920</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //section1 -->
+
+				<!-- section2 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">파일/폴더 구조</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>파일구조</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:30%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>분류 폴더</th>
+										<th>서브 폴더</th>
+										<th>파일 이름</th>
+										<th>파일 설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>fonts</td>
+										<td></td>
+										<td></td>
+										<td>
+											나눔고딕 웹폰트 파일
+										</td>
+									</tr>
+									<tr>
+										<td>css(main)</td>
+										<td>
+											css > slick<br>
+											css > swiper
+										</td>
+										<td>
+											NotoSansKR-Hestia.css<br>
+											circle.css<br>
+											common_new2020.css<br>
+											main_new2020.css<br>
+											wow-animate.css
+										</td>
+										<td>
+											- common_new2020.css, main_new2020.css 메인 공통 css<br>
+										</td>
+									</tr>
+									<tr>
+										<td>css(sub)</td>
+										<td>
+											css > slick<br>
+											css > swiper
+										</td>
+										<td>
+											NotoSansKR-Hestia.css<br>
+											circle.css<br>
+											common_new2020.css<br>
+											funreading_new.css<br>
+											sub_new2020.css<br>
+											sub_new.css<br>
+											wow-animate.css
+										</td>
+										<td>
+											- common_new2020.css, sub_new2020.css, sub_new.css 서브 공통 css<br>
+											- funreading_new.css은 펀리딩 css
+										</td>
+									</tr>
+									<tr>
+										<td>js(main)</td>
+										<td>
+											js > search<br>
+											js > swiper
+										</td>
+										<td>
+											cm_lib.js<br>
+											common_new2020.js<br>
+											jquery-2.2.0.min.js<br>
+											slick.js<br>
+											wlo.js<br>
+											wow.js
+										</td>
+										<td>
+											- common_new2020.js 메인 js
+										</td>
+									</tr>
+									<tr>
+										<td>js(sub)</td>
+										<td>
+											js > search<br>
+											js > swiper
+										</td>
+										<td>
+											cm_lib.js<br>
+											common_new2020.js<br>
+											fun_new.js<br>
+											jquery-2.2.0.min.js<br>
+											slick.js<br>
+											wlo.js<br>
+											wow.js
+										</td>
+										<td>
+											- fun_new.js 펀리딩 js
+										</td>
+									</tr>
+									<tr>
+										<td>images</td>
+										<td>
+											common<br>
+											alllecture<br>
+											banner<br>
+										</td>
+										<td></td>
+										<td>
+											공통<br>
+											모든강좌<br>
+										</td>
+									</tr>
+									<tr>
+										<td>html</td>
+										<td>
+											guide<br>
+											CR1<br>
+											CR2<br>
+
+										</td>
+										<td></td>
+										<td>
+											guide<br>
+											main<br>
+											로그인<br>
+											고객센터<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="g-desc">
+							<li><a href="https://www.ebse.co.kr/apps/main/main.do" target="_blank">메인 운영 서버: https://www.ebse.co.kr/apps/main/main.do</a></li>
+							<li><a href="https://stg-www.ebse.co.kr/apps/main/main.do" target="_blank">스테이징 서버: https://stg-www.ebse.co.kr/apps/main/main.do</a></li>
+							<li><a href="https://www.ebse.co.kr/apps/broadcast/main.do" target="_blank">방송프로그램: https://www.ebse.co.kr/apps/broadcast/main.do</a></li>
+							<li><a href="https://teacher.ebse.co.kr/apps/tchsupt/main.do" target="_blank">교사지원센터: https://teacher.ebse.co.kr/apps/tchsupt/main.do</a></li>
+							<li><a href="https://www.ebse.co.kr/apps/engBook/engBookIntro.do?use=Y" target="_blank">교과서영어: https://www.ebse.co.kr/apps/engBook/engBookIntro.do?use=Y</a></li>
+							<li><p>관리자 계정 : ID- stark11 / PW- 123456</p></li>
+						</ul>
+					</div>
+				</section>
+				<!-- //section -->
+
+			</div>
+		</article>
+		<!-- //Content -->
+	</div>
+</div>
+
+<script type="text/javascript" src="../js/ui_common.js"></script>
+
+</body>
+</html>

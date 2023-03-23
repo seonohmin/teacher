@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"  >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+	html,body {height:100%;line-height:100%;padding:0px;margin:0px;background-color:#fafafa;font-family:"Noto Sans KR", sans-serif;}
+
+	.html_list {float:left;width:500px;height:100%;background-color:#fff;}
+	.html_list iframe{width:100%;height:100%;padding:0px;margin:0px;border:none;margin-bottom:-2px;}
+
+	.control_bar {position:absolute;left:520px;top:10px;width:calc(100% - 520px);height:30px;overflow-y:auto;}
+    .control_bar.active {width:100%;left:0px;text-align:center;}    
+	.control_bar button {appearance:none;padding:0;margin:0;border:0;cursor:pointer;background-color:transparent;text-align:center;font-size:12px;line-height:16px;margin-bottom:5px;padding:2px 5px;color:333;font-weight:bold;border-radius:20px;text-align:center;border:1px solid #000;}
+	.control_bar button.on{background-color:#004072;color:#fff;}
+
+	.case1{width: 360px; height: 640px;}
+	.case2{width: 375px; height: 667px;}
+	.case3{width: 640px; height: 720px;}
+	.case4{width: 1024px; height: 768px;}
+	.case5{width: 1300px; height: 890px;}
+	.case6{width: 1920px; height: 890px;}
+
+	.mobile_view {position:absolute;top:40px;left:520px;display:flex;flex-direction:column;border:1px solid #dcdcdc;background-color:#fff;-webkit-transition:width 0.5s, height 0.5s,-webkit-transform 0.5s;transition:width 0.5s, height 0.5s, transform 0.5s;}
+	.mobile_view.active {left:0px;}
+	.mobile_view iframe{padding:0px;margin:0px; height:0;flex-grow:1}
+</style>
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	for (var i=1; i<=20; i++) {
+		(function(){
+			var id = i;
+			$(".mv_case" + id).click(function(){
+				$(".mobile_view").removeClass().addClass("mobile_view");
+				$(".mobile_view").addClass("case"+ id);
+			});
+		})();
+	}
+
+    $('.control_bar button').click(function(){
+        $('.html_list').show();
+        $('.control_bar, .mobile_view').removeClass('active');
+        $(this).addClass('on').siblings().removeClass('on');
+    });    
+    $('.pc_view').click(function(){
+        $('.html_list').hide();
+        $('.control_bar, .mobile_view').addClass('active');
+    });
+});
+</script>
+<title>EBSi Web Publish</title>
+</head>
+<body>
+	<div class="html_list">
+		<iframe src="list.html" scrolling="auto" frameborder="0"></iframe>
+	</div>
+	<div class="control_bar">
+		<button class="mv_case1">360x640</button>
+		<button class="mv_case2">375x667</button>
+		<button class="mv_case3">640x720</button>
+		<button class="mv_case4">1024x768</button>
+		<button class="mv_case5 on">1280x1024</button>
+		<button class="mv_case6 pc_view">1920x1280</button>
+	</div>
+    <div class="mobile_view case5">
+        <iframe id="ifrhowl" name="ifrhowl" frameborder="0" src="../html/guide/guide_default.html" scrolling="yes"></iframe>
+    </div>
+</body>
+</html>

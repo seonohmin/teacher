@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>EBSi Web Publish</title>
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/jsTree/jquery.jstree.js"></script>
+<style>
+
+html {overflow-y: scroll}
+body {font-size:8pt;color:#666;margin:0;padding:0;font-family:"Noto Sans KR", sans-serif;padding-bottom:30px;}
+#treecontrol {position:fixed;text-align:right;background:#fff;width:100%;z-index:10;height:36px;border-bottom:1px solid #aaaaaa;box-shadow:0 0px 5px 3px RGBA(0,0,0,0.2);}
+#treecontrol:after {display:block;clear:both;height:0px;visibility:hidden;content:".";}
+#treecontrol .logo {float:left;margin:8px 0 0 5px;width:50px}
+#treecontrol h1 {float:left;position:relative;font-size:14px;color:#333;font-weight:bold;padding:10px 2px;margin:0;white-space:nowrap;margin-left:5px;font-weight:normal}
+#treecontrol a {float:right;display:inline-block;padding:3px 8px;border:2px solid #005183;border-radius:5px;text-decoration:none;color:#005183;margin:5px 5px 0 0;font-weight:bold;}
+#treecontrol a.on {background-color:#005183;color:#fff;}
+
+.jstree-apple a {text-shadow:none;}
+.treeview-red {border-top:1px solid #f57676}
+.jstree {padding:40px 0 36px 0;}
+.jstree li {position:relative;}
+.jstree > ul > li > ul > li:hover {background-color:#f3c395}
+.jstree li a {color:#aaa;text-shadow:none;}
+.jstree li strong {color:#d70544;}
+.jstree li > i {display:inline-block;margin-left:5px;color:#d70544;font-style:normal;}
+.jstree li span {position:absolute;top:0;right:10px;display:inline-block;margin-left:20px;color:#d70544}
+.jstree li em {display:inline-block;color:#000cff;font-style:normal;font-weight:bold;}
+.jstree li.fst {background-color:#ffeecc;border-radius:10px;}
+.jstree-apple li.jstree-last.fst {background-color:#ffeecc;border-radius:10px;}
+.jstree li.cmp a {color:#000}
+/*.jstree li.cmp a:after{content: 'Done';display: inline-block;margin-left: 5px;color: #000; background-color: #fff; border-radius: 10px; padding:0 5px; line-height: 14px;}*/
+.jstree li.work a {color:#d70544}
+.jstree li.gud a {color:#d70544}
+.jstree li.work.ing {background-color:#ffdd00;}
+.jstree li.del a {color:#aaa;text-decoration:line-through;}
+.jstree li.del span {display:none;}
+.jstree li.del:after {content:'Deleted';position:absolute;top:2px;right:10px;display:inline-block;margin-left:5px;color:#fff;background-color:#aaaaaa;border-radius:10px;padding:0 10px;line-height:14px;}
+.jstree li.exl span {display:none;}
+.jstree li.exl:after {content:'External Link';position:absolute;top:2px;right:10px;display:inline-block;margin-left:20px;color:#fff;background-color:#aaaaaa;border-radius:10px;padding:0 10px;line-height:14px;}
+.jstree li.ntv span {display:none;}
+.jstree li.ntv:after {content:'Native';position:absolute;top:2px;right:10px;display:inline-block;margin-left:5px;color:#fff;background-color:#aaaaaa;border-radius:10px;padding:0 10px;line-height:14px;}
+.jstree li.mod {background-color:#aaff44;}
+.jstree li.mod:hover .mod_dtl {display:block;}
+
+.jstree li {cursor:pointer;}
+.jstree li.on {font-weight:bold;color:#fff;background-color:#91d2ff;border-radius:10px;}
+.jstree-apple li.jstree-last.on {background-color:#91d2ff;}
+.jstree-open > .jstree-icon {cursor:pointer;}
+.jstree-closed > .jstree-icon {cursor:pointer;}
+.jstree .jstree-closed strong,
+.jstree .jstree-closed i {color:#000;}
+.jstree li.jstree-open.active > ul {display:none;}
+.jstree li.jstree-open.active strong {color:#000;}
+.jstree li.jstree-closed.active > ul {display:block;}
+.jstree li.jstree-closed.active strong {color:#d70544;}
+
+.ico_pop {display:inline-block;margin-left:5px;color:#fff;background-color:#a9cf52;border-radius:10px;padding:0 5px;line-height:14px;font-weight:bold;font-style:normal;}
+.ico_fst {display:inline-block;margin-left:5px;color:#fff;background-color:#5f5cd3;border-radius:10px;padding:0 5px;line-height:14px;font-weight:bold;font-style:normal;}
+.ico_2nd {display:inline-block;margin-left:5px;color:#fff;background-color:#542194;border-radius:10px;padding:0 5px;line-height:14px;font-weight:bold;font-style:normal;}
+.ico_pop.lpop {background-color:#88902d;}
+.ico_mbl {display:inline-block;margin-left:5px;color:#fff;background-color:#d22add;border-radius:4px;padding:0 4px;line-height:14px;font-weight:bold;font-style:normal;}
+.ico_tbt {display:inline-block;margin-left:5px;color:#fff;background-color:#1b1fce;border-radius:4px;padding:0 4px;line-height:14px;font-weight:bold;font-style:normal;}
+
+.progress {height:20px;margin:5px 15px 20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.1)}
+.progress-bar {float:left;width:0;height:100%;font-size:14px;line-height:20px;color:#fff;text-align:center;background-color:#428bca;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-transition:width .6s ease;transition:width .6s ease}
+.progress-striped .progress-bar {background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-size:40px 40px}
+.progress.active .progress-bar {-webkit-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite}.progress-bar-success{background-color:#d9534f}.progress-striped .progress-bar-success {background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent)}
+</style>
+</head>
+
+<body class="kr ko-kr">
+
+<div id="treecontrol">
+	<img src="images/icon_logo.png" class="logo" />
+	<h1>Web Publish Guide</strong></h1>
+	<a href="#none;" id="c">Close All</a>
+	<a href="#none;" id="o" class="on">Open All</a>
+</div>
+
+<div id="navigation">
+	<ul>
+		<li><strong>Style Guide</strong> <i class="counter"></i>
+			<ul>
+				<li class="gud"><a href="../html/default/guide_default.html" target="ifrhowl">가이드 기본정책</a></li>
+			</ul>
+		</li>
+		<li><strong>메인</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/index_230130.html" target="ifrhowl">메인</a></li>
+				<li class="cmp"><a href="../../html/index_pop_230213.html" target="ifrhowl">메인 팝업</a></li>
+				<li class="cmp"><a href="../../html_new2020/index_goal.html" target="ifrhowl">메인 띠배너 2개</a></li>
+				<li class="cmp"><a href="../../html_new2020/index_20221207.html" target="ifrhowl">공지 슬라이드 띠배너</a></li>
+				<li class="cmp"><a href="../../html_new2020/index_goal_221228.html" target="ifrhowl">이벤트 띠배너</a></li>
+				<li class="cmp"><a href="../../html_new2020/_header.html" target="ifrhowl">_header</a></li>
+				<li class="cmp"><a href="../../html_new2020/_footer.html" target="ifrhowl">_footer</a></li>
+			</ul>
+		</li>
+		<li><strong>로그인</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html/user_login_221206.html" target="ifrhowl">로그인</a></li>
+				<li class="cmp"><a href="../../html_new2020/index_20221207.html" target="ifrhowl">메인 MY</a></li>
+				<li class="cmp"><a href="../../html_new2020/eclip_view_221207.html" target="ifrhowl">e클립 댓글</a></li>
+				<li class="cmp"><a href="../../html_new2020/online_view_reply_221207.html" target="ifrhowl">온라인 강좌 수강후기</a></li>
+				<li class="cmp"><a href="../../Book_english/class_course_list_221207.html" target="ifrhowl">교과서 영어 수강후기</a></li>
+				<li class="cmp"><a href="../../funreading2021/fun_book_detail_icon.html" target="ifrhowl">펀리딩 댓글</a></li>
+			</ul>
+		</li>
+		<li><strong>검색</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/search_210318.html" target="ifrhowl">통합검색</a></li>
+				<li class="cmp"><a href="../../html_new2020/fun_search_all.html" target="ifrhowl">통합검색 > 펀리딩</a></li>
+				<li class="cmp"><a href="../../html_new2020/fun_search_list.html" target="ifrhowl">펀리딩 검색결과</a></li>
+				<li class="cmp"><a href="../../html_new2020/search_A.html" target="ifrhowl">스페셜 검색 A</a></li>
+				<li class="cmp"><a href="../../html_new2020/search_B.html" target="ifrhowl">스페셜 검색 B</a></li>
+
+			</ul>
+		</li>
+		<li><strong>교과서영어</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../Book_english/introduce_keycontent.html" target="ifrhowl">교과서영어 소개</a></li>
+				<li class="cmp"><a href="../../Book_english/introduce_apply.html" target="ifrhowl">교과서영어 신청</a></li>
+				<li class="cmp"><a href="../../Book_english/introduce_apply_teacher.html" target="ifrhowl">신청 > 교사회원</a></li>
+				<li class="cmp"><a href="../../Book_english/introduce_apply_student.html" target="ifrhowl">신청 > 학생회원</a></li>
+				<li class="cmp"><a href="../../Book_english/introduce_apply_general.html" target="ifrhowl">신청 > 일반회원</a></li>
+				<li class="cmp"><a href="../../Book_english/class_list_20210308.html" target="ifrhowl">학습하기</a></li>
+				<li class="cmp"><a href="../../Book_english/class_learning_list.html" target="ifrhowl">학습하기 > 단원리스트 > 학습목록</a></li>
+				<li class="cmp"><a href="../../Book_english/class_question_list.html" target="ifrhowl">학습목록 > 질문있어요 </a></li>
+				<li class="cmp"><a href="../../Book_english/class_question_view.html" target="ifrhowl">학습목록 > 질문있어요 - 질문/답변 </a></li>
+				<li class="cmp"><a href="../../Book_english/class_question_write.html" target="ifrhowl">학습목록 > 질문있어요 - 등록/편집</a></li>
+				<li class="cmp"><a href="../../Book_english/class_course_list.html" target="ifrhowl">학습목록 > 수강후기</a></li>
+				<li class="cmp"><a href="../../Book_english/template.html" target="ifrhowl">강의 템플릿</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher.html" target="ifrhowl">나의교실 > 교사용 > 나의교실 현황</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_join.html" target="ifrhowl">나의교실 > 교사용 > 교실 만들기</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_edit.html" target="ifrhowl">나의교실 > 교사용 > 교실 편집</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_use_1026.html" target="ifrhowl">나의교실 > 교사용 > 교실 사용현황</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_report.html" target="ifrhowl">나의교실 > 교사용 > 학습 이용현황</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_reportAbout.html" target="ifrhowl">나의교실 > 교사용 > 학습 이용현황 > 학생 학습이력</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_question.html" target="ifrhowl">나의교실 > 교사용 > 교실 활동현황 > 질문 있어요!(목록)</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_write.html" target="ifrhowl">나의교실 > 교사용 > 교실 활동현황 > 질문 있어요!(답변)</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_comment.html" target="ifrhowl">나의교실 > 교사용 > 교실 활동현황 > 수강후기 현황</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_teacher_myReport.html" target="ifrhowl">나의교실 > 교사용 > 교실 활동현황 > 교사 학습 이용현황</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_student.html" target="ifrhowl">나의교실 > 학생/일반 > 나의 교실(학생)</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_guest.html" target="ifrhowl">나의교실 > 학생/일반 > 나의 교실(미가입)</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_student_join_0615.html" target="ifrhowl">나의교실 > 학생/일반 > 우리 반 찾기</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_student_addClass.html" target="ifrhowl">나의교실 > 학생/일반 > 교과서 추가</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_student_report.html" target="ifrhowl">나의교실 > 학생/일반 > 나의 학습</a></li>
+				<li class="cmp"><a href="../../Book_english/my_school_student_question.html" target="ifrhowl">나의교실 > 학생/일반 > 나의 활동(질문/후기)</a></li>
+				<li class="cmp"><a href="../../Book_english/template.html" target="ifrhowl">강의 템플릿</a></li>
+				<li class="cmp"><a href="../../Book_english/template_200330.html" target="ifrhowl">강의 템플릿 이벤트 도장</a></li>
+			</ul>
+		</li>
+		<li><strong>방송프로그램</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/program_2022.html" target="ifrhowl">다시보기</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_again_220923.html" target="ifrhowl">다시보기 view</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_again_write.html" target="ifrhowl">시청자게시판 - 글쓰기</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_rating.html" target="ifrhowl">만족도평가 - 별점</a></li>
+				<li class="cmp"><a href="../../html_new2020/etc_onair_2022.html" target="ifrhowl">온에어 및 편성표 - 온에어 Tap</a></li>
+				<li class="cmp"><a href="../../html_new2020/etc_channel_2022.html" target="ifrhowl">온에어 및 편성표 - 편성표 Tap</a></li>
+
+
+			</ul>
+		</li>
+		<li><strong>펀리딩</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../funreading2021/fun_main.html" target="ifrhowl">도서</a></li>
+				<li class="cmp"><a href="../../funreading2021/fun_book_detail_icon.html" target="ifrhowl">도서 > 자세히보기</a></li>
+				<li class="cmp"><a href="../../funreading2021/today_archive.html" target="ifrhowl">오늘의 펀리딩</a></li>
+			</ul>
+		</li>
+		<li><strong>자기주도학습</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/eclip.html" target="ifrhowl">e 클립</a></li>
+				<li class="cmp"><a href="../../html_new2020/eclip_view_221207.html" target="ifrhowl">e 클립 view</a></li>
+				<li class="cmp"><a href="../../html_new2020/html_new2020/online.html" target="ifrhowl">온라인콘텐츠</a></li>
+				<li class="cmp"><a href="../../html_new2020/online_view.html" target="ifrhowl">온라인콘텐츠 view - 강의목록 Tap</a></li>
+				<li class="cmp"><a href="../../html_new2020/online_view_reply_221207.html" target="ifrhowl">온라인콘텐츠 view - 수강후기 Tap</a></li>
+				<li class="cmp"><a href="../../html_new2020/online_view.html" target="ifrhowl">온라인콘텐츠 view - 영어웹툰</a></li>
+				<li class="cmp"><a href="../../html_new2020/webtoon_player-2.html" target="ifrhowl">온라인콘텐츠 view - 영어웹툰 player</a></li>
+				<li class="cmp"><a href="../../html_new2020/after.html" target="ifrhowl">방과후영어 소개</a></li>
+				<li class="cmp"><a href="../../html_new2020/after_list.html" target="ifrhowl">방과후영어 학습하기</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_210106.html" target="ifrhowl">방과후영어 view - 강좌소개</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_list.html" target="ifrhowl">방과후영어 view - 강의목록</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_qna.html" target="ifrhowl">방과후영어 view - 학습Q&A</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_qna_view.html" target="ifrhowl">방과후영어 view - 학습Q&A view</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_qna_edit.html" target="ifrhowl">방과후영어 view - 학습Q&A edit</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_exam.html" target="ifrhowl">방과후영어 view - 평가하기</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_add.html" target="ifrhowl">방과후영어 view - 부가콘텐츠</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_210106.html" target="ifrhowl">필수영단어</a></li>
+				<li class="cmp"><a href="../../EBSe_html/after_view_210106.html" target="ifrhowl">365영단어</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_talk_221130.html" target="ifrhowl">e-야기</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_talk_view_2022.html" target="ifrhowl">e-야기 view</a></li>
+				<li class="cmp"><a href="../../html_new2020/after.html" target="ifrhowl">방과후영어 소개</a></li>
+			</ul>
+		</li>
+		<li><strong>레벨테스트</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/level_221109.html" target="ifrhowl">소개 및 응시</a></li>
+				<li class="cmp"><a href="../../html_new2020/level_result_221109.html" target="ifrhowl">결과보기</a></li>
+			</ul>
+		</li>
+		<li><strong>마이페이지</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html/my_renewal_2022.html" target="ifrhowl">마이페이지 default</a></li>
+				<li class="cmp"><a href="../../html/my_renewal_2022_on.html" target="ifrhowl">마이페이지</a></li>
+				<li class="cmp"><a href="../../html_new2020/.html" target="ifrhowl">최근이용콘텐츠</a></li>
+				<li class="cmp"><a href="../../html_new2020/.html" target="ifrhowl">나의 학습방</a></li>
+				<li class="cmp"><a href="../../html_new2020/.html" target="ifrhowl">나의 활동 내역</a></li>
+				<li class="cmp"><a href="../../html_new2020/my_match_0615.html" target="ifrhowl">매칭 학습 관리</a></li>
+				<li class="cmp"><a href="../../funreading2021/fun_mybook_series.html" target="ifrhowl">나의 서재 - 시리즈</a></li>
+				<li class="cmp"><a href="../../funreading2021/fun_mybook_all.html" target="ifrhowl">나의 서재 - 전체도서</a></li>
+				<li class="cmp"><a href="../../funreading2021/fun_mybook_empty.html" target="ifrhowl">나의 서재 - 담은도서 없음</a></li>
+				<li class="cmp"><a href="../../html_new2020/.html" target="ifrhowl">나의 e-tizen 내역</a></li>
+				<li class="cmp"><a href="../../html_new2020/.html" target="ifrhowl">정보 관리</a></li>
+			</ul>
+		</li>
+		<li><strong>고객센터</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../html/CR7/UI-HSC-HSP-CR-2001.html" target="ifrhowl">서브메인 - 01</a></li>
+
+			</ul>
+		</li>
+		<li><strong>이벤트</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../html/CR8/UI-HSC-HSP-CR-3001.html" target="ifrhowl">서브메인</a></li>
+
+				<li class="cmp"><a href="../../EBSe_html/program_again_220124" target="ifrhowl">방송프로그램 다시보기 - 이벤트 팝업</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_again_211013.html" target="ifrhowl">방송프로그램 다시보기 - 이벤트 획득 팝업</a></li>
+
+
+			</ul>
+		</li>
+		<li><strong>EBSe 안내</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../html/CR9/UI-HSC-HSP-CR-4001.html" target="ifrhowl">서브메인 - 고1~2내신 중점</a></li>
+			</ul>
+		</li>
+		<li><strong>학습자료실</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../EBSe_html/comunity_alphabet.html" target="ifrhowl">알파벳 단어연습</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_alphabet.html" target="ifrhowl">다시시작 기초영어</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_homeschool.html" target="ifrhowl">홈스쿨링</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_homeschool_view.html" target="ifrhowl">홈스쿨링 view</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_homeschool_edit.html" target="ifrhowl">홈스쿨링 edit</a></li>
+				<li class="cmp"><a href="../../EBSe_html/comunity_alphabet.html" target="ifrhowl">우리아이 영어고민</a></li>
+
+			</ul>
+		</li>
+		<li><strong>팝업</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/non-member_popup_220412.html" target="ifrhowl">비회원콘텐츠 이용안내 팝업</a></li>
+				<li class="cmp"><a href="../../html_new2020/eclip_view_221129.html" target="ifrhowl">게시판 운영방침 팝업</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_pwd.html" target="ifrhowl">방송프로그램 다시보기 - 비밀번호 변경 안내 팝업</a></li>
+				<li class="cmp"><a href="../../EBSe_html/program_again_220826.html" target="ifrhowl">방송프로그램 다시보기 - 공유 URL 복사 팝업</a></li>
+			</ul>
+		</li>
+		<li><strong>기타</strong> <i class="counter"></i>
+			<ul>
+				<li class="cmp"><a href="../../html_new2020/app_loading.html" target="ifrhowl">로그인 진행 중 로딩화면</a></li>
+
+				<li class="cmp"><a href="../../html_new2020/android_settings.html" target="ifrhowl"> 설정</a></li>
+				<li class="cmp"><a href="../../html_new2020/android_settings.html" target="ifrhowl">안드로이드 설정</a></li>
+				<li class="cmp"><a href="../../html_new2020/ios_settings.html" target="ifrhowl">아이폰 설정</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#navigation").jstree({
+            "themes" : {"theme" : [ "apple" ]},
+            "plugins" : [ "themes", "html_data" ],
+        }).bind("loaded.jstree", function (event, data) {
+            $(this).jstree("open_all");
+            $('#navigation > ul > li > ul > li').each(function(){
+                var filepath = $(this).find('a').attr("href").split("/");
+                var filepathLength = filepath.length;
+                var filename = filepath[filepathLength-1];
+                $(this).append("<span>"+filename+"</span>");
+                $('a',this).attr('title',filename);
+            });
+
+            $('.jstree > ul > li > strong').each(function(i){
+                $(this).prepend(i + '. ');
+            });
+
+            $('.work').each(function(i){
+                $(this).find('a ins').after(i + 1 + ') ');
+            });
+
+            $('#navigation > ul > li > ul').each(function(){
+                var lengthLI = $(this).find('li').length;
+                $(this).siblings('.counter').html('( ' + lengthLI + ' )');
+            });
+
+            $('#navigation > ul > li strong, #navigation > ul > li i').on('click', function(){
+                if($(this).parent().hasClass('jstree-closed') == true) {
+                    $(this).parent().toggleClass('active');
+                    $('#treecontrol a').removeClass('on');
+                } else if ($(this).parent().hasClass('jstree-open') == true) {
+                    $(this).parent().toggleClass('active');
+                    $('#treecontrol a').removeClass('on');
+                }
+            });
+
+            $('.jstree-leaf a').click(function(){
+                $('.jstree-leaf').removeClass('on');
+                $(this).parent('li').addClass('on');
+            });
+        });
+
+        $("#o").click(function(){
+            $('#navigation').jstree('open_all')
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.jstree-open').removeClass('active');
+        });
+        $("#c").click(function(){
+            $('#navigation').jstree('close_all')
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.jstree-closed').removeClass('active');
+        });
+    });
+</script>
+
+</body>
+</html>

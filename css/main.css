@@ -1,0 +1,44 @@
+/*
+** main CSS
+ */
+
+
+#skip_navigation a {
+    overflow: hidden; display: block; position: absolute; top: 0; left: 0; z-index: 99; width: 0; height: 0; background: #000; font-size: 16px; line-height: 26px; color: #fff; text-align: center;
+}
+
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: top 0.3s ease-out;
+    will-change: transform;
+    background: #ff0000;
+    opacity: .5;
+}
+
+#header .header_inner {
+    position: relative;
+    z-index: 1;
+    background: #00ff00;
+    opacity: .5;
+}
+
+#header .header_inner .inner {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 98rem;
+    height: 18.2rem;
+    background: #0000ff;
+    opacity: .5;
+}
+
+
+
+.header_top {
+
+}

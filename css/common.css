@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/*
+** common CSS
+ */
+
+#skip_navigation {
+    position: relative;
+    z-index: 1000;
+}
+
+ #skip_navigation > button {
+    background: #333;
+    height: 3rem;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: -3rem;
+    width: 10rem;
+}
+
+#skip_navigation > button > span {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+#wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+    word-break: keep-all;
+    box-sizing: border-box;
+}
+
+*,:after,:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,html {
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    overflow-y: scroll;
+    -ms-overflow-x: hidden;
+    -webkit-tap-highlight-color: unset!important;
+    font-size: 62.5%;
+}
+
+blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,select,table,td,textarea,th,ul {
+    margin: 0;
+    padding: 0;
+    word-break: break-all
+}
+
+body,button,input,select,table,textarea {
+    font-family: 'Noto Sans',sans-serif;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1
+}
+
+em {
+    font-style: normal
+}
+
+fieldset,img {
+    border: 0 none
+}
+
+img {
+    vertical-align: middle
+}
+
+dl,li,menu,ol,ul {
+    list-style: none
+}
+
+input::-ms-clear {
+    display: none
+}
+
+button {
+    border: 0 none;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+a:active,a:focus,a:hover {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+a[href^="tel:"] {
+    cursor: text
+}
+
+body {
+    touch-action: pan-x pan-y
+}
+
+body.pinch-zoom {
+    touch-action: auto
+}
+
+.blind,caption,legend {
+    position: absolute;
+    z-index: -10;
+    width: 0!important;
+    height: 0!important;
+    overflow: hidden!important;
+    font-size: medium;
+    line-height: normal;
+    word-break: break-all
+}
+
+.ios_no_acc {
+    -webkit-overflow-scrolling: auto
+}
+
+button,input,select,textarea {
+    vertical-align: middle;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+label {
+    vertical-align: middle
+}
+
+textarea {
+    width: 100%;
+    border: 0;
+    overflow-y: auto;
+    resize: none
+}
+
+.dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: .7;
+    z-index: 1000
+}
+
+.scroll-lock {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh
+}
+
+.flx {display: flex;flex-flow:row wrap;}
+.inner {width: 100%; max-width:1600px; margin: 0 auto;}
+
+
+/*
+** sub CSS
+ */
+
+
+/*
+** sub CSS
+ */

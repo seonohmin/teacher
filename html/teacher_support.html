@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<!-- skip navigation -->
+<div id="skip_navigation">
+    <button type="button" data-anchor="#menu"><span>전체 메뉴 바로가기</span></button>
+    <button type="button" data-anchor="#contents"><span>본문 바로가기</span></button>
+</div>
+<!-- //skip navigation -->
+
+<div id="wrap">
+    <!-- 띠배너 삽입될 공간 -->
+    <div id="top_banner"></div>
+    <!-- 띠배너 삽입될 공간 -->
+    <header id="header">
+        <div class="header_inner" aria-hidden="false">
+            <div class="inner">
+                <div class="header_top">
+                    <div class="header_util">
+                        <ul class="inside_header">
+                            <li><a href="#" role="button"><span>EBSe</span></a></li>
+                            <li><a href="#" role="button"><span>공지사항</span></a></li>
+                            <li><a href="#" role="button"><span>교과서 영어</span></a></li>
+                        </ul>
+                        <ul class="inside_body">
+                            <li><a href="#" role="button" class="btn_login"><span>로그인</span></a></li>
+                            <li><a href="#" role="button" class="btn_join"><span>회원가입</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_body">
+            <div class="body_inner">
+                <h1 class="logo">
+                    <a rel="noopener noreferrer" href="https://www.ebse.co.kr/" title="EBSe">EBSe 교사지원센터</a>
+                </h1>
+                <div class="gnb" id="gnb">
+                    <div class="gnb_menu">
+                        <ul>
+                            <li><a href="#" target="_self" role="button"><span>교사회원 인증</span></a></li>
+                            <li><a href="#" target="_self" role="button"><span>단체가입 인증</span></a></li>
+                            <li class="on">
+                                <a href="#" target="_self" role="button"><span>EBSe 자료실</span></a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#" target="_self" role="button"><span>교수학습자료</span></a></li>
+                                        <li><a href="#" target="_self" role="button"><span>VOD자료</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" role="button"><span>교사 공유실</span></a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#" role="button"><span>자료공유</span></a></li>
+                                        <li><a href="#" role="button"><span>T-Talk</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#" target="_self" role="button">마이페이지</a></li>
+                            <li>
+                                <a href="#" role="button"><span>AI펭톡</span></a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#" role="button"><span>학습현황</span></a></li>
+                                        <li><a href="#" role="button"><span>학습단원</span></a></li>
+                                        <li><a href="#" role="button"><span>스쿨톡관리</span></a></li>
+                                        <li><a href="#" role="button"><span>신학기관리</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="contents">
+        <!-- 교사지원센터 신청 -->
+        <section class="intro_wrap">
+            <div class="inner">
+                <ul>
+                    <li class="teacher_con">
+                        <h2 class="teacher_tit">교사회원 인증</h2>
+                        <p class="teacher_txt">교육부 행정전자서명인증센터에서 EPKI 인증 후 교사회원으로 활동할 수 있습니다.</p>
+                        <ul class="teacher_list_row">
+                            <li class="teacher_list_item">
+                                <div class="teacher_img_sec"></div>
+                                <div class="teacher_text_sec">신청서 작성</div>
+                            </li>
+                            <li class="teacher_list_item">
+                                <div class="teacher_img_sec"></div>
+                                <div class="teacher_text_sec">교육부 EPKI 인증</div>
+                            </li>
+                            <li class="teacher_list_item">
+                                <div class="teacher_img_sec"></div>
+                                <div class="teacher_text_sec">교사권한 부여</div>
+                            </li>
+                            <li class="teacher_list_item">
+                                <div class="teacher_img_sec"></div>
+                                <div class="teacher_text_sec">인증 완료</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="group_con">
+                        <h2 class="group_tit">단체가입 신청</h2>
+                        <p class="teacher_txt">학교 학생들의 EBSe 콘텐츠 이용을 위해 단체 회원 신청을 하는 공간</p>
+                        <ul class="group_list_row">
+                            <li class="group_list_item">
+                                <div class="group_img_sec"></div>
+                                <div class="group_text_sec">온라인 신청</div>
+                            </li>
+                            <li class="group_list_item">
+                                <div class="group_img_sec"></div>
+                                <div class="group_text_sec">관리자 확인 후가입 처리</div>
+                            </li>
+                            <li class="group_list_item">
+                                <div class="group_img_sec"></div>
+                                <div class="group_text_sec">신청완료 & 메일 발송</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //교사지원센터 신청 -->
+
+        <!-- 게시판 -->
+        <section class="notice_wrap">
+            <div class="inner">
+                <div class="board">
+                    <!-- 교사 자료 공유 -->
+                    <div class="teacher_data_sharing">
+                        <div class="head">
+                            <h2>교사 자료 공유</h2>
+                            <a href="#" title="교사 자료 공유 더보기" aria-label="교사 자료 공유 더보기">더보기</a>
+                        </div>
+                        <div class="notice_banner">
+                            <div class="banner_text_wrap">
+                                <p class="banner_title">교사가 직접 제작 또는 공유 가능한 <strong class="text_under">교수활동 및 기타자료</strong>를 공유하실 수 있습니다.</p>
+                                <img class="banner_img" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class=>워크시트</span>
+                                        <p>6학년 겨울방학 영어캠프 수업자료</p>
+                                        <span class="date">2023.06.16</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class=>워크시트</span>
+                                        <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트</p>
+                                        <span class="date">2023.06.16</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class=>기타</span>
+                                        <p>방학 현장체험학습 교안</p>
+                                        <span class="date">2023.06.16</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class=>퀴즈</span>
+                                        <p>방학 특강 관련 퀴즈 문해력 테스트 텍스트 텍스트</p>
+                                        <span class="date">2023.06.16</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class=>워크시트</span>
+                                        <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트</p>
+                                        <span class="date">2023.06.16</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //교사 자료 공유 -->
+
+                    <!-- T-Talk -->
+                    <div class="T-Talk">
+                        <div class="head">
+                            <h2>T-Talk</h2>
+                            <a href="#" title="T-Talk 더보기" aria-label="T-Talk 더보기">더보기</a>
+                        </div>
+                        <div class="notice_banner">
+                            <div class="banner_text_wrap">
+                                <p class="banner_title">교사회원분들의 교사활동 및 다양한 주제로 자유롭게 이야기 나눌 수 있는 <strong class="text_under">커뮤니티 공간</strong>입니다.</p>
+                                <img class="banner_img" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li>
+                                    <div><a href="#" target="_blank">교사용 E-야기 게시판인가요?</a></div>
+                                    <span class="date">2023.06.16</span>
+                                </li>
+                                <li>
+                                    <div><a href="#" target="_blank">영어 교수활동 아이디어 제공합니다</a></div>
+                                    <span class="date">2023.05.16</span>
+                                </li>
+                                <li>
+                                    <div><a href="#" target="_blank">1차 연수 후기 공유 드립니다</a></div>
+                                    <span class="date">2023.04.10</span>
+                                </li>
+                                <li>
+                                    <div><a href="#" target="_blank">2022 겨울워크샵 관련 공지 공유 텍스트 텍스트 텍스트 텍스트</a></div>
+                                    <span class="date">2023.03.26</span>
+                                </li>
+                                <li>
+                                    <div><a href="#" target="_blank">3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트 텍스트</a></div>
+                                    <span class="date">2023.02.16</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //T-Talk -->
+                </div>
+            </div>
+        </section>
+        <!-- //게시판 -->
+
+        <section class="post_wrap">
+            <!-- 교사 콘텐츠 등록 -->
+            <div class="teacher_register">
+                <div class="head">
+                    <h2>교사 콘텐츠 등록</h2>
+                    <p>선생님 본인 자료를 등록하거나 게시글 작성을 할 수 있습니다.</p>
+                </div>
+                <ul class="post_list">
+                    <li><a href="#" class="post_link"><span>워크시트</span><img src="" alt=""></a></li>
+                    <li><a href="#" class="post_link"><span>퀴즈</span><img src="" alt=""></a></li>
+                    <li><a href="#" class="post_link"><span>기타 자료</span><img src="" alt=""></a></li>
+                    <li><a href="#" class="post_link"><span>T-Talk</span><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <!-- //교사 콘텐츠 등록 -->
+            <!-- 로그인 시 - 최근 방문글 -->
+            <div class="recent_visit">
+                <div class="head">
+                    <h2>최근 방문글</h2>
+                    <a href="#" title="T-Talk 더보기" aria-label="T-Talk 더보기">더보기</a>
+                </div>
+                <div class="body">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <span class=>T-Talk</span>
+                                <p>교사용 E-야기 게시판인가요?</p>
+                                <span class="date">2023.06.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <span class=>자료공유</span>
+                                <p>영어 교수활동 아이디어 제공합니다</p>
+                                <span class="date">2023.06.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <span class=>T-Talk</span>
+                                <p>1차 연수 후기 공유 드립니다</p>
+                                <span class="date">2023.06.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <span class=>자료공유</span>
+                                <p>2022 겨울워크샵 관련 공지 공유 텍스트</p>
+                                <span class="date">2023.06.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <span class=>자료공유</span>
+                                <p>3학년 겨울방학 영어캠프 수업자료 텍스트</p>
+                                <span class="date">2023.06.16</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //로그인 시 - 최근 방문글 -->
+        </section>
+
+        <!-- EBSe 교수학습자료 -->
+        <section class="teacher_learning_data">
+            <div class="head">
+                <h2>EBSe 교수학습자료</h2>
+                <p>EBSe 운영진에서 제공하는 교수학습자료입니다.</p>
+                <a href="#" title="EBSe 교수학습자료 더보기" aria-label="EBSe 교수학습자료">더보기</a>
+            </div>
+            <div class="body">
+                <ul class="learning_list">
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>초등3~6학년별 교과서영어 활용가이드</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>2022 겨울워크샵 관련 공지 공유 텍스트 텍스트 텍스트 텍스트</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="learning_list">
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>초등3~6학년별 교과서영어 활용가이드</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>2022 겨울워크샵 관련 공지 공유 텍스트 텍스트 텍스트 텍스트</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트</p>
+                            <span class="date">2023.06.16</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //EBSe 교수학습자료 -->
+
+        <!-- EBSe VOD자료 -->
+        <section class="vod_data">
+            <div class="head">
+                <h2>EBSe VOD자료</h2>
+                <p>EBSe 방송프로그램의 VOD자료를 이용하실 수 있습니다.</p>
+                <a href="#" title="EBSe VOD자료" aria-label="EBSe VOD자료">더보기</a>
+            </div>
+            <div class="body">
+                <ul class="vod_list">
+                    <li>
+                        <div class="vod_card">
+                            <a href="#">
+                                <div class="card_img">
+                                    <img src="https://static.ebs.co.kr/images//public/courses/2021/02/19/20/ER2016G0BEG01ZZ/610056ad-508f-4fd0-949c-43fc5ba09b11.jpg" alt="">
+                                </div>
+                                <div class="card_txt">
+                                    <p class="tit">카툰 잉글리시 2.0</p>
+                                    <p class="cate">총39편</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vod_card">
+                            <a href="#">
+                                <div class="card_img">
+                                    <img src="https://static.ebs.co.kr/images/public/courses/2022/02/17/16/40033183/cc74dfc1-94dc-43fe-befa-8ac562860854.jpg" alt="">
+                                </div>
+                                <div class="card_txt">
+                                    <p class="tit">영어에 반하다 @초등 6</p>
+                                    <p class="cate">총39편</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vod_card">
+                            <a href="#">
+                                <div class="card_img">
+                                    <img src="https://static.ebs.co.kr/images/public/courses/2022/12/8/15/40046012/7dee7d2a-e4ca-4c17-a84c-5923d67b4fbf.jpg" alt="">
+                                </div>
+                                <div class="card_txt">
+                                    <p class="tit">액티비티 잉글리시 - Tweet English</p>
+                                    <p class="cate">총39편</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vod_card">
+                            <a href="#">
+                                <div class="card_img">
+                                    <img src="https://static.ebs.co.kr/images/public/courses/2022/02/18/10/40033188/95e7a855-e3b4-419c-a5ca-70d805ab997b.jpg" alt="">
+                                </div>
+                                <div class="card_txt">
+                                    <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트</p>
+                                    <p class="cate">총39편</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //EBSe VOD자료 -->
+
+        <!-- AI 펭톡 -->
+        <section class="pengtalk_wrap">
+            <!-- AI펭톡(일반교사)-->
+            <a class="general_link" href="https://pengtalk-teacher.ebse.co.kr/">
+                <div class="general_image">
+                    <img src="" alt="">
+                </div>
+                <div class="general_teacher">
+                    <div class="general_title">AI 펭톡</div>
+                    <p class="general_desc">학급별 학습현황 확인 및 스쿨톡 관리 등을 위한 공간</p>
+                </div>
+            </a>
+            <!--//AI펭톡(일반교사)-->
+            <!-- AI펭톡(대표교사)-->
+            <a class="leader_link" href="https://pengtalk-lcms.ebse.co.kr/lcms/web/main/index/loginAction.do">
+                <div class="leader_image">
+                    <img src="" alt="">
+                </div>
+                <div class="leader_teacher">
+                    <div class="leader_title">AI 펭톡</div>
+                    <p class="leader_desc">학생 코드 발급 및 교사 & 학생매칭 등을 위한 공간</p>
+                </div>
+            </a>
+            <!--//AI펭톡(대표교사)-->
+        </section>
+        <!-- //AI 펭톡 -->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <section class="footer_head">
+                <div class="cs_info">
+                    <div class="teacher_contact">
+                        <h2 class="cs_tit">고객센터</h2>
+                        <a class="cs_call" href="tel:1588-1580">1588-1580</a>
+                    </div>
+                    <ul class="info_list">
+                        <li>월~금 8:00~18:00</li>
+                        <li>토요일 9:00~18:00</li>
+                        <li>토요일 9:00~18:00</li>
+                        <li>점심시간 12~13시 / 일요일 휴무</li>
+                        <li><a href="mailto:helpdesk@ebs.co.kr">helpdesk@ebs.co.kr</a></li>
+                    </ul>
+                </div>
+
+                <div class="pengtalk_info">
+                    <div class="pengtalk_contact">
+                        <h2 class="cs_tit">AI펭톡 고객센터</h2>
+                        <a class="cs_call" href="tel:1800-2319">1800-2319</a>
+                    </div>
+                    <div class="info_list">
+                        <p>월~금 09:00~18:00</p>
+                        <p>토요일, 일요일, 공휴일 휴무</p>
+                    </div>
+                </div>
+
+                <div class="family_site_box active">
+                    <button type="button" class="btn_family_site"><span class="text">영어교육유관기관</span></button>
+                    <ul class="family_site_list">
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://kice.re.kr/index.do">한국교육과정평가원</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.niied.go.kr/main/main.do">국립국제교육원</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.neti.go.kr">중앙교육연수원</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.sen.go.kr">서울특별시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.pen.go.kr">부산광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.dge.go.kr">대구광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.ice.go.kr">인천광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.gen.go.kr">광주광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.dje.go.kr">대전광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.use.go.kr">울산광역시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.sje.go.kr">세종특별자치시교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://goe.go.kr">경기도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.gwe.go.kr">강원도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href=http://www.cbe.go.kr">충청북도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href=http://www.cne.go.kr">충청남도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.jbe.go.kr">전라북도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.jne.go.kr">전라남도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.gbe.kr">경상북도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.gne.go.kr">경상남도교육청</a></li>
+                        <li class="family_site_item"><a class="family_site_link" target="_blank" href="http://www.jje.go.kr">제주특별시자치도교육청</a></li>
+                    </ul>
+                </div>
+
+                <ul class="family_site">
+                    <li><a href="https://www.ebs.co.kr/" target="_blank"><img src="" alt="EBS"></a></li>
+                    <li><a href="https://primary.ebs.co.kr/" target="_blank"><img src="" alt="EBS 초등"></a></li>
+                    <li><a href="https://mid.ebs.co.kr/" target="_blank"><img src="" alt="EBS 중학"></a></li>
+                    <li><a href="https://www.ebsi.co.kr/" target="_blank"><img src="" alt="EBSi"></a></li>
+                    <li><a href="https://www.ebsmath.co.kr" target="_blank"><img src="" alt="EBSmath"></a></li>
+                    <li><a href="https://www.ebslang.co.kr" target="_blank"><img src="" alt="EBSlang"></a></li>
+                    <li><a href="https://www.ebssw.kr/" target="_blank"><img src="" alt="EBS 이솦"></a></li>
+                    <li><a href="https://www.ebsoc.co.kr/" target="_blank"><img src="" alt="EBS 온라인클래스"></a></li>
+                </ul>
+            </section>
+            <section class="footer_body">
+                <div class="foot_info_box">
+                    <ul class="footer_menu_list">
+                        <li class="footer_menu_item"><a href="https://www.ebse.co.kr/apps/introduce/introduce_main.do" class="m m_hide">EBSe소개</a></li>
+                        <li class="footer_menu_item"><a href="http://home.ebs.co.kr/copyright/main" class="m m_hide">저작권 침해 제보</a></li>
+                        <li class="footer_menu_item"><a href="https://sso.ebs.co.kr/policy/privacy?fsdc=" class="m color_etc mb_hide">개인정보처리방침</a></li>
+                        <li class="footer_menu_item"><a href="https://sso.ebs.co.kr/policy/termsInfo" class="m">이용약관</a></li>
+                        <li class="footer_menu_item"><a href="http://about.ebs.co.kr/kor/business/advertisement" class="m m_hide">광고문의</a></li>
+                        <li class="footer_menu_item"><a href="http://about.ebs.co.kr/kor/business/sponsorship" class="m m_hide">협찬문의</a></li>
+                    </ul>
+                    <ul class="footer_content">
+                        <li class="address">
+                            <p>10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</p>
+                            <p>사업자등록번호 : 229-82-01343 (한국교육방송공사사장 김유열)</p>
+                        </li>
+                        <li class="company">
+                            <p><a href="mailto:hotline@ebs.co.kr">시청자불만전담 : hotline@ebs.co.kr</a></p>
+                            <p>부가통신사업신고 : 10077</p>
+                            <p>통신판매업신고 : 고양일산동-1415</p>
+                        </li>
+                        <li class="copy_right"> Copyright ⓒ EBS All Rights Reserved</li>
+                    </ul>
+                </div>
+                <div class="mark_isms">
+                    <img src="" alt="">
+                    <ul class="corp">
+                        <li>[인증범위] 교육 포털 웹서비스</li>
+                        <li>[유효기간] 022.05.04~2025.05.03</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <button type="button" class="to_top">맨위</button>
+    </footer>
+</div>
+
+</body>
+</html>
