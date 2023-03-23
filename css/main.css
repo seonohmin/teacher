@@ -2,43 +2,96 @@
 ** main CSS
  */
 
-
 #skip_navigation a {
     overflow: hidden; display: block; position: absolute; top: 0; left: 0; z-index: 99; width: 0; height: 0; background: #000; font-size: 16px; line-height: 26px; color: #fff; text-align: center;
 }
-
 
 #header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
     width: 100%;
+    height: 18.2rem;
     transition: top 0.3s ease-out;
     will-change: transform;
-    background: #ff0000;
-    opacity: .5;
+    z-index: 5000;
+    /* background: #ff0000;
+    opacity: .5; */
+    color: #000;
 }
 
 #header .header_inner {
     position: relative;
     z-index: 1;
-    background: #00ff00;
-    opacity: .5;
+    /* background: #00ff00;
+    opacity: .5; */
 }
 
 #header .header_inner .inner {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    max-width: 98rem;
-    height: 18.2rem;
-    background: #0000ff;
-    opacity: .5;
+    /* background: #0000ff;
+    opacity: .5; */
+}
+
+.header_top {
+    width: 100%;
+}
+
+.header_top .header_util {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem 0;
+}
+
+.header_top .header_util .inside_header {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: auto;
+
+}
+
+.header_top .header_util .inside_header li {
+    margin-right: 2rem;
+}
+
+.header_top .header_util .inside_header li:last-child {
+    margin-right: 0; 
+}
+
+.header_top .header_util .inside_header li > a,
+.header_top .header_util .inside_body li > a {
+    font-size: 1.3rem;
+}
+
+.header_top .header_util .inside_body {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.header_top .header_util .inside_body li {
+    margin-left: 2rem;
+}
+
+.header_top .header_util .inside_body li:first-child {
+    margin-left: 0; 
 }
 
 
+#header .header_body {
 
-.header_top {
+}
+
+#header .header_body .inner {
+
+}
+
+
+#header .logo  {
+
+}
+
+#header .logo > a {
 
 }
