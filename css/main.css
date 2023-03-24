@@ -1,131 +1,11 @@
-/*
-** main CSS
- */
 
-#skip_navigation a {
-    overflow: hidden; display: block; position: absolute; top: 0; left: 0; z-index: 99; width: 0; height: 0; background: #000; font-size: 16px; line-height: 26px; color: #fff; text-align: center;
-}
+/* ========================================================================
+ * main CSS
+ * ======================================================================== */
 
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 18.2rem;
-    margin: 0 auto;
-    overflow: hidden;
-    transition: top 0.3s ease-out;
-    will-change: transform;
-    z-index: 5000;
-    background: #fff;
-    color: #000;
-}
-
-#header .header_inner {
-    position: relative;
-    z-index: 1;
-    border-bottom: 0.1rem solid #ddd;
-}
-
-#header .header_inner .inner {
-    display: flex;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-/* header_top */
-.header_top {
-    width: 100%;
-}
-
-.header_top .header_util {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 1rem 0;
-}
-
-.header_top .header_util .inside_header {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-right: auto;
-
-}
-
-.header_top .header_util .inside_header li {
-    margin-right: 2rem;
-}
-
-.header_top .header_util .inside_header li:last-child {
-    margin-right: 0; 
-}
-
-.header_top .header_util .inside_header li > a,
-.header_top .header_util .inside_body li > a {
-    font-size: 1.3rem;
-}
-
-.header_top .header_util .inside_body {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.header_top .header_util .inside_body li {
-    margin-left: 2rem;
-}
-
-.header_top .header_util .inside_body li:first-child {
-    margin-left: 0; 
-}
-
-
-/* header_body */
-#gnb .gnb_menu ul {
-    display: flex;
-    justify-content: center;
-}
-
-.gnb_list_item .gnb_link {
-  display: block;
-}
-
-.gnb_list_item .gnb_link span{
-    letter-spacing: -.1rem;
-    color: #222;
-    white-space: nowrap;
-}
-
-.gnb_menu .gnb_list_item {
-    padding: 1rem 3.5rem;
-    font-size: 2rem;
-}
-
-#header .logo {
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#header .logo > a {
-    display: block;
-    width: 25.2rem;
-    height: 5rem;
-    text-indent: -999rem;
-    background-image: url(../images/common/EBSe_teacher_logo.png);
-    background-size: 25.2rem 5rem;
-    background-repeat: no-repeat;
-}
-
-.depth2 {
-    display: none;
-}
 
 /* 교사지원센터 신청 */
-.intro_wrap {
-    background-color: #CFDEEE;
-    position: relative;
-    height: 37.6rem;
-}
+.intro_wrap { background-color: #CFDEEE; position: relative; height: 37.6rem; }
 
 .intro_wrap:before {
     background-color: #fff;
@@ -154,13 +34,6 @@
     z-index: 10;
 }
 
-.intro_wrap .intro_list .teacher_con .teacher_tit {
-    font-size: 3.6rem;
-    font-weight: bold;
-    letter-spacing: -0.09rem;
-    margin-bottom: 1.5rem;
-}
-
 .intro_wrap .intro_list .teacher_con .teacher_tit::after {
     background: url();
 }
@@ -171,8 +44,12 @@
     margin-bottom: 2.35rem;
 }
 
-.intro_wrap .intro_list .teacher_con .teacher_list_row {
-    display: flex;
+.intro_wrap .intro_list .teacher_con .teacher_txt,
+.intro_wrap .intro_list .group_con .group_txt  {
+    line-height: 1.45;
+    letter-spacing: -0.025rem;
+    margin-bottom: 1.7rem;
+    font-size: 1.8rem;
 }
 
 .intro_wrap .intro_list .teacher_con {
@@ -192,34 +69,77 @@
     z-index: 10;
 }
 
+.intro_wrap .intro_list .teacher_con .teacher_tit {
+    background: url(../images/icon/ico_arrow.png) 100% no-repeat;
+    background-size: 1.4rem 2.8rem;
+    padding-right: 32px;
+    width: 100%;
+    color: #fff;
+}
+
 .intro_wrap .intro_list .teacher_con .teacher_tit,
-.intro_wrap .intro_list .group_con .group_tit  {
+.intro_wrap .intro_list .group_con .group_tit {
+    position: relative;
     font-size: 3.6rem;
     font-weight: bold;
     letter-spacing: -0.09rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.45;
+}
+
+.intro_wrap .intro_list .teacher_con .teacher_tit::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/icon/ico_arrow_m.png) no-repeat;
 }
 
 .intro_wrap .intro_list .teacher_con .teacher_tit::after {
     background: url();
 }
 
-.intro_wrap .intro_list .teacher_con .teacher_txt,
-.intro_wrap .intro_list .group_con .group_txt  {
-    line-height: 1.25;
-    letter-spacing: -0.025rem;
-    margin-bottom: 1.7rem;
-    font-size: 1.8rem;
-}
-
 .intro_wrap .intro_list .teacher_con .teacher_list_row {
     display: flex;
+    justify-content: space-between;
 }
 
 .intro_wrap .intro_list .group_con .group_list_row {
     display: flex;
+    
 }
 
 .intro_wrap .intro_list .teacher_con {
     display: flex;
+}
+
+
+.teacher_con .teacher_list_item {
+    position: relative;
+}
+
+.teacher_con .teacher_list_item .teacher_num {
+    position: absolute;
+    top: .2rem;
+    left: .5rem;
+}
+
+.teacher_con .teacher_list_item .teacher_text {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    color: #434343;
+    text-align: center;
+    letter-spacing: -0.07rem;
+    line-height: 1.2;
+}
+
+.teacher_con .teacher_list_item:nth-of-type(2) .teacher_text {
+    bottom: 0.5rem;
+}
+
+.intro_wrap .intro_list .teacher_con h2 {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
