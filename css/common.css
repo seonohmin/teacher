@@ -4,20 +4,19 @@
  * ======================================================================== */
 * {margin:0; padding:0; -webkit-box-sizing:border-box; box-sizing:border-box;-webkit-print-color-adjust:exact;}
 html {margin:0; padding:0; font-size:62.5%; }
-@media screen and (max-width:1023px) { html {font-size:10px} }
+/* @media screen and (max-width:1023px) { html {font-size:10px} }
 @media screen and (max-width:719px) { html {font-size:6px} }
 @media screen and (max-width:370px) { html {font-size:5.5px} }
-@media screen and (max-width:359px) { html {font-size:5px} }
+@media screen and (max-width:359px) { html {font-size:5px} } */
 @media screen and (max-device-height:420px) and (orientation: landscape) { html {font-size:6px} } /* 모바일 가로모드 */
 body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table {color:#222; font: 400 1.4rem/100% "Noto Sans Korean", sans-serif; line-height:1.5rem; font-weight:400; word-wrap:break-word; word-break:keep-all; transition:all 0.3s ease; }
 label {vertical-align:middle; cursor:pointer;}
 address, em {font-style:normal}
 fieldset, img {border:0; vertical-align:middle}
 button {border:0; background-color:transparent; vertical-align:middle; cursor:pointer;}
-ul, ol, dl, dd, li {list-style:none}
 input, textarea, select {border:0; vertical-align:middle;}
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {display:block}
-a {text-decoration:none; color:#44465c;}
+a {text-decoration:none;}
 a:hover {text-decoration:none}
 table {width:100%; border-spacing:0; border-collapse:collapse;}
 iframe {margin:0; border:0; width:100%; height:100%}
@@ -50,10 +49,8 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
 #skip_navigation { position: relative; z-index: 1000;}
 #skip_navigation > button { background: #333; height: 3rem; left: 0; line-height: 1; position: absolute; text-align: center; top: -3rem; width: 10rem; }
 #skip_navigation > button > span { color: #fff; display: inline-block; font-size: 1rem; white-space: nowrap; }
-.common_inner { max-width: 98rem; margin: 0 auto; }
+
 .screen_out { position: absolute; width: 0; height: 0; line-height: 0; overflow: hidden; text-indent: -9999px; }
-.scroll-x { overflow-x: auto; overflow-y: hidden; white-space: nowrap;-webkit-overflow-scrolling: touch; -ms-overflow-style: none; scrollbar-width: none; }
-.scroll-x::-webkit-scrollbar { display: none; }
 .pc_break { display: block;} 
 .mo_break {display: none;}
 .dimmed { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; background-color: #111; opacity: .7; z-index: 1000 }
@@ -61,7 +58,7 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
 .clearfix { zoom: 1; }
 .clearfix:before, .clearfix::after { content: ''; display: block; clear: both; }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 980px) {
     .pc_break { display: none;} 
     .mo_break {display: block;}
 }
@@ -70,9 +67,10 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
  * header CSS
  * ======================================================================== */
 .logo { display: inline-block; font-size: 0; line-height: 0; text-indent: -9999px; vertical-align: top }
-#wrap { padding-top: 18.2rem; }
-#header { position: fixed; top: 0; left: 0; width: 100%; height: 18.2rem; margin: 0 auto; overflow: hidden; transition: top 0.3s ease-out; will-change: transform; z-index: 5000; background: #fff; color: #000; }
-#header .header_inner { position: relative; z-index: 1; border-bottom: 0.1rem solid #ddd; }
+/* #wrap { padding-top: 18.2rem; } */
+.common_inner { max-width: 98rem; margin: 0 auto; }
+#header { position: fixed; top: 0; left: 0; width: 100%; margin: 0 auto;  /*height: 18.2rem; overflow: hidden;*/ transition: top 0.3s ease-out; will-change: transform; z-index: 1000; background: #fff; color: #000; }
+#header .header_inner { position: relative; z-index: 1; border-bottom: 0.1rem solid #DFDFDF; }
 #header .header_inner .inner { display: flex; box-sizing: border-box; width: 100%;}
 
 /* header_top */
@@ -81,33 +79,100 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
 .header_top .header_util .inside_header { display: flex; flex-flow: row nowrap; margin-right: auto; }
 .header_top .header_util .inside_header li { margin-right: 2rem; }
 .header_top .header_util .inside_header li:last-child { margin-right: 0; }
-.header_top .header_util .inside_header li > a, .header_top .header_util .inside_body li > a { font-size: 1.3rem; }
+.header_top .header_util .inside_header li > a, .header_top .header_util .inside_body li > a { font-size: 1.3rem; color: #434343; font-weight: 500; }
 .header_top .header_util .inside_body { display: flex; flex-flow: row nowrap; }
 .header_top .header_util .inside_body li { margin-left: 2rem;}
 .header_top .header_util .inside_body li:first-child { margin-left: 0; }
 
 /* header_body */
-#gnb .gnb_menu ul { display: flex; justify-content: center;}
-.gnb_list_item .gnb_link { display: block;}
-.gnb_list_item .gnb_link span { letter-spacing: -.1rem; color: #222; white-space: nowrap; }
-.gnb_menu .gnb_list_item { padding: 1rem 3.5rem; font-size: 2rem;}
-#header .logo { padding: 2rem 0; display: flex; flex-direction: column; align-items: center; }
-#header .logo > a { display: block; width: 25.2rem; height: 5rem; margin: 0.6rem 0; text-indent: -999rem; background-image: url(../images/common/EBSe_teacher_logo.png); background-size: 25.2rem 5rem; background-repeat: no-repeat; }
-.depth2 { display: none; }
+#gnb .gnb_menu > ul{*zoom:1; display: flex;}
+#gnb .gnb_menu > ul:after{display:block;clear:both;content:''}
+#gnb .gnb_menu > ul > li{flex: 1 1 auto; position:relative; padding: .2rem;}
+#gnb .gnb_menu > ul > li > a{position:relative;z-index:1; display:block;text-align: center; letter-spacing: -.1rem; color: #222; white-space: nowrap; font-size: 2rem; line-height: 1.25; font-weight: 400;padding: 1rem 0;}
+#gnb .gnb_menu > ul > li > a:hover,#gnb .gnb_menu > ul > li > a:focus{color:#F57E25;}
+#gnb .gnb_menu .depth2{position: absolute;width: 100%;top:5rem;}
+#gnb .gnb_menu .depth2 ul{ display: flex; flex-direction: column; flex-wrap: nowrap;}
+#gnb .gnb_menu .depth2 ul li{ padding-left: 22%; padding-top: 1rem;}
+#gnb .gnb_menu .depth2 li a{ color: #222; font-size: 1.6rem; line-height: 1.25; font-weight: 400; white-space: nowrap; text-align: left;letter-spacing: -.04rem; } 
+#gnb .gnb_menu .depth2 li a > span {position: relative;z-index: 1;}
+#gnb .gnb_menu .depth2 li a:hover > span:after,#gnb .gnb_menu .depth2 li a:focus > span:after { content: ""; position: absolute; left: -0.1rem; bottom: .4rem; z-index: -1; width: 105%; height: .5rem; background-color: #ffdab2; }
 
+#header .gnb_menu{height: 4.5rem;overflow: hidden;transition: all 0.4s ease-out;}
+#header.hover .gnb_menu{height: 21rem;z-index: 999;transition: height 0.25s ease-out;} 
+#header .inner_wrap {position: relative; z-index: 1; width: 100%;}
+#header.hover .inner_wrap {width: 100%; background-color: #fff; box-shadow: 0px 0.5rem 0.6rem rgba(113, 113, 113, 0.16);}
+/* #header.hover .inner_wrap:before { content: ''; display: block; position: absolute; bottom: 16.2rem; left: 0; width: 100%; border-top: 1px solid #e6e6e6; opacity: 1; transition: opacity 0.4s ease-out;} */
+/* #header .gnb_menu:before { opacity: 0; } */
+
+#header .logo { padding: 2.7rem 0 3.2rem; display: flex; flex-direction: column; align-items: center; }
+#header .logo > a { display: block; width: 25.2rem; height: 5rem; text-indent: -999rem; background-image: url(../images/common/EBSe_teacher_logo.png); background-size: 25.2rem 5rem; background-repeat: no-repeat; }
+#header .head_top .toggle_btn {display: none;position: absolute; left: 2rem;  color: #231F20;}
+#header .head_top .toggle_btn span { display: block; width: 2.6rem; height: .4rem; background-color: #231F20; margin-bottom: .5rem; transition-duration: 0.5s; opacity: 0.72;}
+#header .head_top .toggle_btn span:last-child {margin-bottom: 0;}
+
+/* SITEMAP */
+.sitemap_dim { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.5; z-index: 1001; transition: all 0.4s ease-out;}
+article.sitemap {position: fixed;display: block;overflow-x: hidden;overflow-y: auto;top: 0;bottom: 0;left: -100%;right: 0;z-index: 100000;width: 85%;max-width: 45rem; margin-left: 0; background-color: #fff; -ms-overflow-style: none; transition: all 0.4s ease-out;}
+article.sitemap::-webkit-scrollbar { width: 0; display: none; }
+article.sitemap.close, article.sitemap.close .inner { left: -100%; }
+article.sitemap ul { display: block; overflow: hidden; width: 100%; padding: 2rem 2.5rem; }
+article.sitemap ul li { position: relative; display: block; overflow: hidden; width: 100%; }
+article.sitemap ul li:first-child { border: 0; }
+article.sitemap ul li:last-child .mm { border-bottom: 0; }
+article.sitemap ul li .mm { position: relative; width: 100%; height: 4rem; line-height: 4rem; text-align: left; color: #413d3e; font-size: 1.7rem; }
+article.sitemap ul li > span { position: absolute; float: right; top: .9rem; right: 0; width: 2rem; height: 2rem; text-indent: -999rem; }
+article.sitemap ul li > span:before { position: absolute; right: 0; top: 50%; margin-top: -.1rem; content: ""; overflow: hidden; width: 1.4rem; height: .1rem; background: #413d3e; }
+article.sitemap ul li > span:after { position: absolute; right: .6rem; top: 50%; margin-top: -.7rem; content: ""; overflow: hidden; width: .1rem; height: 1.4rem; background: #413d3e; }
+article.sitemap ul li.on > span:after { display: none !important; }
+article.sitemap ul li.on .mm { color: #ff8400; }
+article.sitemap ul li .mm + .mm { border-top: .1rem solid rgba(255, 255, 255, 0.5); }
+article.sitemap ul li .mm > a { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
+article.sitemap ul li .sm { display: none; overflow: hidden; width: 100%; padding-left: .2rem; padding-bottom: .5rem; background-color: rgba(256, 256, 256, 0.1); }
+article.sitemap ul li .sm .m { display: block; overflow: hidden; width: 100%; text-align: left; color: #413d3e; font-size: 1.4rem; line-height: 1.6rem; padding: .9rem 0; }
+article.sitemap ul li .sm .s { display: block; overflow: hidden; width: 100%; text-align: left; color: #413d3e; font-size: 1.2rem; line-height: 1.4rem; padding: .9rem 0; }
+article.sitemap .nav_top { padding: 3rem 2.5rem 1rem; text-align: right; background: url("../images/common/bg_m_menu.png") no-repeat 0 top; }
+article.sitemap .nav_top p.txt { margin-bottom: 1rem; color: #fff; line-height: 2rem; font-size: 1.5rem; font-weight: lighter; text-align: left; }
+article.sitemap .nav_top p.txt span { display: block; line-height: 3rem; font-size: 2.4rem; font-weight: 400; }
+article.sitemap .nav_top p.txt span i { font-size: 2.6rem; font-style: normal;}
+article.sitemap .nav_top .bt { height: 3rem; margin-left: 1rem; line-height: 3rem; color: #fff; font-size: 1.4rem; font-weight: lighter; }
+article.sitemap.open {left:0;transition: all 0.4s ease-out;}
+article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-out;}
+
+@media screen and (max-width: 980px) {
+    .scroll-x { overflow-x: auto; overflow-y: hidden; white-space: nowrap;-webkit-overflow-scrolling: touch; -ms-overflow-style: none; scrollbar-width: none; }
+    .scroll-x::-webkit-scrollbar { display: none; }
+    .header_top .header_util {padding: 1.75rem 0; font-size: 1.4rem;}
+    .header_top .header_util .inside_header { margin-left: auto; }
+    .header_top .header_util .inside_body {display: none;} 
+
+    #header .logo {padding: 0; height: 5.5rem; justify-content: center;}
+    #header .logo > a {width: 18.6rem; height: 3.6rem; background-size: contain;}
+    #header .head_top {display: flex;justify-content: center; align-items: center;border-bottom: 0.1rem solid #DFDFDF;}
+    #header .head_top .toggle_btn {display: block;}
+
+    #gnb .gnb_menu > ul > li {padding: 0;}
+    #gnb .gnb_menu > ul > li > a {font-size: 1.6rem;padding: 1.5rem 2rem;}
+    #gnb .gnb_menu .depth2 {display: none;}
+
+}
 
 /* ========================================================================
  * footer CSS
  * ======================================================================== */
+#footer {}
+#footer .footer_head {display: flex;flex-direction: column;}
+#footer .footer_head .info_center {display: flex;}
 
 
 
 
- 
 
 
 
- /* ========================================================================
+
+
+
+/* ========================================================================
  * sub CSS
  * ======================================================================== */
 
