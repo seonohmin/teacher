@@ -46,8 +46,37 @@ $(document).ready(function () {
 		}
 	});
 
+	/* SELECT */
+  var $select = $('#institution_select');
+  var $label = $('label[for="institution_select"]');
 
+  $select.change(function() {
+    var selectText = $select.children('option:selected').text();
+    $label.text(selectText);
   });
+
+  $select.change(function() {
+    var selectedValue = $select.val();
+    if(selectedValue != '') {
+      window.open(selectedValue, '_blank');
+    }
+  });
+
+  /* 맨위로 가기 */
+  $(window).scroll(function() {
+    const $btnTop = $('.btn_top');
+    if ($(this).scrollTop() > 500) {
+      $btnTop.addClass('show');
+    } else {
+      $btnTop.removeClass('show');
+    }
+  });
+  
+  $('.btn_top').click(function() {
+    $('html, body').animate({scrollTop: 0}, 680);
+  });
+
+});
 
 
 
