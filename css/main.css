@@ -21,13 +21,77 @@
 .intro_wrap .intro_list .teacher_con .teacher_list_row, .intro_wrap .intro_list .group_con .group_list_row { display: flex; justify-content: space-between; }
 
 .teacher_con .teacher_list_item,.group_con .group_list_item { position: relative; }
+
+.teacher_con .teacher_list_item {display: flex; align-items: flex-start; justify-content: center; background: url(../images/common/teacher_box_bg.svg) 100% 100% no-repeat; width: 9.6rem; height: 10rem;}
+.group_con .group_list_item {display: flex; align-items: flex-start; justify-content: center; background: url(../images/common/group_box_bg.svg) 100% 100% no-repeat; width: 12.8rem; height: 10rem; }
+.teacher_con .teacher_list_item img,.group_con .group_list_item img {width: 6rem; height: 6rem; margin-top: .5rem;}
 .teacher_con .teacher_list_item .teacher_num,.group_con .group_list_item .group_num { position: absolute; top: .2rem; left: .5rem; } 
 .teacher_con .teacher_list_item .teacher_text,.group_con .group_list_item .group_text { position: absolute; bottom: 1.5rem; left: 50%; width: 100%; transform: translate(-50%); color: #434343; text-align: center; letter-spacing: -0.07rem; line-height: 1.2; } 
 .teacher_con .teacher_list_item:nth-of-type(2) .teacher_text, .group_con .group_list_item:nth-of-type(2) .group_text { bottom: 0.5rem; } 
 
 
 /* 게시판 */
-.notice_wrap {margin-top: 7rem;}
+.notice_wrap {margin: 7rem 0 8rem;}
+.notice_wrap .board {display: flex;}
+.notice_wrap .teacher_data_sharing,.notice_wrap .T-Talk { display: flex; flex-direction: column; width: 50%; max-width: 47rem; }
+.notice_wrap .teacher_data_sharing {margin-right: 4rem;}
+.notice_wrap .head { align-items: flex-end; display: flex; justify-content: space-between; margin-bottom: 2rem; }
+.notice_wrap .head h2 {font-size: 3rem; font-weight: bold; letter-spacing: -.15rem; line-height: 1.35;}
+.head > a { font-size: 1.6rem; letter-spacing: -.08rem; font-weight: 500; line-height: 1.5; background: url(../images/icon/ico_more.svg) 100% no-repeat; background-size: 2rem 2rem; padding-right: 2.4rem; }
+
+.notice_wrap .teacher_data_sharing .notice_banner, .notice_wrap .T-Talk .notice_banner {display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; width: 100%; height: 9rem; border-radius: 1rem;}
+.notice_wrap .teacher_data_sharing .notice_banner { background-color: #F8F3E3; }
+.notice_wrap .T-Talk .notice_banner { background-color: #E6EFF8; }
+.notice_wrap .notice_banner .banner_title {font-size: 1.6rem; line-height: 1.5; letter-spacing: -.04rem;}
+.notice_wrap .notice_banner .banner_title .text_under {position: relative;z-index: 1;}
+.notice_wrap .teacher_data_sharing .text_under:after, .notice_wrap .T-Talk .text_under:after { content: ""; position: absolute; left: -0.05rem; bottom: .1rem; z-index: -1; width: 101%; height: .6rem;  }
+.notice_wrap .teacher_data_sharing .text_under:after { background-color: #FBDBAB; }
+.notice_wrap .T-Talk .text_under:after { background-color: #BDDBFC; }
+
+.notice_wrap .body {margin-top: 3.2rem;}
+.notice_wrap .body > ul {height: 13.6rem; -webkit-box-flex: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-pack: justify; -ms-flex-pack: justify; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; justify-content: space-between;}
+.notice_wrap .body > ul > li > a, .recent_visit .body > ul > li > a, .teacher_learning_data > ul > li > a  { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; justify-content: space-between;}
+.notice_wrap .body > ul > li > a .noti_tit, .recent_visit .body > ul > li > a .noti_tit {display: -webkit-box; display: -ms-flexbox; display: flex; }
+.notice_wrap .body > ul > li > a .data_category, .recent_visit .body > ul > li > a .data_category {font-size: 1.4rem; font-weight: 500; width: 5.2rem; margin-right: 2rem;}
+.notice_wrap .body > ul > li p, .recent_visit .body > ul > li p {font-size: 1.5rem; flex: 1; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;}
+.notice_wrap .body > ul > li .date, .recent_visit .body > ul > li .date {-webkit-box-flex: 0; color: #9C9C9C; -ms-flex: none; flex: none; font-size: 1.5rem; letter-spacing: -.038rem; padding-left: 4rem;}
+
+/* 교사 콘텐츠 등록, 최근 방문글 */
+.post_wrap {width: 100%; background-color: #F5F5F5; padding: 6rem 0;}
+.post_wrap .common_inner {display: flex;}
+.post_wrap .recent_visit .head {align-items: flex-end; display: flex; justify-content: space-between; margin-bottom: 3rem;}
+.post_wrap .recent_visit .body {display: flex; align-items: center; padding:2rem; background-color: #fff; border-radius: 1rem; width: 100%; height: 19.8rem;}
+.post_wrap .post_list { display: flex; flex-wrap: wrap; margin-top: 1rem; justify-content: space-between; }
+.recent_visit .body > ul {height: 15rem; -webkit-box-flex: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-pack: justify; -ms-flex-pack: justify; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; justify-content: space-between;}
+.post_wrap .post_list li { width: calc(50% - 0.5rem); height: 8rem; background-color: #fff; border-radius: 1rem; margin-top: 1rem; padding: 1.5rem 4rem; }
+.post_wrap .post_list li a {display: flex; justify-content: space-between; align-items: center; }
+.post_wrap .post_list li a span { font-size: 1.8rem; color: #434343; }
+.post_wrap .teacher_register {width: 100%; max-width: 100%;}
+.post_wrap .teacher_register img {width: 5rem; height: 5rem;}
+.post_wrap .teacher_register, .post_wrap .recent_visit { display: flex; flex-direction: column; justify-content: space-between; width: 50%; max-width: 47rem; }
+.post_wrap .teacher_register{ margin-right: 4rem; }
+.post_wrap .teacher_register .head h2, .post_wrap .recent_visit .head h2 { font-size: 3rem; font-weight: bold; letter-spacing: -.15rem; line-height: 1.35; }
+.post_wrap .teacher_register .head p { font-size: 1.6rem; letter-spacing: -.04rem; line-height: 1.25; margin-top: 1.6rem;}
+
+/* 교사 콘텐츠 등록 - 비로그인시 */
+.teacher_register { width: 100%; max-width: 100%; margin-right: 0; }
+.teacher_register .head { display: flex; }
+.teacher_register .head h2 { margin-right: 2rem; }
+.teacher_register .post_list { flex-wrap: nowrap; }
+.teacher_register .post_list li { margin-right: 2rem; }
+.teacher_register .post_list li:last-child {margin-right: 0;}
+
+/* EBSe 교수학습자료 */
+.teacher_learning_data {margin: 9rem 0;}
+.teacher_learning_data .head {align-items: flex-end; display: flex; justify-content: space-between; margin-bottom: 2rem; }
+.teacher_learning_data .head .teacher_tit {display: flex; align-items: center;}
+.teacher_learning_data .head .teacher_tit > p { max-width: 100%; width: 60.4rem; height: 4.6rem; padding: 1.1rem 0 1.1rem 2rem; line-height: 1.5; background-color: #F3F3F3; border-radius: 1rem; font-size: 1.6rem; letter-spacing: -.04rem; }
+.teacher_learning_data .head h2 { margin-right: 3rem; font-size: 3rem; font-weight: bold; letter-spacing: -.15rem; line-height: 1.35; white-space: nowrap; }
+
+
+
+/* EBSe VOD자료 */
+.vod_data {}
 
 @media screen and (max-width: 980px) {
   #contents .common_inner {padding: 0 2rem;}
