@@ -166,9 +166,7 @@ article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-ou
 
 @media screen and (max-width: 980px) {
     #wrap { padding-top: 15.5rem; }
-
-    .pc_break { display: none;} 
-    .mo_break {display: block;}
+    .t_break {display: block;}
     .t_hide {display: none !important;}
 
     .scroll-x { overflow-x: auto; overflow-y: hidden; white-space: nowrap;-webkit-overflow-scrolling: touch; -ms-overflow-style: none; scrollbar-width: none; }
@@ -198,6 +196,9 @@ article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-ou
 }
 
 @media screen and (max-width: 740px) { 
+    .pc_break { display: none;} 
+    .t_break { display: none;} 
+    .mo_break {display: block;}
     .m_hide {display: none !important;}
 
     #footer .cs_info .cs_tit, .pengtalk_info .cs_tit {font-size: 1.6rem;}
