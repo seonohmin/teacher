@@ -93,7 +93,7 @@ $(document).ready(function () {
     rows: 1,
     prevArrow: false,
     nextArrow: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
 			{
@@ -101,7 +101,8 @@ $(document).ready(function () {
 			  settings: {
 			  slidesPerRow: 3,
 			  rows: 1,
-				centerMode: false
+				centerMode: false,
+        autoplay: true,
 			  }
 			},
 			{
