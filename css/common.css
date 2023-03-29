@@ -156,10 +156,10 @@ article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-ou
 #footer .footer_foot .corp {font-size: 1.2rem; color: #808080; line-height: 1.5; margin-top: 2.5rem; }
 
 /* SELECT */
-.institution { position: relative; overflow: hidden; display: inline-block; width: 100%;max-width: 16.8rem; height: 3rem;}
-.institution label { position: relative; display: block; overflow: hidden; width: 100%;max-width: 16.8rem; height: 3rem; line-height: 2.8rem; text-align: left; color: #515e73; font-size: 1.2rem; border: .1rem solid #b0b0b0; background-color: #fff; padding: 0 1rem 0 1rem; }
-.institution label:before { content: ""; display: block; position: absolute; right: 1rem; top: 50%; margin-top: -.2rem;  overflow: hidden; width: 0; height: 0; border: .4rem solid transparent; border-top: .4rem solid #65748e; }
-.institution select { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; line-height: 3rem; color: #000; font-size: 1.2rem; padding: 0 1rem; opacity: 0; }
+#footer .institution { position: relative; overflow: hidden; display: inline-block; width: 100%;max-width: 16.8rem; height: 3rem;}
+#footer .institution label { position: relative; display: block; overflow: hidden; width: 100%;max-width: 16.8rem; height: 3rem; line-height: 2.8rem; text-align: left; color: #515e73; font-size: 1.2rem; border: .1rem solid #b0b0b0; background-color: #fff; padding: 0 1rem 0 1rem; }
+#footer .institution label:before { content: ""; display: block; position: absolute; right: 1rem; top: 50%; margin-top: -.2rem;  overflow: hidden; width: 0; height: 0; border: .4rem solid transparent; border-top: .4rem solid #65748e; }
+#footer .institution select { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; line-height: 3rem; color: #000; font-size: 1.2rem; padding: 0 1rem; opacity: 0; }
 
 #footer .btn_top { position: fixed;height: 4rem; width: 4rem; right: 2rem; bottom: 2rem; z-index: 500; background: rgba(0,0,0,0.3) url(../images/icon/ico_top.png) no-repeat center 50%; background-size: 3rem; border-radius: 50%; display: none; opacity: 0; transition: opacity 0.3s ease-in-out;}
 #footer .btn_top.show { display: block; opacity: 1; }
@@ -169,7 +169,7 @@ article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-ou
 
     .pc_break { display: none;} 
     .mo_break {display: block;}
-    .m_hide {display: none !important;}
+    .t_hide {display: none !important;}
 
     .scroll-x { overflow-x: auto; overflow-y: hidden; white-space: nowrap;-webkit-overflow-scrolling: touch; -ms-overflow-style: none; scrollbar-width: none; }
     .scroll-x::-webkit-scrollbar { display: none; }
@@ -186,16 +186,29 @@ article.sitemap.open + .sitemap_dim {display: block;transition: all 0.4s ease-ou
     #gnb .gnb_menu > ul > li > a {font-size: 1.6rem;padding: 1.5rem 2rem;}
     #gnb .gnb_menu .depth2 {display: none;}
 
+    #footer .footer_head .info_center {width: 100%;}
+    #footer .institution {display: none;}
+
+    #footer .footer_body {display: none;}
+    #footer .footer_head .info_center .cs_info {margin-right: 3rem;}
+    #footer .footer_foot > .common_inner {justify-content: center; height: 18rem;}
+    #footer .foot_info_box .footer_menu_list .footer_menu_item {margin-right: 0;}
+    #footer .foot_info_box .footer_menu_list .footer_menu_item:nth-child(4)::before {content: ''; display: inline-block; width: 1px; height: 10px; margin: 0 10px; background-color: #808080;}
+   
+}
+
+@media screen and (max-width: 740px) { 
+    .m_hide {display: none !important;}
+
     #footer .cs_info .cs_tit, .pengtalk_info .cs_tit {font-size: 1.6rem;}
     #footer .cs_info .cs_call, .pengtalk_info .cs_call{font-size: 2.8rem;}
     #footer .foot_info_box .footer_menu_list { margin: 2rem 0 2rem; }
-    #footer .foot_info_box .footer_menu_list .footer_menu_item {margin-right: 0;}
-    #footer .foot_info_box .footer_menu_list .footer_menu_item:nth-child(4)::before {content: ''; display: inline-block; width: 1px; height: 10px; margin: 0 10px; background-color: #808080;}
     #footer .footer_foot > .common_inner {justify-content: center;height: 6rem;}
     #footer .footer_head .info_center {width: 100%; height: 13rem;}
     #footer .teacher_contact {margin-right: 3rem;}
-}
 
+
+}
 /* ========================================================================
  * sub CSS
  * ======================================================================== */

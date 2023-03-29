@@ -5,13 +5,13 @@
 /* 교사지원센터 신청 */
 .intro_wrap { background-color: #CFDEEE; position: relative; height: 37.6rem; }
 .intro_wrap:before { background-color: #fff; bottom: 0; content: ""; height: 8rem; position: absolute; width: 100%; }
-.intro_wrap .intro_list { display: flex; width: 100%; }
-.intro_wrap .intro_list .teacher_con { display: flex; flex-direction: column; width: 47rem; max-width: 50%; height: 31.6rem; margin-right: 4rem; margin-top: 6rem; padding: 4rem; color: #fff; background: transparent linear-gradient(180deg, #FBA05A 0%, #E97721 100%) 0% 0% no-repeat; z-index: 10; }
+.intro_wrap .intro_list { display: flex; justify-content: space-between; width: 100%; }
+.intro_wrap .intro_list .teacher_con { display: flex; flex-direction: column; width: 47rem; max-width: calc(50% - 2rem); height: 31.6rem; margin-top: 6rem; padding: 4rem; color: #fff; background: transparent linear-gradient(180deg, #FBA05A 0%, #E97721 100%) 0% 0% no-repeat; z-index: 10; }
 .intro_wrap .intro_list .teacher_con .teacher_tit::after { background: url(); }
 .intro_wrap .intro_list .teacher_con .teacher_txt { line-height: 1.35; letter-spacing: -0.025rem; margin-bottom: 2.35rem; }
 .intro_wrap .intro_list .teacher_con .teacher_txt, .intro_wrap .intro_list .group_con .group_txt { line-height: 1.45; letter-spacing: -0.025rem; margin-bottom: 1.7rem; font-size: 1.8rem; }
-.intro_wrap .intro_list .group_con {display: flex; flex-direction: column; width: 47rem; max-width: 50%; height: 31.6rem; margin-top: 6rem; padding: 4rem; color: #fff; background: transparent linear-gradient(180deg, #7591C7 0%, #405680 100%) 0% 0% no-repeat; box-sizing: border-box; z-index: 10;}
-.intro_wrap .intro_list .teacher_con .teacher_tit,.intro_wrap .intro_list .group_con .group_tit {background: url(../images/icon/ico_arrow.png) 100% no-repeat; background-size: 1.4rem 2.8rem; padding-right: 32px; width: 100%; color: #fff;}
+.intro_wrap .intro_list .group_con {display: flex; flex-direction: column; width: 47rem; max-width: calc(50% - 2rem); height: 31.6rem; margin-top: 6rem; padding: 4rem; color: #fff; background: transparent linear-gradient(180deg, #7591C7 0%, #405680 100%) 0% 0% no-repeat; box-sizing: border-box; z-index: 10;}
+.intro_wrap .intro_list .teacher_con .teacher_tit,.intro_wrap .intro_list .group_con .group_tit {background: url(../images/icon/ico_arrow.png) 100% no-repeat; background-size: 1.4rem 2.8rem; padding-right: 3.2rem; width: 100%; color: #fff;}
 .intro_wrap .intro_list .teacher_con h2,.intro_wrap .intro_list .group_con h2 { display: flex; width: 100%; margin-bottom: 1.5rem; }
 .intro_wrap .intro_list .teacher_con .teacher_tit,
 .intro_wrap .intro_list .group_con .group_tit {position: relative; font-size: 3.6rem; font-weight: bold; letter-spacing: -0.09rem; line-height: 1.45;}
@@ -57,17 +57,16 @@
 
 
 
-
 /* 교사 콘텐츠 등록, 최근 방문글 */
 .post_wrap {width: 100%; background-color: #F5F5F5; padding: 6rem 0;}
 .post_wrap .common_inner {display: flex;}
 .post_wrap .recent_visit .head {align-items: flex-end; display: flex; justify-content: space-between; margin-bottom: 3rem;}
 .post_wrap .recent_visit .body {display: flex; align-items: center; padding:2rem; background-color: #fff; border-radius: 1rem; width: 100%; height: 19.8rem;}
-.post_wrap .post_list { display: flex; flex-wrap: wrap; margin-top: 1rem; justify-content: space-between; }
+.post_wrap .teacher_register .post_list { display: flex; flex-wrap: wrap; margin-top: 1rem; justify-content: space-between; }
 .recent_visit .body > ul {height: 15rem; -webkit-box-flex: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-pack: justify; -ms-flex-pack: justify; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; justify-content: space-between;}
-.post_wrap .post_list li { width: calc(50% - 0.5rem); height: 8rem; background-color: #fff; border-radius: 1rem; margin-top: 1rem; }
-.post_wrap .post_list li a {display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 4rem; }
-.post_wrap .post_list li a span { font-size: 1.8rem; color: #434343; }
+.post_wrap .teacher_register .post_list li { width: calc(50% - 0.5rem); height: 8rem; background-color: #fff; border-radius: 1rem; margin-top: 1rem; }
+.post_wrap .teacher_register .post_list li a {display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 4rem; }
+.post_wrap .teacher_register .post_list li a span { font-size: 1.8rem; color: #434343; }
 .post_wrap .teacher_register {width: 100%; max-width: 100%;}
 .post_wrap .teacher_register img {width: 5rem; height: 5rem;}
 .post_wrap .teacher_register, .post_wrap .recent_visit { display: flex; flex-direction: column; justify-content: space-between; width: 50%; max-width: 47rem; }
@@ -75,14 +74,16 @@
 .post_wrap .teacher_register .head h2, .post_wrap .recent_visit .head h2 { font-size: 3rem; font-weight: bold; letter-spacing: -.15rem; line-height: 1.35; }
 .post_wrap .teacher_register .head p { font-size: 1.6rem; letter-spacing: -.04rem; line-height: 1.25; margin-top: 1.6rem;}
 
- 
 /* 교사 콘텐츠 등록 - 비로그인시 */
-.post_wrap .teacher_register { width: 100%; max-width: 100%; margin-right: 0; }
+/* .post_wrap .teacher_register { width: 100%; max-width: 100%; margin-right: 0; }
 .post_wrap .teacher_register .head { display: flex; }
 .post_wrap .teacher_register .head h2 { margin-right: 2rem; }
 .post_wrap .teacher_register .post_list { flex-wrap: nowrap; }
 .post_wrap .teacher_register .post_list li { margin-right: 2rem; }
 .post_wrap .teacher_register .post_list li:last-child {margin-right: 0;}
+  */
+
+
 
 /* EBSe 교수학습자료 */
 .teacher_learning_data {padding: 9rem 0;}
@@ -130,4 +131,14 @@
 
 @media screen and (max-width: 980px) {
   #contents .common_inner { padding: 0 2rem;}
+
+  .intro_wrap .intro_list .teacher_con {max-width: calc(50% - 1rem); padding: 2.6rem 3rem 3rem;}
+  .intro_wrap .intro_list .teacher_con .teacher_tit, .intro_wrap .intro_list .group_con .group_tit {font-size: 3.4rem;}
+  .intro_wrap .intro_list .teacher_con .teacher_txt, .intro_wrap .intro_list .group_con .group_txt {font-size: 1.6rem; line-height: 1.35;}
+  .teacher_con .teacher_list_item .teacher_text, .group_con .group_list_item .group_text {font-size: 1.3rem;}
+
+}
+
+@media screen and (max-width: 740px) {
+ 
 }
