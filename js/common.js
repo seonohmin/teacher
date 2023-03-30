@@ -2,14 +2,10 @@
  * gnb hover
  * ======================================================================== */
 
-$(document).ready(function () {
+$(function () {
     var $header = $('#header');
-    var $body = $('body');
 
-    // 초기화 함수를 실행하여 현재 창 크기에 따라 이벤트를 설정합니다.
     initialize();
-    
-    // 창 크기가 변경될 때마다 초기화 함수를 실행합니다.
     $(window).on('resize', initialize);
     
     function initialize() {
@@ -76,60 +72,6 @@ $(document).ready(function () {
   $('.btn_top').click(function() {
     $('html, body').animate({scrollTop: 0}, 680);
   });
-
-
-
-
-  if($(".vod_card").length > 0){
-		$(".pager p").text("1/"+ $(".vod_card").length);
-	}else{
-		$(".pager p").text("0/0");	
-	}
-  $(".vod_list").slick({
-    touchMove: true,
-    infinite: false,
-    dots: false,
-    slidesPerRow: 4,
-    rows: 1,
-    prevArrow: false,
-    nextArrow: false,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    responsive: [
-			{
-			  breakpoint: 980,
-			  settings: {
-			  slidesPerRow: 3,
-			  rows: 1,
-				centerMode: false,
-        autoplay: true,
-			  }
-			},
-			{
-			 breakpoint: 740,
-			  settings: {
-				slidesPerRow: 1,
-				rows: 1,
-				dots: false,
-				centerMode: true,
-			  }
-			}
-		  ]
-  }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		$(".pager p").text((nextSlide+1)+ "/"+ slick.slideCount);	
-	});
-	$(".page_bar_per").animate({
-			"width": (( 1 / 4 ) * 100)+"%"
-		 },300);
-	$(".vod_list").on('afterChange',function(){
-	  var curIdx = $(".vod_list .slick-center").attr("data-slick-index");
-	  curIdx = parseInt(curIdx);
-		 $(".page_bar_per").animate({
-			"width": ( ((curIdx + 1) / 4 ) * 100)+"%"
-		 },300);
-	});
-
-  
 
 });
 
