@@ -23,6 +23,7 @@ $(function () {
                 rows: 1,
                 centerMode: false,
                 draggable: true,
+                autoplay: true,
                 autoplaySpeed: 3000,
             }
         },
@@ -34,7 +35,8 @@ $(function () {
                 dots: false,
                 centerMode: true,
                 draggable: true,
-                
+                autoplay: true,
+                autoplaySpeed: 3000,
             }
         }
     ]}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
