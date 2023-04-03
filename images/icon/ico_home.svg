@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="ico_home" transform="translate(-404 -190)">
+    <rect id="area36" width="40" height="40" transform="translate(404 190)" fill="#00edff" opacity="0"/>
+    <rect id="area24" width="24" height="24" transform="translate(412 198)" fill="#00edff" opacity="0"/>
+    <path id="ico_home-2" data-name="ico_home" d="M3892-40h-5v-6h-4v6h-5V-50l7-6,7,6v10Zm-9-7h4a1,1,0,0,1,1,1v5h3v-8.539l-6-5.144-6,5.144V-41h3v-5A1,1,0,0,1,3883-47Z" transform="translate(-3461 258)"/>
+  </g>
+</svg>

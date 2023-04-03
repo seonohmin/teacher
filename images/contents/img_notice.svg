@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="22" viewBox="0 0 54 22">
+  <g id="img_notice" transform="translate(-926 -409)">
+    <path id="shape_notice" d="M31.829,19.215H-12v-22H31.966v.022a2.418,2.418,0,0,1,1.745.806L41.262,6.28a2.934,2.934,0,0,1,0,3.9L33.711,18.41a2.415,2.415,0,0,1-1.786.807Z" transform="translate(937.998 411.783)" fill="#495a6e"/>
+    <text id="Notice" transform="translate(931 411)" fill="#fff" font-size="12" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700"><tspan x="0" y="14">Notice</tspan></text>
+  </g>
+</svg>
