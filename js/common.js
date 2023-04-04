@@ -159,7 +159,7 @@ $(function () {
           $('.path').removeClass('fix');
       }
 
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 140) {
         $('.tab_list').addClass('tab_fix');
     } else {
         $('.tab_list').removeClass('tab_fix');
