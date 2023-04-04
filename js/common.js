@@ -151,6 +151,22 @@ $(function () {
     initializeTabs();
   });
 
+  function toggleFixClass() {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 30) {
+          $('.path').addClass('fix');
+      } else {
+          $('.path').removeClass('fix');
+      }
+
+      if ($(this).scrollTop() > 100) {
+        $('.tab_list').addClass('tab_fix');
+    } else {
+        $('.tab_list').removeClass('tab_fix');
+    }
+    });
+  }
+
   $(function () {
     detectDevice();
     initGnb();
@@ -158,9 +174,10 @@ $(function () {
     initSitemap();
     initInstitutionSelect();
     initBackToTop();
-    initTab();
-    initResizeEvent();
-    handleResize();
+    toggleFixClass();
+    // initTab();
+    // initResizeEvent();
+    // handleResize();
 
   });
 });
