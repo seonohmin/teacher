@@ -1,4 +1,0 @@
-<svg id="ico_phone" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <rect id="area" width="30" height="30" fill="#fff" opacity="0"/>
-  <path id="Icon_material-phone-in-talk" data-name="Icon material-phone-in-talk" d="M21.5,17a11.36,11.36,0,0,1-3.57-.57,1.021,1.021,0,0,0-1.02.24l-2.2,2.2a15.045,15.045,0,0,1-6.59-6.59l2.2-2.21a.96.96,0,0,0,.25-1A11.36,11.36,0,0,1,10,5.5a1,1,0,0,0-1-1H5.5a1,1,0,0,0-1,1,17,17,0,0,0,17,17,1,1,0,0,0,1-1V18A1,1,0,0,0,21.5,17Zm-1-3.5h2a9,9,0,0,0-9-9v2A7,7,0,0,1,20.5,13.5Zm-4,0h2a5,5,0,0,0-5-5v2A3,3,0,0,1,16.5,13.5Z" transform="translate(1.5 1.5)"/>
-</svg>
