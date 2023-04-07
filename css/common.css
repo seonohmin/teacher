@@ -109,7 +109,7 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
 /* #header .gnb_menu:before { opacity: 0; } */
 
 #header .logo { padding: 2.6rem 0 2.6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-#header .logo > a { display: block; width: 25.2rem; height: 5rem; text-indent: -999rem; background-image: url(../images/common/EBSe_teacher_logo.svg); background-size: auto; background-position: 50%; background-repeat: no-repeat; }
+#header .logo > a { display: block; width: 25.2rem; height: 5rem; text-indent: -999rem; background-image: url(../images/common/EBSe_teacher_logo.svg); background-size: 100% 100%; background-repeat: no-repeat; }
 #header .head_top .toggle_btn { -webkit-transform: translateY(0.25rem); -ms-transform: translateY(0.25rem); transform: translateY(0.25rem); display: none;position: absolute; left: 2rem;  color: #231F20;}
 #header .head_top .toggle_btn span {display: block; width: 2.6rem; height: .4rem; background-color: #222; margin-bottom: .5rem; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s;}
 /* #header .head_top .toggle_btn span:last-child {margin-bottom: 0;} */
@@ -355,7 +355,7 @@ footer .btn_top.show { display: block; opacity: 1; }
 
     #top_banner .btn_close {padding: 2rem 3.5rem;}
     #header .logo {padding: 0; height: 5.5rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
-    #header .logo > a {width: 18.6rem; height: 3.6rem; background-size: contain;}
+    #header .logo > a {width: 18.4rem; height: 3.6rem;}
     #header .head_top {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center;border-bottom: 0.1rem solid #DFDFDF;}
     #header .head_top .toggle_btn {display: block;}
 
@@ -482,4 +482,10 @@ footer .btn_top.show { display: block; opacity: 1; }
     .group_write_container {margin: 6rem 0 10rem;}
 
     
+}
+
+
+@media screen and (max-width: 440px) { 
+
+
 }

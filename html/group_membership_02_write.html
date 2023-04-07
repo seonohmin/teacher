@@ -123,6 +123,7 @@
                 </div>
             </div>
 
+  
             <div class="group_write_visual">
                 <div class="common_inner">
                     <div class="visual_txt">
@@ -133,16 +134,176 @@
             </div>
 
             
-            <div class="group_write_container">
+            <div class="application_form_container">
                 <div class="common_inner">
 
-                    <p class="group_write_txt">한 학급당 학급의 선생님이 학생들을 일괄 신청이 가능하며,<span class="pc_break"></span> 학생들은 EBSe에서 부여한 ID 및 PW로 최초의 1회 로그인을 하면 정상적으로 EBSe 사이트 회원가입이 완료됩니다.</p>
+                    <p class="form_txt">한 학급당 학급의 선생님이 학생들을 일괄 신청이 가능하며,<span class="pc_break"></span> 학생들은 EBSe에서 부여한 ID 및 PW로 최초의 1회 로그인을 하면 정상적으로 EBSe 사이트 회원가입이 완료됩니다.</p>
                     
                     <div class="group_noti_wrap">
                         <img src="../images/contents/img_notice.svg" alt="notice">
                         <p>단, EBSe 단체가입 신청과 AI펭톡 회원 코드 발급은 다르며 <em>AI펭톡 회원코드 발급은 LCMS 사이트</em>에서 발급하실 수 있습니다.</p>
                     </div>
-                
+
+                    <div class="personal_info_wrap">
+                        <h3 class="personal_info_tit">개인정보 수집 및 이용 동의(필수)</h3>
+                        <ul>
+                            <li><p>수집목적 :</p><p> EBS English 사이트 단체가입</p></li>
+                            <li><p>수집항목 :</p><p>신청자ID, 신청자 성명, 이메일 주소, 휴대전화번호, 지역/학교명, 신청학년</p></li>
+                            <li><p>보유기간 :</p> 
+                                <div>
+                                    <p>- 단체가입 승인이 되지 않은 경우 : 신청일로부터 <span>3개월</span></p>
+                                    <p>- 단체가입 승인된 경우 : 승인시점부터 <span>1년</span></p>
+                                </div>
+                            </li>
+                            <li><p>수집한 개인 정보는 관련 법규 및 내부 규정에 의거 회원님의 동의 없이 수집한 목적 외로 사용되거나 제 3자에게 제공되지 않습니다.</p></li>
+                            <li><p>동의거부권 :</p><p>귀하께서는 본 안내에 따른 개인정보의 수집이용을 거부하실 권리가 있으나, 미동의시 EBSe 단체가입 서비스 이용에 제한을 받으실 수 있음을 알려드립니다.</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="agree_wrap">
+                        <p>상기 개인정보 수집 · 이용에 동의하십니까?</p>
+                        <div class="agree_box">
+                            <input type="radio" id="joinInfo1" name="joinInfoYn" value="Y"> 
+                            <label for="joinInfo1">예</label>
+                        </div>
+                        <div class="agree_box"> 
+                            <input type="radio" id="joinInfo2" name="joinInfoYn" value="N"> 
+                            <label for="joinInfo2">아니오</label>
+                        </div>
+                    </div>
+
+                    <div class="application_form_wrap">
+                        <h3 class="application_form_txt">단체가입 신청서 작성</h3>
+                        <ul class="form_input_box">
+                            <li>
+                                <div class="row">
+                                    <span class="th">신청자ID</span>
+                                    <span class="td">stark11</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">신청자명</span>
+                                    <span class="td">김샘플</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">이메일</span>
+                                    <span class="td">
+                                        <div class="mail">
+                                            <input type="text" name="prefixEml" id="prefixEml" class="input">
+                                            <input type="text" name="suffixEml" id="suffixEml" class="input">
+                                            <div class="select">
+                                                <label>직접입력</label>
+                                                <select name="slctEml" id="slctEml" class="select-area">
+                                                    <option value="">직접입력</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="daum.net">daum.net</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="hotmail.com">hotmail.com</option>
+                                                    <option value="yahoo.com">yahoo.com</option>
+                                                    <option value="msn.com">msn.com</option>
+                                                    <option value="icloud.com">icloud.com</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">휴대전화</span>
+                                    <span class="td">
+                                        <div class="tel">
+                                            <input type="text" name="cryTlno1" id="cryTlno1" class="input only-num" placeholder="010" maxlength="3">
+                                            <input type="text" name="cryTlno2" id="cryTlno2" class="input only-num" maxlength="4">
+                                            <input type="text" name="cryTlno3" id="cryTlno3" class="input only-num" maxlength="4">
+                                        </div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">지역/학교명</span>
+                                    <span class="td">
+                                        <div class="school">
+                                            <div class="select">
+                                                <label>시도</label>
+                                                <select name="cityDsCd" id="cityDsCd" class="select-area">
+                                                    <option value="">시도</option>
+                                                    <option value="A00">강원</option>
+                                                        <option value="B00">경기</option>
+                                                        <option value="C00">경남</option>
+                                                        <option value="D00">경북</option>
+                                                        <option value="E00">광주</option>
+                                                        <option value="F00">대구</option>
+                                                        <option value="G00">대전</option>
+                                                        <option value="H00">부산</option>
+                                                        <option value="J00">서울</option>
+                                                        <option value="K00">울산</option>
+                                                        <option value="L00">인천</option>
+                                                        <option value="M00">전남</option>
+                                                        <option value="N00">전북</option>
+                                                        <option value="P00">제주</option>
+                                                        <option value="Q00">충남</option>
+                                                        <option value="R00">충북</option>
+                                                        <option value="S00">세종</option>
+                                                        </select>
+                                            </div>
+                                            <div class="select">
+                                                <label>구군</label>
+                                                <select name="stateDsCd" id="stateDsCd" class="select-area">
+                                                    <option value="">구군</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <label>학교급</label>
+                                                <select name="schlDsCd" id="schlDsCd" class="span2 select-area">
+                                                    <option value="">학교급</option>
+                                                    <option value="1">초등학교</option>
+                                                    <option value="2">중학교</option>
+                                                    <option value="3">고등학교</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <label>학교명</label>
+                                                <select name="schlCdNm" id="schlCdNm" class="select-area">
+                                                    <option value="">학교명</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">신청학년</span>
+                                    <span class="td">
+                                        <div class="select">
+                                            <label>선택하세요</label>
+                                            <select name="gradeDsCd" id="gradeDsCd" class="select-area">
+                                                <option value="">선택하세요</option>
+                                            </select>
+                                        </div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <span class="th">신청인원</span>
+                                    <span class="td"><input type="text" name="sntnCnt" id="sntnCnt" class="input only-num" value="" maxlength="3"></span>
+                                </div>
+                            </li>
+                        </ul>       
+                        <div class="form_btn">
+                            <a href="#none" class="cancel">취소</a>
+                            <a href="#none" class="register">등록</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -150,7 +311,7 @@
 
         </div>
 
-        <footer id="#footer">
+        <footer id="footer">
             <section class="footer_head">
                 <div class="common_inner">
                     <div class="customer_wrap">
@@ -159,15 +320,15 @@
                                 <h2 class="tit">고객센터</h2>
                                 <p class="tel">1588-1580</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_MTOM" data-conts-group-nm="푸터_고객센터_1:1문의" data-weblog-url="/apps/cs/csMtoM.do">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_REMOTE" data-conts-group-nm="푸터_고객센터_원격지원_서비스" data-weblog-url="/apps/cs/csRemote.do" >원격지원</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">원격지원</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
                                 <p>월~금 8:00~18:00</p>
                                 <p>토요일 9:00~18:00</p>
                                 <p>점심시간 12~13시 / 일요일 휴무</p>
-                                <p><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_EMAIL" data-conts-group-nm="푸터_헬프데스트_이메일" data-weblog-url="mailto:helpdesk@ebs.co.kr" >helpdesk@ebs.co.kr</a></p>
+                                <p><a href="#none">helpdesk@ebs.co.kr</a></p>
                             </div>
                         </div>
                         <div class="customer_info">
@@ -175,8 +336,8 @@
                                 <h2 class="tit">AI펭톡 고객센터</h2>
                                 <p class="tel">1800-2319</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_MTOM" data-conts-group-nm="푸터_AI펭톡_고객센터_1:1문의" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/ticket/">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_FAQ" data-conts-group-nm="푸터_AI펭톡_고객센터_자주묻는질문" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/article/">자주묻는질문</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">자주묻는질문</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
@@ -189,14 +350,14 @@
                         <div class="footer_app">
                             <h2 class="tit">EBSe APP</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_APP" data-conts-group-nm="푸터_EBSE_APP" data-weblog-url="https://play.google.com/store/apps/details?id=kr.co.ebse.player" title="ebse"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_APP" data-conts-group-nm="푸터_AI펭톡_APP" data-weblog-url="https://play.google.com/store/apps/details?id=com.ebsenglish.talk" title="AI"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
                             </ul>
                         </div>
                         <div class="sns_app m_hide">
                             <h2 class="tit">YouTube</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_YOUTUBE" data-conts-group-nm="푸터_EBSe_유튜브" data-weblog-url="https://www.youtube.com/user/EBSLanguage" data-target="_blank" title="유튜브" ><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
                             </ul>
                         </div>
                     </div>
@@ -284,6 +445,7 @@
     
             <button type="button" class="btn_top"><span class="sr-only">맨위로 가기</span></button>
         </footer>
+
 
         <article class="sitemap">
             <div class="nav_top">

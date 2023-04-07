@@ -113,9 +113,10 @@
 .vod_data .body .vod_list .vod_card .card_txt .cate_tot {position: absolute; bottom: 1.6rem; left: 1.6rem; color: #434343; font-size: 1.4rem; letter-spacing: -.035rem; } 
 .vod_data .body .vod_list .vod_card .card_txt .cate {position: absolute; bottom: 1.6rem; right: 1.6rem; font-size: 1.2rem; letter-spacing: -0.03rem; line-height: 1.35; color: #9C9C9C;}
 .vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail {position: relative; margin-right: 0.5rem;}
-.vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail::after {content: ""; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); display: inline-block; width: 0.1rem; height: 0.6rem; margin-left: 0.35rem; background-color: #AAAAAA;}
+.vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail::after {content: ""; position: absolute; top: 50%; -webkit-transform: translateY(-43%); -ms-transform: translateY(-43%); transform: translateY(-43%); display: inline-block; width: 0.1rem; height: 0.6rem; margin-left: 0.35rem; background-color: #AAAAAA;}
 .vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail:first-child::after {height: 1rem;}
 .vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail:last-child::after {display: none;}
+.vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail:last-child {margin-right: 0;}
 #contents .vod_data .common_inner { max-width: 100rem; }
 #contents .vod_data .common_inner .head { max-width: 98rem; margin: 0 auto; }
 #contents .vod_data .common_inner .body { max-width: 100rem; }
@@ -172,7 +173,7 @@
 
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 780px) {
   .intro_wrap {height: 31rem;}
   .intro_wrap .intro_list .teacher_con {margin-top: 2rem;}
   .intro_wrap .intro_list .teacher_con .teacher_txt, .intro_wrap .intro_list .group_con .group_txt,
@@ -234,17 +235,20 @@
   .post_wrap .non_teacher_register .post_list li a span { margin-bottom: .5rem; font-size: 1.4rem; } 
   .post_wrap .non_teacher_register .head p { margin-bottom: 2rem; }
 
+
+}
+
+@media screen and (max-width: 511px) {
+  .post_wrap .teacher_register .post_list li a span {margin-bottom: .5rem;}
+  .post_wrap .teacher_register img { width: 4rem; height: 4rem; }
+
   .vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail {margin-right: 0.8rem;}
   .vod_data .body .vod_list .vod_card .card_txt .cate .cate_detail::after {margin-left: 0.55rem;}
-  .vod_data .body .vod_list .vod_card .card_txt .cate { font-size: 1.4rem; }
+  .vod_data .body .vod_list .vod_card .card_txt .cate { font-size: 1.4rem; bottom: 1.45rem;}
   .vod_data .body .vod_list .vod_card {padding: 0;}
   .vod_data .body .vod_list .slick-slide .vod_card {-webkit-box-shadow: 0px 1rem 1rem #E1D7B9;box-shadow: 0px 1rem 1rem #E1D7B9;}
   .vod_data .slick-slider { margin-left: -5rem; }
   .vod_data .slick-slide { margin: 0 1rem; padding: 0; }
   .vod_data .slick-list { overflow: visible; }
-}
 
-@media screen and (max-width: 400px) {
-  .post_wrap .teacher_register .post_list li a span {margin-bottom: .5rem;}
-  .post_wrap .teacher_register img { width: 4rem; height: 4rem; }
 }

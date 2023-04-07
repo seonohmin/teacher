@@ -28,7 +28,19 @@ $(function () {
             }
         },
         {
-            breakpoint: 740,
+            breakpoint: 780,
+            settings: {
+                slidesPerRow: 2,
+                rows: 1,
+                dots: false,
+                centerMode: false,
+                draggable: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            }
+        },
+        {
+            breakpoint: 512,
             settings: {
                 slidesPerRow: 1,
                 rows: 1,
