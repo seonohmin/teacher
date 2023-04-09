@@ -153,7 +153,7 @@ $(function () {
 
   function toggleFixClass() {
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 30) {
+      if ($(this).scrollTop() > 10) {
           $('.path').addClass('fix');
       } else {
           $('.path').removeClass('fix');
@@ -166,6 +166,29 @@ $(function () {
     }
     });
   }
+
+//이메일 선택
+$('#slctEml').change(function(){
+	if ($(this).val() != '') {
+		$('#suffixEml').val($(this).val());
+	} else {
+		$('#suffixEml').val('');
+	}
+});
+
+//label 변경
+$('.select-area').change(function(){
+  $(this).parent('.select').find('label').text($(this).val());
+});
+
+$('.lnb .bt.drop').click(function(){
+  $(this).parent().toggleClass('on').siblings().removeClass('on');
+  if ($(window).width() < 740){
+    $(this).parent().toggleClass('on');
+  }
+});
+
+
 
   $(function () {
     detectDevice();

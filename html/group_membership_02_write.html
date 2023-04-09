@@ -29,7 +29,7 @@
     <!-- //skip navigation -->
 
     <div id="wrap">  
-        <header id="header" class="">
+        <header id="header">
             <div class="header_inner" aria-hidden="false">
                 <!-- 띠배너 삽입될 공간 -->
                 <!-- <div id="top_banner">
@@ -112,7 +112,7 @@
                 </div>
             </div>
         </header>
-
+        <!-- 단체가입 신청 -->
         <div id="contents">
             <div class="path">
                 <div class="common_inner">
@@ -123,7 +123,6 @@
                 </div>
             </div>
 
-  
             <div class="group_write_visual">
                 <div class="common_inner">
                     <div class="visual_txt">
@@ -132,14 +131,13 @@
                     </div>
                 </div>
             </div>
-
             
             <div class="application_form_container">
                 <div class="common_inner">
 
                     <p class="form_txt">한 학급당 학급의 선생님이 학생들을 일괄 신청이 가능하며,<span class="pc_break"></span> 학생들은 EBSe에서 부여한 ID 및 PW로 최초의 1회 로그인을 하면 정상적으로 EBSe 사이트 회원가입이 완료됩니다.</p>
                     
-                    <div class="group_noti_wrap">
+                    <div class="group_noti_wrap"> 
                         <img src="../images/contents/img_notice.svg" alt="notice">
                         <p>단, EBSe 단체가입 신청과 AI펭톡 회원 코드 발급은 다르며 <em>AI펭톡 회원코드 발급은 LCMS 사이트</em>에서 발급하실 수 있습니다.</p>
                     </div>
@@ -147,28 +145,32 @@
                     <div class="personal_info_wrap">
                         <h3 class="personal_info_tit">개인정보 수집 및 이용 동의(필수)</h3>
                         <ul>
-                            <li><p>수집목적 :</p><p> EBS English 사이트 단체가입</p></li>
-                            <li><p>수집항목 :</p><p>신청자ID, 신청자 성명, 이메일 주소, 휴대전화번호, 지역/학교명, 신청학년</p></li>
-                            <li><p>보유기간 :</p> 
-                                <div>
-                                    <p>- 단체가입 승인이 되지 않은 경우 : 신청일로부터 <span>3개월</span></p>
-                                    <p>- 단체가입 승인된 경우 : 승인시점부터 <span>1년</span></p>
+                            <li><p class="info_tit">수집목적 :</p><p>EBS English 사이트 단체가입</p></li>
+                            <li><p class="info_tit">수집항목 :</p><p>신청자ID, 신청자 성명, 이메일 주소, 휴대전화번호, 지역/학교명, 신청학년</p></li>
+                            <li class="period_txt"><p class="info_tit">보유기간 :</p> 
+                                <div class="info_txt">
+                                    <p><span class="info_line"> - 단체가입 승인이 되지 않은 경우 :</span> <span class="info_line">신청일로부터 <span class="info_strong">3개월</span></span></p>
+                                    <p><span class="info_line"> - 단체가입 승인된 경우 :</span> <span class="info_line">승인시점부터 <span class="info_strong">1년</span></span></p>
                                 </div>
                             </li>
-                            <li><p>수집한 개인 정보는 관련 법규 및 내부 규정에 의거 회원님의 동의 없이 수집한 목적 외로 사용되거나 제 3자에게 제공되지 않습니다.</p></li>
-                            <li><p>동의거부권 :</p><p>귀하께서는 본 안내에 따른 개인정보의 수집이용을 거부하실 권리가 있으나, 미동의시 EBSe 단체가입 서비스 이용에 제한을 받으실 수 있음을 알려드립니다.</p></li>
+                            <li><p class="info_tit">수집한 개인 정보는 관련 법규 및 내부 규정에 의거 회원님의 동의 없이 수집한 목적 외로 사용되거나 제 3자에게 제공되지 않습니다.</p></li>
+                            <li class="refuse_txt"><p class="info_tit">동의거부권 :</p><p>귀하께서는 본 안내에 따른 개인정보의 수집이용을 거부하실 권리가 있으나, 미동의시 EBSe 단체가입 서비스 이용에 제한을 받으실 수 있음을 알려드립니다.</p></li>
                         </ul>
                     </div>
 
                     <div class="agree_wrap">
                         <p>상기 개인정보 수집 · 이용에 동의하십니까?</p>
                         <div class="agree_box">
-                            <input type="radio" id="joinInfo1" name="joinInfoYn" value="Y"> 
-                            <label for="joinInfo1">예</label>
+                            <label class="checkable_label">
+                                <input class="checkable_input" type="radio" id="joinInfo1" name="joinInfoYn" value="Y" >
+                                <span class="checkable_text">예</span>
+                            </label>
                         </div>
                         <div class="agree_box"> 
-                            <input type="radio" id="joinInfo2" name="joinInfoYn" value="N"> 
-                            <label for="joinInfo2">아니오</label>
+                            <label class="checkable_label">
+                                <input class="checkable_input" type="radio" id="joinInfo2" name="joinInfoYn" value="N" >
+                                <span class="checkable_text">아니오</span>
+                            </label>
                         </div>
                     </div>
 
@@ -192,8 +194,9 @@
                                     <span class="th">이메일</span>
                                     <span class="td">
                                         <div class="mail">
-                                            <input type="text" name="prefixEml" id="prefixEml" class="input">
-                                            <input type="text" name="suffixEml" id="suffixEml" class="input">
+                                            <input type="text" name="prefixEml" id="prefixEml" class="id_input">
+                                            <span>@</span>
+                                            <input type="text" name="suffixEml" id="suffixEml" class="mail_input">
                                             <div class="select">
                                                 <label>직접입력</label>
                                                 <select name="slctEml" id="slctEml" class="select-area">
@@ -219,7 +222,9 @@
                                     <span class="td">
                                         <div class="tel">
                                             <input type="text" name="cryTlno1" id="cryTlno1" class="input only-num" placeholder="010" maxlength="3">
+                                            <span>-</span>
                                             <input type="text" name="cryTlno2" id="cryTlno2" class="input only-num" maxlength="4">
+                                            <span>-</span>
                                             <input type="text" name="cryTlno3" id="cryTlno3" class="input only-num" maxlength="4">
                                         </div>
                                     </span>
@@ -303,14 +308,10 @@
                             <a href="#none" class="register">등록</a>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
         </div>
-
+        <!-- //단체가입 신청 -->
         <footer id="footer">
             <section class="footer_head">
                 <div class="common_inner">
@@ -445,7 +446,6 @@
     
             <button type="button" class="btn_top"><span class="sr-only">맨위로 가기</span></button>
         </footer>
-
 
         <article class="sitemap">
             <div class="nav_top">
