@@ -29,18 +29,8 @@
     <!-- //skip navigation -->
 
     <div id="wrap">  
-        <header id="header" class="">
+        <header id="header" >
             <div class="header_inner" aria-hidden="false">
-                <!-- 띠배너 삽입될 공간 -->
-                <!-- <div id="top_banner">
-                    <div class="common_inner">
-                        <a href="#">
-                            <span>2023년도 개편 교사지원센터 이용안내 가이드</span>
-                            <button type="button" class="btn_close"><span class="sr-only">닫기</span></button>
-                        </a>
-                    </div>
-                </div> -->
-                <!-- //띠배너 삽입될 공간 -->
                 <div class="common_inner">
                     <div class="header_top">
                         <div class="header_util">
@@ -112,148 +102,267 @@
                 </div>
             </div>
         </header>
-
+        <!-- T - Talk -->
         <div id="contents">
             <div class="path">
                 <div class="common_inner">
                     <a href="#none" class="icon home">메인</a>
-                    <nav class="lnb here">
-                        <h2>단체가입 신청</h2>
+                    <nav class="lnb here" aria-label="lnb">
+                        <h2>교사 공유실</h2>
+                    </nav>
+                    <nav class="lnb" aria-label="lnb detail">
+                        <h2>T - Talk</h2>
+                        <button type="button" class="bt drop">메뉴열고닫기</button>
+                        <ul>
+                            <li><a href="#" class="mm">자료공유</a></li>
+                            <li><a href="#" class="mm">T - Talk</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>
 
-            <div class="group_sub_visual">
+            <div class="ttalk_wrap">
                 <div class="common_inner">
-                    <div class="group_signup_content">
-                        <div class="group_signup_info">
-                            <div class="visual_txt">
-                                <h2 class="group_signup_tit">단체가입 신청</h2>
-                                <p class="group_signup_txt1">EBSe 서비스 이용을 위해 단체가입 신청이 가능합니다.</p>
-                                <p class="group_signup_txt2">한 학급당 학급의 선생님이 학생들을 일괄 신청이 가능하며, 학생들은 EBSe에서 부여한 ID 및 Password로 최초의 1회 로그인을 하면 정상적으로 EBSe사이트 회원가입이 완료됩니다.</p>
-                            </div>
-                            <div class="visual_noti">
-                                <img src="../images/contents/img_notice.svg" alt="notice">
-                                <p>EBSe 단체가입 신청과 AI펭톡 회원 코드 발급은 다르며 AI펭톡 회원코드 발급은 LCMS 사이트에서 발급하실 수 있습니다.</p>
-                            </div>
-                        </div>
-                        <div class="group_procedure">
-                            <h3>단체가입 신청절차</h3>
-                            <ul class="group_signup_list">
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">1</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">신청 및 대기</div>
-                                        <p class="group_text">EBSe ID로 교사인증한 교사가 해당 학교 학급의 반 학생들의 단체 가입 신청</p>
-                                    </div>
-                                </li>
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">2</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">처리진행</div>
-                                        <p class="group_text">신청절차에 따라 중복 또는 가입대상자 확인 후 신속히 가입처리</p>
-                                    </div>
-                                </li>
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">3</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">신청처리 완료</div>
-                                        <p class="group_text">단체 신청 내역 메일로 발송</p>
-                                    </div>
-                                </li>                              
-                            </ul>
-                        </div>
+                    <div class="visual_txt">
+                        <h2 class="page_title">T - Talk</h2>
+                        <p>선생님들의 자유게시판으로,<span class="mo_break"></span> 교직 생활 뿐만 아니라<span class="pc_break"></span>  다양한 주제로<span class="mo_break"></span>  자유롭게 소통하는 공간입니다.</p>
                     </div>
                 </div>
             </div>
 
-            <div id="prod2" class="tab-content">
-                <div class="tit-sbm">
-                    <p class="tit">스탠바이미 클럽</p>
-                    
-                    <div class="sbm-qna">
-                        <p>스탠바이미에 대한<br class="mo-only"> 공지사항을 확인해 주세요</p>
-                        
-                        
+            <div class="ttalk_search">
+                <div class="common_inner">
+                    <!-- T - Talk 검색 -->
+                    <div class="select">
+                        <label>전체</label>
+                        <select name="ttalk" id="ttalk" class="ttalk_select">
+                            <option value="">전체</option>
+                            <option value="">제목</option>
+                            <option value="">내용</option>
+                            <option value="">작성자</option>
+                        </select>
                     </div>
-                    
-                </div>
-                <div class="result-wrap">
-                    <div class="sorting-wrap">
-                        <div class="total">전체 <em id="count" class="count">2</em>건</div>
-                        <div class="sort-box">
-                            <div class="sort-select-wrap">
-                                <input type="hidden" name="orderType" id="orderType" value="NEW"/>
-                                
-                            </div>
-                        </div>
+                    <div class="search_con">
+                        <input type="text" class="input" name="search" placeholder="검색어를 입력해 주세요">
+                        <button class="search_btn"><span class="sr-only">검색</span></button>
                     </div>
-                    <div class="tb_row board-type">
-                        <table>
-                            <caption>공지사항 제목, 작성자, 등록일</caption>
-                            <colgroup>
-                                <col >
-                                <col style="width:148px">
-                                <col style="width:148px">
-                                                              
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일</th>
-                                                                   
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="#">
-                                            
-                                            <p>[공지] LG 스탠바이미 전용리모컨 사용 편의성 개선</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="/story/stanbyme-club/stanbyme-club-detail?clubMId=NT00000032&amp;orderType=NEW&amp;listPage=1">
-                                            
-                                            <p>[공지] LG스탠바이미 Apple TV 앱 및 Apple Music 앱 출시</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                
-                                
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                        
-                        
-                            <div class="pagination" data-page="1" data-visible-count="10" data-total-count="1"></div>
-                        
-                    
-                                                                                                                                                                                                                                                                                              
+                    <!-- //T - Talk 검색 -->
                 </div>
             </div>
 
+            <!-- T - Talk 게시판 -->
+            <div class="professor_table professor_learning_table">
+                <div id="table">
+                    <div class="common_inner">
+                        <div class="sorting_wrap">
+                            <div class="talk_sorting_wrap">
+                                <p class="sorting_tit">T - Talk</p>
+                                <div class="total">총 <em id="count" class="count">206건</em></div>
+                                <button class="operation_btn">게시판 운영방침</button>
+                            </div>
+                            <button class="register_btn">등록</button> 
+                            <!-- 관리자 페이지 등록 버튼 -->
+                        </div>
+                        <div class="result_wrap">
+                            <div class="tb_row board-type">
+                                <table>
+                                    <caption>번호, 제목, 작성자, 등록일, 조회수, 댓글수, 첨부</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>              
+                                        <col>
+                                        <col>                            
+                                        <col>                            
+                                        <col>                            
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">등록일</th>
+                                        <th scope="col">조회수</th>                      
+                                        <th scope="col">댓글수</th>                      
+                                        <th scope="col">첨부</th>                      
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="must_read">
+                                            <td class="tb_num"><span> 필독</span></td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>3학년 겨울방학 영어캠프 수업자료 3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트 수업자료 텍스트 텍스트 텍스트 수업자료 텍스트 텍스트 텍스트 </p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>01020</td>
+                                            <td>2320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">205</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>2022년 12월 EBSe 후반기 워크샵 발표자료</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10020</td>
+                                            <td>1320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">204</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>고교 - 어휘 - 생각하는영단어 - 97 - handicap – answers</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>102020</td>
+                                            <td>120</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">203</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트 텍스트</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>1020</td>
+                                            <td>13700</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">202</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>2022년 12월 EBSe 후반기 워크샵 발표자료</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10201020</td>
+                                            <td>12320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">201</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>고교 - 어휘 - 생각하는영단어 - 97 - handicap – answers</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10201020</td>
+                                            <td>13720</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_num">200</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트 텍스트</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10201020</td>
+                                            <td>13702320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>     
+                                        <tr>
+                                            <td class="tb_num">199</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>3학년 겨울방학 영어캠프 수업자료 텍스트 텍스트 텍스트 텍스트</p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10201020</td>
+                                            <td>13702320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="tb_num">198</td>
+                                            <td class="board-tit">
+                                                <a href="#">
+                                                    <p>3학년 겨울방학 영어캠프 수업자료 3학년 겨울방학 영어캠프 수업자료 3학년 겨울방학 </p>
+                                                </a>
+                                            </td>
+                                            <td>운영자</td>
+                                            <td>2023.01.31</td>
+                                            <td>10201020</td>
+                                            <td>12320</td>
+                                            <td class="tb_state clip"><a href="#none" class="btn_link download" download title="첨부파일"><span class="sr-only">첨부</span></a></td>
+                                        </tr>                                                                                                                     
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav class="pagination">
+                                <ul role="navigation">
+                                    <li><a href="#none;" class="page on">1</a></li>
+                                    <li><a href="#none;" class="page">2</a></li>
+                                    <li><a href="#none;" class="page">3</a></li>
+                                    <li><a href="#none;" class="page">4</a></li>
+                                    <li><a href="#none;" class="page">5</a></li>
+                                    <li><a href="#none;" class="page">6</a></li>
+                                </ul>
+                                <a href="#none;" class="next"></a>
+                                <a href="#none;" class="last"></a>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //T - Talk 게시판 -->
+          
         </div>
-
-        <footer id="#footer">
+        <!-- //T - Talk -->
+        <article class="popup bbs hide">
+            <div class="wrap">
+                <div class="inner">
+                    <!-- 2022-11-30 안내글 수정 -->
+                    <div class="box md">
+                        <div class="title">
+                            <button type="button" class="bt ico x">닫기</button>
+                            <h6>EBSe 게시판 운영방침</h6>
+                        </div>
+                        <div class="content">
+                            <p class="con">EBSe 게시판은 프로그램 관련 의견을 자유롭게 나누는 곳입니다.<br>게시판 방문이 유익하고 즐거운 경험이 될 수 있도록,<br>이용자 여러분의 배려와 협조를 부탁드립니다.<br>아울러, EBSe 게시판은 이용자님이 회원 가입시 동의하신 &lt;EBS 이용약관&gt;에 근거하여 운영되고 있음을 알려 드립니다.</p>
+                        </div>
+                        <div class="content">
+                            <div class="line_box">
+                                <h3 class="bold">EBS 이용약관 제20조 (이용자의 게시물)</h3>
+                                <p>공사는 이용자가 게시하거나 등록하는 서비스내의 내용물이 다음 각 호에 해당한다고 판단되는 경우에 사전통지 없이 삭제할 수 있으며, 공사에 의한 삭제 조치 이후에도 동일한 건으로 게시물 정책을 위반할 경우 게시판 이용을 제한할 수 있습니다.</p>
+                                <ul>
+                                    <li>1. 다른 회원 또는 제3자를 비방하거나 중상모략으로 명예를 손상시키는 내용인 경우</li>
+                                    <li>2. 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우</li>
+                                    <li>3. 범죄적 행위에 결부된다고 객관적으로 인정되는 내용일 경우</li>
+                                    <li>4. 공사의 저작권, 제3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+                                    <li>5. 공사에서 규정한 게시기간이나 용량을 초과한 경우</li>
+                                    <li>6. 영리를 목적으로 하는 광고일 경우</li>
+                                    <li>7. 공사에서 규정한 게시물 원칙에 어긋나거나, 게시판 성격에 부합되지 않는 경우</li>
+                                    <li>8. 기타 관계법령에 위배된다고 판단되는 경우</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //2022-11-30 안내글 수정 -->
+                </div>
+            </div>
+        </article>
+        <footer id="footer">
             <section class="footer_head">
                 <div class="common_inner">
                     <div class="customer_wrap">
@@ -262,15 +371,15 @@
                                 <h2 class="tit">고객센터</h2>
                                 <p class="tel">1588-1580</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_MTOM" data-conts-group-nm="푸터_고객센터_1:1문의" data-weblog-url="/apps/cs/csMtoM.do">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_REMOTE" data-conts-group-nm="푸터_고객센터_원격지원_서비스" data-weblog-url="/apps/cs/csRemote.do" >원격지원</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">원격지원</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
                                 <p>월~금 8:00~18:00</p>
                                 <p>토요일 9:00~18:00</p>
                                 <p>점심시간 12~13시 / 일요일 휴무</p>
-                                <p><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_EMAIL" data-conts-group-nm="푸터_헬프데스트_이메일" data-weblog-url="mailto:helpdesk@ebs.co.kr" >helpdesk@ebs.co.kr</a></p>
+                                <p><a href="#none">helpdesk@ebs.co.kr</a></p>
                             </div>
                         </div>
                         <div class="customer_info">
@@ -278,8 +387,8 @@
                                 <h2 class="tit">AI펭톡 고객센터</h2>
                                 <p class="tel">1800-2319</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_MTOM" data-conts-group-nm="푸터_AI펭톡_고객센터_1:1문의" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/ticket/">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_FAQ" data-conts-group-nm="푸터_AI펭톡_고객센터_자주묻는질문" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/article/">자주묻는질문</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">자주묻는질문</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
@@ -292,14 +401,14 @@
                         <div class="footer_app">
                             <h2 class="tit">EBSe APP</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_APP" data-conts-group-nm="푸터_EBSE_APP" data-weblog-url="https://play.google.com/store/apps/details?id=kr.co.ebse.player" title="ebse"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_APP" data-conts-group-nm="푸터_AI펭톡_APP" data-weblog-url="https://play.google.com/store/apps/details?id=com.ebsenglish.talk" title="AI"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
                             </ul>
                         </div>
                         <div class="sns_app m_hide">
                             <h2 class="tit">YouTube</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_YOUTUBE" data-conts-group-nm="푸터_EBSe_유튜브" data-weblog-url="https://www.youtube.com/user/EBSLanguage" data-target="_blank" title="유튜브" ><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
                             </ul>
                         </div>
                     </div>

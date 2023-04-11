@@ -29,18 +29,8 @@
     <!-- //skip navigation -->
 
     <div id="wrap">  
-        <header id="header" class="">
+        <header id="header" >
             <div class="header_inner" aria-hidden="false">
-                <!-- 띠배너 삽입될 공간 -->
-                <!-- <div id="top_banner">
-                    <div class="common_inner">
-                        <a href="#">
-                            <span>2023년도 개편 교사지원센터 이용안내 가이드</span>
-                            <button type="button" class="btn_close"><span class="sr-only">닫기</span></button>
-                        </a>
-                    </div>
-                </div> -->
-                <!-- //띠배너 삽입될 공간 -->
                 <div class="common_inner">
                     <div class="header_top">
                         <div class="header_util">
@@ -112,105 +102,194 @@
                 </div>
             </div>
         </header>
-
+        <!-- 자료공유 -->
         <div id="contents">
             <div class="path">
                 <div class="common_inner">
                     <a href="#none" class="icon home">메인</a>
-                    <nav class="lnb here">
-                        <h2>단체가입 신청</h2>
+                    <nav class="lnb here" aria-label="lnb">
+                        <h2>교사 공유실</h2>
+                    </nav>
+                    <nav class="lnb" aria-label="lnb detail">
+                        <h2>자료공유</h2>
+                        <button type="button" class="bt drop">메뉴열고닫기</button>
+                        <ul>
+                            <li class="on"><a href="#" class="mm">자료공유</a></li>
+                            <li><a href="#" class="mm">T - Talk</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>
-
-            <li class="con">
-                <textarea name="pstCntn" id="pstCntn" style="width: 100%; display: none;"></textarea><iframe frameborder="0" scrolling="no" style="width: 100%; height: 349px;" src="/js/smarteditor2/SmartEditor2Skin.html"></iframe>
-            </li>
-
-            <div id="prod2" class="tab-content">
-                <div class="tit-sbm">
-                    <p class="tit">스탠바이미 클럽</p>
-                    
-                    <div class="sbm-qna">
-                        <p>스탠바이미에 대한<br class="mo-only"> 공지사항을 확인해 주세요</p>
-                        
-                        
+    
+            <div class="data_comments_wrap">
+                <div class="common_inner">
+                    <div class="visual_txt">
+                        <h2 class="page_title">자료공유</h2>
+                        <p>교사가 직접 제작한<span class="mo_break"></span> 교육용 자료, 공유가 가능한 일반 교수자료,<span class="all_break"></span> 퀴즈, 기타 자료를 공유하실 수 있습니다.</p>
                     </div>
-                    
-                </div>
-                <div class="result-wrap">
-                    <div class="sorting-wrap">
-                        <div class="total">전체 <em id="count" class="count">2</em>건</div>
-                        <div class="sort-box">
-                            <div class="sort-select-wrap">
-                                <input type="hidden" name="orderType" id="orderType" value="NEW"/>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tb_row board-type">
-                        <table>
-                            <caption>공지사항 제목, 작성자, 등록일</caption>
-                            <colgroup>
-                                <col >
-                                <col style="width:148px">
-                                <col style="width:148px">
-                                                              
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일</th>
-                                                                   
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="#">
-                                            
-                                            <p>[공지] LG 스탠바이미 전용리모컨 사용 편의성 개선</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="/story/stanbyme-club/stanbyme-club-detail?clubMId=NT00000032&amp;orderType=NEW&amp;listPage=1">
-                                            
-                                            <p>[공지] LG스탠바이미 Apple TV 앱 및 Apple Music 앱 출시</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                
-                                
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                        
-                        
-                            <div class="pagination" data-page="1" data-visible-count="10" data-total-count="1"></div>
-                        
-                    
-                                                                                                                                                                                                                                                                                              
                 </div>
             </div>
+ 
+            <!-- 자료공유 등록 -->
+            <div class="board_write_content">
+                <div class="common_inner">
+                <div class="box_board_write">
 
+                    <div class="board_header">
+                        <strong class="header_tit">자료공유 등록</strong>
+                        <p class="header_txt">직접 작성하신 워크시트를 올려주세요. 본인이 작성하지 않은 자료는 반드시 출처를 기재해 주세요.</p>
+                    </div>
+                    <div class="board_body">
+                        <ul>
+                            <h3 class="required_tit">제목</h3>
+                            <li class="write_tit">
+                                <input type="text" id="formTitle" placeholder="제목 *">
+                                <div class="chk_box">
+                                    <input type="checkbox" name="formRquired" id="formRquired">
+                                    <label for="formRquired">필독</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3 class="required_tit">학습대상</h3>
+                            <li>
+                                <div class="chk_box_group">
+                                    <div class="chk_box_con">
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem1" id="optionItem1" >
+                                            <label for="optionItem1">초3</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem2" id="optionItem2" >
+                                            <label for="optionItem2">초3</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem3" id="optionItem3" >
+                                            <label for="optionItem3">초3</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem4" id="optionItem4" >
+                                            <label for="optionItem4">초3</label>
+                                        </div>
+                                    </div>
+                                    <div class="chk_box_con">
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem5" id="optionItem5" >
+                                            <label for="optionItem5">중1</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem6" id="optionItem6" >
+                                            <label for="optionItem6">중2</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem7" id="optionItem7" >
+                                            <label for="optionItem7">중3</label>
+                                        </div>
+                                    </div>
+                                    <div class="chk_box_con">
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem8" id="optionItem8" >
+                                            <label for="optionItem8">고1</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem9" id="optionItem9" >
+                                            <label for="optionItem9">고2</label>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" name="optionItem10" id="optionItem10" >
+                                            <label for="optionItem10">고3</label>
+                                        </div>
+                                    </div>                                                                     
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3>AI펭톡</h3>
+                            <li>
+                                <div class="chk_box">
+                                    <input type="checkbox" name="formChoice" id="formChoice">
+                                    <label for="formChoice">선택</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3 class="required_tit">유형</h3>
+                            <li>
+                                <div class="chk_box_group">                        
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_01" name="chk01">
+                                        <label for="chk_01">파닉스</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_02" name="chk02">
+                                        <label for="chk_02">어휘</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_03" name="chk03">
+                                        <label for="chk_03">문법</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_04" name="chk04">
+                                        <label for="chk_04">듣기</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_05" name="chk05">
+                                        <label for="chk_05">읽기</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_06" name="chk06">
+                                        <label for="chk_06">말하기</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_07" name="chk07">
+                                        <label for="chk_07">쓰기</label>
+                                    </div>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="chk_08" name="chk08">
+                                        <label for="chk_08">공통</label>
+                                    </div>                                                     
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3 class="required_tit">첨부파일</h3>
+                            <li>
+                                <div class="filebox">
+                                    <label for="file_attach1">파일선택</label>
+                                    <input type="file" id="file_attach1">
+                                </div>
+                                 <!-- <ul class="filelist">
+                                    <li>
+                                        <a href="2020학년도_학습자료.hwp">2020학년도_학습자료.hwp</a>
+                                        <button type="button" class="btn_remove"><span>삭제</span></button>
+                                    </li>
+                                    <li>
+                                        <a href="2020학년도_학습자료.hwp">2020학년도_학습자료.hwp</a>
+                                        <button type="button" class="btn_remove"><span>삭제</span></button>
+                                    </li>
+                                </ul>  -->
+                                <p class="file_desc">* 첨부 가능한 파일(최대 5개, 최대 OOOMB 미만) : hwp, doc, docx, xls, xlsx, ppt, pptx, pdf, txt, jpg, jpeg, png, gif, bmp, wmv, mp4, avi, mov, mp3, wma, wav, zip</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="editor_wrap">
+                        <p>에디터 영역</p>
+                    </div>
+
+                </div>
+                <!-- 수정, 삭제 버튼 추가 -->
+                <div class="board_btn_wrap">
+                    <button class="board_btn del_btn">삭제</button>
+                    <button class="board_btn register_btn">등록</button>
+                </div>
+                <!-- //수정, 삭제 버튼 추가 -->
+                </div>
+            </div>
+            <!-- //자료공유 등록 -->
+           
         </div>
-
-        <footer id="#footer">
+        <!-- //자료공유 -->
+        <footer id="footer">
             <section class="footer_head">
                 <div class="common_inner">
                     <div class="customer_wrap">
@@ -219,15 +298,15 @@
                                 <h2 class="tit">고객센터</h2>
                                 <p class="tel">1588-1580</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_MTOM" data-conts-group-nm="푸터_고객센터_1:1문의" data-weblog-url="/apps/cs/csMtoM.do">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_REMOTE" data-conts-group-nm="푸터_고객센터_원격지원_서비스" data-weblog-url="/apps/cs/csRemote.do" >원격지원</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">원격지원</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
                                 <p>월~금 8:00~18:00</p>
                                 <p>토요일 9:00~18:00</p>
                                 <p>점심시간 12~13시 / 일요일 휴무</p>
-                                <p><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_EMAIL" data-conts-group-nm="푸터_헬프데스트_이메일" data-weblog-url="mailto:helpdesk@ebs.co.kr" >helpdesk@ebs.co.kr</a></p>
+                                <p><a href="#none">helpdesk@ebs.co.kr</a></p>
                             </div>
                         </div>
                         <div class="customer_info">
@@ -235,8 +314,8 @@
                                 <h2 class="tit">AI펭톡 고객센터</h2>
                                 <p class="tel">1800-2319</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_MTOM" data-conts-group-nm="푸터_AI펭톡_고객센터_1:1문의" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/ticket/">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_FAQ" data-conts-group-nm="푸터_AI펭톡_고객센터_자주묻는질문" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/article/">자주묻는질문</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">자주묻는질문</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
@@ -249,14 +328,14 @@
                         <div class="footer_app">
                             <h2 class="tit">EBSe APP</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_APP" data-conts-group-nm="푸터_EBSE_APP" data-weblog-url="https://play.google.com/store/apps/details?id=kr.co.ebse.player" title="ebse"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_APP" data-conts-group-nm="푸터_AI펭톡_APP" data-weblog-url="https://play.google.com/store/apps/details?id=com.ebsenglish.talk" title="AI"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
                             </ul>
                         </div>
                         <div class="sns_app m_hide">
                             <h2 class="tit">YouTube</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_YOUTUBE" data-conts-group-nm="푸터_EBSe_유튜브" data-weblog-url="https://www.youtube.com/user/EBSLanguage" data-target="_blank" title="유튜브" ><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
                             </ul>
                         </div>
                     </div>

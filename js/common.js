@@ -188,6 +188,12 @@ $('.lnb .bt.drop').click(function(){
   }
 });
 
+$('.popup .bt.x').click(function(){
+  $('.popup.bbs').addClass('hide');
+});
+$('.operation_btn').click(function(){
+  $('.popup.bbs').removeClass('hide');
+});
 
 
   $(function () {

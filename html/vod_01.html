@@ -29,18 +29,8 @@
     <!-- //skip navigation -->
 
     <div id="wrap">  
-        <header id="header" class="">
+        <header id="header" >
             <div class="header_inner" aria-hidden="false">
-                <!-- 띠배너 삽입될 공간 -->
-                <!-- <div id="top_banner">
-                    <div class="common_inner">
-                        <a href="#">
-                            <span>2023년도 개편 교사지원센터 이용안내 가이드</span>
-                            <button type="button" class="btn_close"><span class="sr-only">닫기</span></button>
-                        </a>
-                    </div>
-                </div> -->
-                <!-- //띠배너 삽입될 공간 -->
                 <div class="common_inner">
                     <div class="header_top">
                         <div class="header_util">
@@ -112,148 +102,534 @@
                 </div>
             </div>
         </header>
-
+        <!-- 교수학습자료 -->
         <div id="contents">
             <div class="path">
                 <div class="common_inner">
                     <a href="#none" class="icon home">메인</a>
-                    <nav class="lnb here">
-                        <h2>단체가입 신청</h2>
+                    <nav class="lnb here" aria-label="lnb">
+                        <h2>EBSe 자료실</h2>
+                    </nav>
+                    <nav class="lnb" aria-label="lnb detail">
+                        <h2>VOD자료</h2>
+                        <button type="button" class="bt drop">메뉴열고닫기</button>
+                        <ul>
+                            <li><a href="#" class="mm">교수학습자료</a></li>
+                            <li><a href="#" class="mm">VOD자료</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>
-
-            <div class="group_sub_visual">
+            <!-- 필터 및 검색 -->
+            <div class="vod_data_wrap">
                 <div class="common_inner">
-                    <div class="group_signup_content">
-                        <div class="group_signup_info">
-                            <div class="visual_txt">
-                                <h2 class="group_signup_tit">단체가입 신청</h2>
-                                <p class="group_signup_txt1">EBSe 서비스 이용을 위해 단체가입 신청이 가능합니다.</p>
-                                <p class="group_signup_txt2">한 학급당 학급의 선생님이 학생들을 일괄 신청이 가능하며, 학생들은 EBSe에서 부여한 ID 및 Password로 최초의 1회 로그인을 하면 정상적으로 EBSe사이트 회원가입이 완료됩니다.</p>
-                            </div>
-                            <div class="visual_noti">
-                                <img src="../images/contents/img_notice.svg" alt="notice">
-                                <p>EBSe 단체가입 신청과 AI펭톡 회원 코드 발급은 다르며 AI펭톡 회원코드 발급은 LCMS 사이트에서 발급하실 수 있습니다.</p>
-                            </div>
-                        </div>
-                        <div class="group_procedure">
-                            <h3>단체가입 신청절차</h3>
-                            <ul class="group_signup_list">
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">1</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">신청 및 대기</div>
-                                        <p class="group_text">EBSe ID로 교사인증한 교사가 해당 학교 학급의 반 학생들의 단체 가입 신청</p>
-                                    </div>
-                                </li>
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">2</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">처리진행</div>
-                                        <p class="group_text">신청절차에 따라 중복 또는 가입대상자 확인 후 신속히 가입처리</p>
-                                    </div>
-                                </li>
-                                <li class="group_signup_item">
-                                    <span class="group_signup_num">3</span>
-                                    <img class="group_signup_img" src="../images/common/group_01.png" alt="신청 및 대기">
-                                    <div class="item_txt">
-                                        <div class="group_text">신청처리 완료</div>
-                                        <p class="group_text">단체 신청 내역 메일로 발송</p>
-                                    </div>
-                                </li>                              
-                            </ul>
+                    <div class="visual_txt">
+                        <h2 class="page_title">VOD자료</h2>
+                        <p>EBSe방송의 VOD자료를 이용하실 수 있습니다.</p>
+                    </div>
+                    <div class="professor_learning_filter">
+                        <ul>
+                            <h3>전체 선택</h3>
+                            <li><span class="filter_all">전체</span></li>
+                        </ul>
+                        <ul>
+                            <h3>초등학교</h3>
+                            <li><span class="filter_grade">초등 전체</span></li>
+                            <li><span class="filter_grade">초3</span></li>
+                            <li><span class="filter_grade on">초4</span></li>
+                            <li><span class="filter_grade">초5</span></li>
+                            <li><span class="filter_grade">초6</span></li>
+                        </ul>
+                        <ul>
+                            <h3>중학교</h3>
+                            <li><span class="filter_middle">중학 전체</span></li>
+                            <li><span class="filter_middle on">중1</span></li>
+                            <li><span class="filter_middle">중2</span></li>
+                            <li><span class="filter_middle">중3</span></li>
+                        </ul>
+                        <ul>
+                            <h3>고등학교</h3>
+                            <li><span class="filter_high">고교 전체</span></li>
+                            <li><span class="filter_high">고1</span></li>
+                            <li><span class="filter_high on">고2</span></li>
+                            <li><span class="filter_high on">고3</span></li>
+                        </ul>
+                        <ul>
+                            <h3>유형</h3>
+                            <li><span class="filter_type on">파닉스</span></li>
+                            <li><span class="filter_type on">어휘</span></li>
+                            <li><span class="filter_type">문법</span></li>
+                            <li><span class="filter_type">듣기</span></li>
+                            <li><span class="filter_type">읽기</span></li>
+                            <li><span class="filter_type">말하기</span></li>
+                            <li><span class="filter_type">쓰기</span></li>
+                            <li><span class="filter_type">공통</span></li>
+                        </ul>
+                    </div>
+                    <div class="professor_learning_search">
+                        <span class="search_tit">검색</span>
+                        <div class="search_con">
+                            <input type="text" class="input" name="search" placeholder="자료명을 입력해 주세요">
+                            <button class="search_btn"><span class="sr-only">검색</span></button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- //필터 및 검색 -->
+            <!-- VOD 썸네일 리스트 -->
+            <div class="vod_list_wrap">
+                <div class="common_inner">
 
-            <div id="prod2" class="tab-content">
-                <div class="tit-sbm">
-                    <p class="tit">스탠바이미 클럽</p>
-                    
-                    <div class="sbm-qna">
-                        <p>스탠바이미에 대한<br class="mo-only"> 공지사항을 확인해 주세요</p>
-                        
-                        
-                    </div>
-                    
-                </div>
-                <div class="result-wrap">
-                    <div class="sorting-wrap">
-                        <div class="total">전체 <em id="count" class="count">2</em>건</div>
-                        <div class="sort-box">
-                            <div class="sort-select-wrap">
-                                <input type="hidden" name="orderType" id="orderType" value="NEW"/>
-                                
+                    <div class="filter_box">
+                        <div class="sorting_wrap">
+                            <p class="sorting_tit">VOD자료</p>
+                            <div class="total">총 <em id="count" class="count">206건</em></div>
+                        </div>
+                        <div class="filter">
+                            <div class="order">
+                                <div class="on"><button type="button" class="bt">최신순</button></div>
+                                <div><button type="button" class="bt">인기순</button></div>
                             </div>
                         </div>
                     </div>
-                    <div class="tb_row board-type">
-                        <table>
-                            <caption>공지사항 제목, 작성자, 등록일</caption>
-                            <colgroup>
-                                <col >
-                                <col style="width:148px">
-                                <col style="width:148px">
-                                                              
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일</th>
-                                                                   
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="#">
-                                            
-                                            <p>[공지] LG 스탠바이미 전용리모컨 사용 편의성 개선</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                <tr>
-                                    <td class="board-tit">
-                                        <a href="/story/stanbyme-club/stanbyme-club-detail?clubMId=NT00000032&amp;orderType=NEW&amp;listPage=1">
-                                            
-                                            <p>[공지] LG스탠바이미 Apple TV 앱 및 Apple Music 앱 출시</p>
-                                            
-                                        </a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2022.06.16</td>
-                                    
-                                </tr>
-                                
-                                
-                                
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                        
-                        
-                            <div class="pagination" data-page="1" data-visible-count="10" data-total-count="1"></div>
-                        
-                    
-                                                                                                                                                                                                                                                                                              
+
+                    <ul class="list four">
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_01.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_02.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_03.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_04.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_01.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">Let’s sing Together</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_02.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_03.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_04.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_03.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_01.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_02.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_04.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_01.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">Let’s sing Together</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_02.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_03.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_04.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_03.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_01.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_02.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vod_card">
+                                <a href="#">
+                                    <div class="card_img">
+                                        <img src="../images/contents/vod_img_04.jpg" alt="">
+                                    </div>
+                                    <div class="card_txt">
+                                        <p class="tit">액티비티 잉글리시 - Let’s sing Together 텍스트 텍스트 텍스트 텍스트</p>
+                                        <div class="cate_wrap">
+                                            <p class="cate_tot">총17679편</p>
+                                            <div class="cate">
+                                                <span class="cate_detail">말하기</span>
+                                                <span class="cate_detail">초등</span>
+                                                <span class="cate_detail">중학</span>
+                                                <span class="cate_detail">고교</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>                   
+                        <!-- <li class="no_data"><p>검색된 게시글이 없습니다.</p></li> -->
+                    </ul>
                 </div>
+                <nav class="pagination">
+                    <a href="#none;" class="before"></a>
+                    <a href="#none;" class="first"></a>
+                    <ul role="navigation">
+                        <li><a href="#none;" class="page on">1</a></li>
+                        <li><a href="#none;" class="page">2</a></li>
+                        <li><a href="#none;" class="page">3</a></li>
+                        <li><a href="#none;" class="page">4</a></li>
+                        <li><a href="#none;" class="page">5</a></li>
+                        <li><a href="#none;" class="page">6</a></li>
+                    </ul>
+                    <a href="#none;" class="next"></a>
+                    <a href="#none;" class="last"></a>
+                </nav>
             </div>
+            <!-- //VOD 썸네일 리스트 -->
 
         </div>
-
-        <footer id="#footer">
+        <!-- //교수학습자료 -->
+        <footer id="footer">
             <section class="footer_head">
                 <div class="common_inner">
                     <div class="customer_wrap">
@@ -262,15 +638,15 @@
                                 <h2 class="tit">고객센터</h2>
                                 <p class="tel">1588-1580</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_MTOM" data-conts-group-nm="푸터_고객센터_1:1문의" data-weblog-url="/apps/cs/csMtoM.do">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_REMOTE" data-conts-group-nm="푸터_고객센터_원격지원_서비스" data-weblog-url="/apps/cs/csRemote.do" >원격지원</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">원격지원</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
                                 <p>월~금 8:00~18:00</p>
                                 <p>토요일 9:00~18:00</p>
                                 <p>점심시간 12~13시 / 일요일 휴무</p>
-                                <p><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_CS_EMAIL" data-conts-group-nm="푸터_헬프데스트_이메일" data-weblog-url="mailto:helpdesk@ebs.co.kr" >helpdesk@ebs.co.kr</a></p>
+                                <p><a href="#none">helpdesk@ebs.co.kr</a></p>
                             </div>
                         </div>
                         <div class="customer_info">
@@ -278,8 +654,8 @@
                                 <h2 class="tit">AI펭톡 고객센터</h2>
                                 <p class="tel">1800-2319</p>
                                 <div class="link m_hide">
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_MTOM" data-conts-group-nm="푸터_AI펭톡_고객센터_1:1문의" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/ticket/">1:1문의</a>
-                                    <a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_FAQ" data-conts-group-nm="푸터_AI펭톡_고객센터_자주묻는질문" data-weblog-url="https://pengha.oc.toast.com/penghi/hc/article/">자주묻는질문</a>
+                                    <a href="#none">1:1문의</a>
+                                    <a href="#none">자주묻는질문</a>
                                 </div>
                             </div>
                             <div class="info_txt t_hide">
@@ -292,14 +668,14 @@
                         <div class="footer_app">
                             <h2 class="tit">EBSe APP</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_APP" data-conts-group-nm="푸터_EBSE_APP" data-weblog-url="https://play.google.com/store/apps/details?id=kr.co.ebse.player" title="ebse"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_PENGTALK_APP" data-conts-group-nm="푸터_AI펭톡_APP" data-weblog-url="https://play.google.com/store/apps/details?id=com.ebsenglish.talk" title="AI"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_ebse.png" alt="ebse" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/app_pengtalk.png" alt="AI펭톡" /></a></li>
                             </ul>
                         </div>
                         <div class="sns_app m_hide">
                             <h2 class="tit">YouTube</h2>
                             <ul class="app_icon">
-                                <li><a href="javascript:void(0)" onclick="gfn_saveContentsViewHistAndMove(this)" data-conts-group-id="FOOTER_EBSE_YOUTUBE" data-conts-group-nm="푸터_EBSe_유튜브" data-weblog-url="https://www.youtube.com/user/EBSLanguage" data-target="_blank" title="유튜브" ><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
+                                <li><a href="#none"><img src="../images/common/footer/icon_youtube.png" alt="유투브" /></a></li>
                             </ul>
                         </div>
                     </div>
