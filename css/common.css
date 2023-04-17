@@ -111,9 +111,9 @@ figcaption, caption, legend, .blind, .skip {position:fixed; overflow:hidden; bor
 
 #header .logo { padding: 2.6rem 0 2.6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 #header .logo > a { display: block; width: 25.2rem; height: 5rem; text-indent: -999rem; background-image: url(../images/common/EBSe_teacher_logo.svg); background-size: 100% 100%; background-repeat: no-repeat; }
-#header .head_top .toggle_btn { -webkit-transform: translateY(0.25rem); -ms-transform: translateY(0.25rem); transform: translateY(0.25rem); display: none;position: absolute; left: 2rem;  color: #231F20;}
+#header .head_top .toggle_btn { -webkit-transform: translateY(-.05rem); -ms-transform: translateY(-.05rem); transform: translateY(-.05rem); display: none;position: absolute; left: 2rem;  color: #231F20;}
 #header .head_top .toggle_btn span {display: block; width: 2.6rem; height: .4rem; background-color: #222; margin-bottom: .5rem; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s;}
-/* #header .head_top .toggle_btn span:last-child {margin-bottom: 0;} */
+#header .head_top .toggle_btn span:last-child {margin-bottom: 0;}
 
 /* SITEMAP */
 .sitemap_dim { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.5; z-index: 1001; -webkit-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out;}
@@ -279,7 +279,6 @@ footer .btn_top.show { display: block; opacity: 1; }
 .grant_authority div[class^="authority_method_0"] .authority_btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; }
 .grant_authority div[class^="authority_method_0"] .authority_btn button { width: 24rem; height: 4rem; background-color: #878FA2; color: #fff; font-size: 1.8rem; padding: 0 2rem; margin: 3rem 2rem 5rem;}
 
-
 .use_support {margin-top: 7rem; margin-bottom: 7.4rem;}
 .use_support h2 { font-size: 3rem; letter-spacing: -.15rem; font-weight: 500; color: #222; line-height: 1.35; margin-bottom: 3rem; }
 .use_support div[class^="support_method_0"] p { font-size: 1.8rem; letter-spacing: -.09rem; color: #222; line-height: 1.35; }
@@ -324,8 +323,7 @@ footer .btn_top.show { display: block; opacity: 1; }
 .sorting_wrap .sorting_tit {font-size: 3rem; letter-spacing: -.15rem; line-height: 1.25; padding-right: 1.6rem; font-weight: 500;} 
 .sorting_wrap .total {font-size: 2.4rem; letter-spacing: -.12rem; line-height: 1.45; color: #8A8A8A; font-weight: 400;}
 .sorting_wrap .total .count {color: #4173CA;}
-
-.sorting_wrap .talk_sorting_wrap {display: flex; align-items: flex-end;}
+.sorting_wrap .talk_sorting_wrap {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end;}
 
 #table .result_wrap {padding: 3rem 0 0;}
 #table .pagination {margin-bottom: 10rem;}
@@ -337,6 +335,7 @@ footer .btn_top.show { display: block; opacity: 1; }
 .tb_row .tb_state.blue { color:#4173CA }
 
 .tb_row.board-type .board-tit p { font-weight: 500; text-align: left; font-size: 1.6rem; letter-spacing: -.038rem; line-height: 1.35;}
+.professor_table.mypage_table01 #table .tb_row table td:nth-of-type(3),.professor_table.mypage_table02 #table .tb_row table td:nth-of-type(3) { padding: 0 1rem; -o-text-overflow: ellipsis; text-overflow: ellipsis; max-width: 30rem; white-space: nowrap; overflow: hidden; text-align: left; }
 
 .pagination {margin: 6rem 0 0;display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
 .pagination > ul {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
@@ -394,11 +393,19 @@ footer .btn_top.show { display: block; opacity: 1; }
 .application_form_wrap .form_input_box li .row .td .mail {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
 .application_form_wrap .form_input_box li .row .td input {width: 15rem; background-color: #f3f3f3; color: #7E7E7E; letter-spacing: -.04rem; height: 4rem; font-size: 1.6rem;-webkit-box-shadow: 0 0 0 0 #f3f3f3 inset;}
 .application_form_wrap .input.only-num {text-align: center;}
+
+.application_form_wrap .select select { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0; }
+.application_form_wrap .tel_select {position: relative; width: 15rem;}
+.application_form_wrap .label_tel {position: relative; display: block; width: 100%; padding-left: 1rem; height: 4rem; line-height: 4rem; text-align: center; border: 0; color: #7E7E7E; font-size: 1.6rem; background-color: #f3f3f3; padding: 0 2.5rem 0 1rem;}
+.application_form_wrap .label_tel::before {position: absolute; right: 1rem; top: 50%; margin-top: -0.2rem; content: ""; display: block; overflow: hidden; width: 0; height: 0; border: 0.4rem solid transparent; border-top: 0.4rem solid #878FA2;}
+.application_form_wrap .select_tel {position: absolute;padding-left: 1rem; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0;}
+
 .application_form_wrap .form_input_box li .row .td .mail .id_input { width: 30%; max-width: 21.7rem; padding: 0 2.5rem 0 1rem;}
 .application_form_wrap .form_input_box li .row .td .mail .mail_input { width: calc(35% - .5rem); max-width: 24.8rem; margin-right: .5rem; padding: 0 2.5rem 0 1rem; }
 .application_form_wrap .form_input_box li .row .td .mail span {margin: 0 1.1rem; color: #7E7E7E; font-size: 1.4rem; letter-spacing: -.035rem;}
 .application_form_wrap .select { width: 30%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1;position: relative;}
-.application_form_wrap .select select {position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0;}
+.application_form_wrap .tel .select {position: relative; width: 15rem;-webkit-box-flex: 0; -ms-flex: none; flex: none;}
+.application_form_wrap .select select {position: absolute; padding-left: 1rem; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0;}
 .application_form_wrap .select label { position: relative; display: block; width: 100%; height: 4rem; line-height: 4rem; text-align: left;border: 0; color: #7E7E7E; font-size: 1.6rem; background-color: #f3f3f3; padding: 0 2.5rem 0 1rem;}
 .application_form_wrap .select label:before { position: absolute; right: 1rem; top: 50%; margin-top: -.2rem; content: ""; display: block; overflow: hidden; width: 0; height: 0; border: .4rem solid transparent; border-top: .4rem solid #878FA2; }
 .application_form_wrap .tel {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
@@ -413,9 +420,12 @@ footer .btn_top.show { display: block; opacity: 1; }
 .application_form_wrap .form_btn .cancel {  background-color: #3D4C6B; margin-right: .6rem; }
 .application_form_wrap .form_btn .register { background-color: #878FA2; color: #fff; }
 
+.tb_row.board-type.group_membership_table .board-tit p {text-align: center;}
+
+
 /* 교수학습자료 */
 .professor_learning_wrap,.vod_data_wrap {background: #E0EBCC; width: 100%; height: 57.6rem; overflow: hidden;}
-.professor_learning_wrap .visual_txt,.vod_data_wrap .visual_txt { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 19.2rem; background-image: url(../images/common/professor_learning.png); background-position: 100% 1rem; background-size: 20rem; background-repeat: no-repeat; }
+.professor_learning_wrap .visual_txt,.vod_data_wrap .visual_txt { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 19.2rem; background-image: url(../images/common/professor_learning.png); background-position: 100% 2rem; background-size: 20rem; background-repeat: no-repeat; }
 .professor_learning_wrap .visual_txt .page_title,.vod_data_wrap .visual_txt .page_title {font-size: 4rem; margin-top: 6rem; font-weight: bold; letter-spacing: -.2rem; line-height: 1.5; color: #222; }
 .professor_learning_wrap .visual_txt > p,.vod_data_wrap .visual_txt > p {font-size: 1.8rem; letter-spacing: -.09rem; margin: 1.6rem 0 3rem;line-height: 1.5;}
 .vod_data_wrap {background-color: #D9EBDF;}
@@ -505,7 +515,7 @@ tbody tr.no_data td {height: 22.3rem; padding-top: 9rem; font-size: 1.6rem; lett
 .board_btn.del_btn { width: 16rem; max-width: 100%; }
 .board_btn.register_btn { background-color: #3D4C6B; width: 16rem; margin-left: .6rem;}
 
-.board_clip_wrap {display: flex; flex-wrap: wrap;}
+.board_clip_wrap {display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 
 /* 댓글 */
 .professor_review_board {margin-bottom: 10rem;}
@@ -551,7 +561,7 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 .table_reply_userBoard li .reply_userBoardList .info_append .rublRe:hover { border: 1px solid #ff6600; background: #ff6600; color: #fff; }
 .table_reply_userBoard li .reply_userBoardList .info_append .rublDel:hover { border: 1px solid #9e9e9e; background: #9e9e9e; color: #fff; }
 .table_reply_userBoard li .reply_userBoardList .info_append .rublCon { display: inline-block; height: 2.2rem; line-height: 2rem; padding: 0 1rem 0 1rem; text-align: center; font-size: 1.2rem; font-weight: 300; color: #f2f2f2; border-radius: 5rem; border: .1rem solid #9e9e9e; background: #9e9e9e; vertical-align: middle; pointer-events: none; }
- .fun_review_board .page { padding: 2rem 0 2rem; }
+.fun_review_board .page { padding: 2rem 0 2rem; }
 .bind.ment .input { border: 0; padding-right: 11%; background-color: #efefef; }
 .bind.ment .input.textar_pd { width: 90%; height: 80px; padding: 0.5% 0 0.5% 1.5%; line-height: 1.4; }
 .bg.color3 {background-color: #ff780a; color: #fff; width: 10rem; display: block;} 
@@ -564,7 +574,7 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 .board_write_content .box_board_write .header_txt { font-size: 1.6rem; letter-spacing: -.08rem; margin-top: 1rem;}
 .board_write_content .board_body {border-top: 0.1rem solid #222;}
 .board_write_content .board_body > ul {display: -webkit-box;display: -ms-flexbox;display: flex; height: 6rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 0.1rem solid #E8E5E2;}
-.board_write_content .board_body > ul:nth-of-type(2) {height: 15rem;}
+.board_write_content .board_body > ul.learning_target_box {height: 15rem;}
 .board_write_content .board_body > ul h3 { width: 20%; max-width: 13rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; font-size: 1.6rem; letter-spacing: -.04rem; background-color: #FAFAFA; padding-left: 3rem; }
 .board_write_content .board_body > ul h3.required_tit:after {display: inline-block; margin: 0 0 0.6rem 0.6rem; content: "*"; width: 6px; height: 6px; color: #4173CA;}
 .board_write_content .board_body > ul:last-child h3 {max-height: 18.5rem;}
@@ -572,22 +582,22 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 .board_write_content .board_body > ul li.write_tit {-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
 .board_write_content li.write_tit .chk_box {margin-right: 3rem;}
 .board_write_content .board_body > ul li .chk_box_group {display: -webkit-box;display: -ms-flexbox;display: flex;}
-.board_write_content .board_body > ul:nth-of-type(2) li .chk_box_group {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
-.board_write_content .board_body > ul:nth-of-type(2) li .chk_box,.board_write_content .board_body > ul:nth-of-type(4) li .chk_box {margin-right: 3.3rem;}
-.board_write_content .board_body > ul:nth-of-type(2) li .chk_box_con { margin-bottom: 1.8rem;}
-.board_write_content .board_body > ul:nth-of-type(2) li .chk_box_con:last-child { margin-bottom: 0;}
+.board_write_content .board_body > ul.learning_target_box li .chk_box_group {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.board_write_content .board_body > ul.learning_target_box li .chk_box,.board_write_content .board_body > ul.learning_type_box li .chk_box {margin-right: 3.3rem;}
+.board_write_content .board_body > ul.learning_target_box li .chk_box_con { margin-bottom: 1.8rem;}
+.board_write_content .board_body > ul.learning_target_box li .chk_box_con:last-child { margin-bottom: 0;}
 .board_write_content .board_body > ul li .chk_box_con {display: -webkit-box;display: -ms-flexbox;display: flex;}
-.board_write_content .board_body > ul li .filelist {display: -webkit-box;display: -ms-flexbox;display: flex; flex-wrap: wrap;}
+.board_write_content .board_body > ul li .filelist {display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 .board_write_content .board_body > ul:last-child { height: auto; background-color: #FAFAFA;}
 .board_write_content .board_body > ul:last-child > li {background: #fff; padding-top: 2rem; padding-bottom: 2rem; display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}
-.board_write_content #formTitle { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;  width: calc(100% - 14rem); padding: 0 1rem; height: 3.8rem; border: 1px solid #ccc; line-height: 3.6rem; font-size: 1.4rem; color: #222;}
+.board_write_content #formTitle { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;  width: calc(100% - 14rem); padding: 0 1rem; height: 3.8rem; border: 1px solid #AAAAAA; line-height: 3.6rem; font-size: 1.4rem; color: #222;}
 .board_write_content .board_body .file_desc {font-size: 1.4rem; color: #4173CA; padding-right: 3rem;}
 
 .board_write_content .chk_box { position: relative; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
 .chk_box input[type="checkbox"] { position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; }
-.chk_box input[type="checkbox"] + label { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; line-height: 2.4rem; font-size: 1.6rem; color: #898989; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-.chk_box input[type="checkbox"] + label:before { display: block; width: 2.4rem; height: 2.4rem; margin-right: 0.5rem; content: ''; border: 1px solid #898989; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.chk_box input[type="checkbox"]:checked + label:before { border-color: #AAAAAA; background: #fff url(../images/icon/ico_check.png) no-repeat 50% 50% / 1.5rem auto; }
+.chk_box input[type="checkbox"] + label { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; line-height: 2.4rem; font-size: 1.6rem; color: #222; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.chk_box input[type="checkbox"] + label:before { display: block; width: 2rem; height: 2rem; margin-right: 0.5rem; content: ''; border: 1px solid #AAAAAA; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.chk_box input[type="checkbox"]:checked + label:before { border-color: #AAAAAA; background: #fff url(../images/icon/ico_check.png) no-repeat 50% 50% / 1.25rem auto; }
 .board_write_content .filebox {margin-bottom: 1.6rem;}
 .filebox label { display: inline-block; width: 8.6rem; height: 2.6rem; padding: 0.2rem 0; border-radius: .3rem; font-size: 1.3rem; font-weight: 500; letter-spacing: -.065rem; text-align: center; vertical-align: middle; background-color: #FAFAFA; border: .1rem solid #AAAAAA; cursor: pointer; }
 .filebox input[type="file"] { position: absolute; overflow: hidden; width: 0.1rem; height: 0.1rem; margin: -0.1rem; clip: rect(0,0,0,0); border: 0; }
@@ -599,8 +609,18 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 .filelist li > .btn_remove > span{display: block; text-indent: -9999px; }
 
 .board_write_content .board_btn.add_btn {background-color: #3D4C6B;}
-
+.board_write_content .data_modify_type {display: flex;}
+.board_write_content .data_modify_type li {position: relative; font-size: 1.6rem; letter-spacing: -0.08rem; margin-right: 3rem;}
+.board_write_content .data_modify_type li .checkable_label {display: inline-block; max-width: 100%; min-height: 2rem; vertical-align: baseline; padding-left: 2.4rem; margin-bottom: 0; padding-top: 0; padding-bottom: 0; cursor: pointer;}
+.board_write_content .data_modify_type li .checkable_input {position: absolute; margin: 0.3rem 0 0 -2.4rem; top: 0; width: 2rem; height: 2rem; border: 0.1rem solid #9C9C9C; border-radius: 50%; cursor: pointer;}
+.board_write_content .data_modify_type li .checkable_input:before { content: ''; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 2rem; height: 2rem; -webkit-transition: border-color .1s ease,background-color .1s ease; -o-transition: border-color .1s ease,background-color .1s ease; transition: border-color .1s ease,background-color .1s ease; }
+.board_write_content .data_modify_type li .checkable_input:checked:before { background-color: #4173CA; width: 1rem; height: 1rem; border-radius: 50%; }
+.board_write_content .data_modify_type li .checkable_input:checked::after { opacity: 1; }
+.board_write_content .data_modify_type li .checkable_input:after { background-color: #fff; width: 1.2rem; height: 1.2rem; opacity: 0; -webkit-transition: opacity .1s ease; -o-transition: opacity .1s ease; transition: opacity .1s ease; }
+.board_write_content .data_modify_type li .checkable_text {display: inline-block; padding-left: .5rem;} 
 .operation_btn{display: block; width: 100px; height: 2.2rem; line-height: 1.85; text-align: center; font-size: 1.2rem; font-weight: 400; color: #fff; background: #878FA2; border-radius: 2rem; margin-bottom: 0.6rem; margin-left: 1rem; }
+
+.reply_nodata_board p {padding: 1.9rem 0rem; border-bottom: 0.1rem solid #E8E5E2; height: 21.4rem; padding-top: 12rem; font-size: 1.6rem; text-align: center; letter-spacing: -.04rem; color: #9C9C9C; background-image: url(../images/icon/ico_no_comments.png); background-repeat: no-repeat; background-size: 6rem 5.4rem; background-position: 50% 30%;}
 
 
 /* VOD 썸네일 */
@@ -656,7 +676,7 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 .ttalk_search .common_inner {display: -webkit-box;display: -ms-flexbox;display: flex;}
 .ttalk_search .common_inner .select {width: 19rem; position: relative;} 
 .ttalk_search .select label { position: relative; display: block; width: 100%; height: 5rem; line-height: 5rem; text-align: left; border: .1rem solid #AAAAAA; color: #7E7E7E; font-size: 1.6rem; background-color: #fff; padding: 0 2.7rem 0 2rem; }
-.ttalk_search .select select { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0; }
+.ttalk_search .select select { position: absolute; padding-left: 2rem; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%; color: #222; opacity: 0; }
 .ttalk_search .select label:before { position: absolute; right: 2.7rem; top: 50%; margin-top: -0.2rem; content: ""; display: block; overflow: hidden; width: 0; height: 0; border: 0.5rem solid transparent; border-top: 0.5rem solid #878FA2;}
 .ttalk_search .search_con {position: relative; max-width: 100%; margin-left: 0.8rem;}
 .ttalk_search input { width: 44rem; max-width: 100%; height: 5rem; text-align: left; padding-left: 2rem; font-size: 1.6rem; color: #231f20; border: .1rem solid #AAAAAA; background: #fff;  }
@@ -667,7 +687,7 @@ textarea.textar_pd::placeholder { padding-top: 1.8rem; font-size: 1.5rem; }
 article.popup { position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: block; overflow-x: hidden; overflow-y: auto; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1000000; }
 article.popup .wrap { display: table; width: 100%; height: 100%; }
 article.popup .inner { display: table-cell; width: 100%; height: 100%; text-align: center; vertical-align: middle; padding: 10px; max-width: 98rem; margin: 0 auto; }
-article.popup .box { display: inline-block; overflow: hidden; text-align: left; word-break: keep-all; background-color: #fff; padding: 1rem 0 3rem 0; box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3); }
+article.popup .box { display: inline-block; overflow: hidden; text-align: left; word-break: keep-all; background-color: #fff; padding: 1rem 0 3rem 0; -webkit-box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3); box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3); }
 article.popup .box .title { position: relative; padding: 3rem 5rem; }
 article.popup.bbs .box .title h6 {color:#222; display: block; font-size: 2.5rem; line-height: 120%; letter-spacing: -.2rem;}
 article.popup.bbs .title + .content .con { color: #343434; line-height: 1.4; }
@@ -677,12 +697,11 @@ article.popup.bbs .content .line_box {border: .1rem solid #222; padding: 15px;}
 article.popup.bbs .content .line_box .bold {font-weight: 500; color: #222; line-height: 1.5; font-size: 1.4rem;letter-spacing: -.05rem;}
 article.popup.bbs .content .line_box p {margin: 1rem 0;}
 article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; bottom: auto; margin-top: -2rem; display: inline-block; width: 4rem; text-indent: -9999px;overflow: hidden; height: 4rem; line-height: 4rem; text-align: center; background: none; }
-.bt.ico.x:before { position: absolute; top: 50%; margin-top: -1rem; left: 50%; content: ""; display: block; overflow: hidden; width: 1px; height: 2rem; background-color: #000; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
-.bt.ico.x:after { position: absolute; top: 50%; margin-top: -1rem; left: 50%; content: ""; display: block; overflow: hidden; width: 1px; height: 2rem; background-color: #000; -webkit-transform: rotate(-135deg); -moz-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg); }
+.bt.ico.x:before { position: absolute; top: 50%; margin-top: -1rem; left: 50%; content: ""; display: block; overflow: hidden; width: 1px; height: 2rem; background-color: #000; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.bt.ico.x:after { position: absolute; top: 50%; margin-top: -1rem; left: 50%; content: ""; display: block; overflow: hidden; width: 1px; height: 2rem; background-color: #000; -webkit-transform: rotate(-135deg); -ms-transform: rotate(-135deg); transform: rotate(-135deg); }
 
 
 .must_read_badge { display: block; padding: .2rem .4rem; width: 4.2rem; height: 2rem; color: #fff; text-align: center; background-color: #878FA2;}
-
 .professor_table.mypage_table01 #table .pagination {margin-bottom: 0;}
 #header .user_name b {margin-left: .5rem; cursor: pointer;}
 #header .user_name img {margin-bottom: 0.2rem;}
@@ -731,10 +750,11 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .professor_learning_filter ul li > span {font-size: 1.4rem;padding: 0.4rem 1.5rem;}
 
     .chk_box input[type="checkbox"] + label {font-size: 1.4rem;}
-    .board_write_content .board_body > ul:nth-of-type(2) li .chk_box, .board_write_content .board_body > ul:nth-of-type(4) li .chk_box {margin-right: 1.2rem;}
+    .board_write_content .board_body > ul.learning_target_box li .chk_box, .board_write_content .board_body > ul.learning_type_box li .chk_box {margin-right: 1.2rem;}
     .board_write_content .board_body > ul h3 {width: 14%; max-width: 10rem;padding-left: 1rem; font-size: 1.4rem;}
     .board_write_content .board_body > ul > li {padding-left: 2rem;padding-right: 2rem;}
     .board_write_content li.write_tit .chk_box {margin-right: 0;}
+    .board_write_content .data_modify_type li .checkable_text {font-size: 1.4rem;}
 
     /* 3열 */
     .list.four li { width: 31%; }
@@ -766,6 +786,17 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .tab_panel { display: block; padding: 0 0; }
     .tab_list { display: none; }
     .path { display: none; }
+
+    .ttalk_wrap {height: 23rem;}
+    .ttalk_wrap .visual_txt {height: auto;background-position: 100% 1.7rem; background-size: 12rem; background-repeat: no-repeat;}
+
+    .data_comments_wrap {height: 23rem;}
+    .data_comments_wrap .visual_txt {height: auto;background-position: 100% 1.7rem; background-size: 12rem; background-repeat: no-repeat;}
+
+    .mypage_wrap {height: 20rem;}
+    .mypage_wrap .visual_txt {height: 15rem;background-position: 100% 1.7rem; background-size: 12rem; background-repeat: no-repeat;}
+
+
 
     .teacher_sub_visual,.teacher_sub_visual .visual_txt {height: 15rem;}
     .teacher_sub_visual .visual_txt .page_title {margin-top: 5.5rem;font-size: 3rem; letter-spacing: -.15rem}
@@ -800,7 +831,7 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .use_support div[class^="support_method_0"] .support_list {-ms-flex-wrap: wrap;flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
     .use_support div[class^="support_method_0"] .support_list li {width: calc(50% - 0.5rem); height: 15.5rem; margin-right: 0;  margin-bottom: 1rem;}
     .use_support div[class^="support_method_0"] .support_list li .support_link p { display: none; }
-    .use_support div[class^="support_method_0"] .support_list li .support_link img { margin-bottom: 0.8rem; }
+    .use_support div[class^="support_method_0"] .support_list li .support_link img { margin-bottom: 0.8rem; width: 5.6rem; height: 5.6rem;}
     .use_support div[class^="support_method_0"] .support_list li .support_link h3 {font-size: 1.6rem;}
     .use_support div[class^="support_method_0"] .support_list li .support_link h3::after {width: 0.6rem; height: 1.2rem; margin-left: .8rem; background-size: 0.6rem 1.2rem;}
 
@@ -826,8 +857,8 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .sorting_wrap .sorting_tit {font-size: 2.4rem; letter-spacing: -.12rem; padding-right: 1rem;}
     .sorting_wrap .total {font-size: 1.4rem; letter-spacing: -.07rem;}
 
-    .group_noti_wrap {height: 12.2rem; padding: 0 1.6rem;}
-    .group_noti_wrap { height: 12.2rem; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+    .group_noti_wrap {height: 12.2rem; padding: 0 1.6rem; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+    .result_wrap .group_noti_wrap {margin-top: 6rem;}
     .group_noti_wrap > img {margin: 0 0 .4rem 0;}
     .group_noti_wrap > p { margin-right: 0; }
 
@@ -864,9 +895,10 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .application_form_wrap .form_input_box li .row .td .mail .mail_input {width: calc(30% - 7.5rem);-webkit-box-flex: 1;-ms-flex: 1;flex: 1; max-width: 100%; margin-right: 0;}
     .application_form_wrap .form_input_box li .row .td .mail span { margin: 0 .2rem;}
     .application_form_wrap .tel {background-color: #f3f3f3;}
-    .application_form_wrap .select {width: 100%; margin-top: .6rem;}
-    .application_form_wrap .select {-webkit-box-flex: 0;-ms-flex: none;flex: none;}
+    .application_form_wrap .select {width: 100%; margin-top: .6rem;-webkit-box-flex: 0;-ms-flex: none;flex: none;}
+    .application_form_wrap .tel .select { width: 30%; margin-top: 0;}
     .application_form_wrap .select label {font-size: 1.4rem; white-space: nowrap;}
+    .application_form_wrap .tel .select label {text-align: center;}
     .application_form_wrap .form_input_box li .row .td #sntnCnt { width: 100%; max-width: 100%;}
     .application_form_wrap .form_btn > a {-webkit-box-flex: 1;-ms-flex: 1;flex: 1;}
     .personal_info_wrap > ul > .period_txt > .info_txt > p:before { width: 0;}
@@ -884,7 +916,7 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
 
     .professor_learning_search {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-top: 2.2rem;}
     .professor_learning_wrap .visual_txt > p,.vod_data_wrap .visual_txt > p {font-size: 1.6rem; margin: 1.6rem 0 1.6rem;}
-    .professor_learning_wrap .visual_txt,.vod_data_wrap .visual_txt {height: auto; background-size: 11rem; background-position: 100% 2rem;}
+    .professor_learning_wrap .visual_txt,.vod_data_wrap .visual_txt,.data_sharing_wrap .visual_txt {height: auto; background-size: 11rem; background-position: 100% 2rem;}
     .professor_learning_filter ul { -ms-flex-wrap: wrap; flex-wrap: wrap; }
     .professor_learning_filter ul h3 {width: 100%; padding-top: 1.2rem; height: auto;line-height: 1.35; background-color: #fff; color: #222; font-size: 1.5rem; letter-spacing: -.075rem; padding-left: 1.2rem;}
     .professor_learning_filter ul:first-child h3 {padding-top: 1.7rem; height: auto; border-radius: 1rem;}
@@ -903,21 +935,27 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .professor_table tbody tr {height: 13.6rem;}
     .professor_table .must_read .tb_num > span {margin: 0;padding: 0.4rem 0.9rem; font-size: 1.2rem;}
     .professor_table .tb_row.board-type .board-tit p {font-size: 1.5rem; height: 4.5rem; white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.5;}
+    .professor_table.mypage_table01 .tb_row.board-type .board-tit p,.professor_table.mypage_table02 .tb_row.board-type .board-tit p {font-size: 1.3rem; height: 4.5rem; white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.5;}
     .professor_table .board-type td:nth-child(2) {max-width: 80%;}
+    .professor_table.data_share_table .board-type td:nth-child(2) { max-width: 80%;}
     .professor_table .tb_state.clip {height: 6rem;right: 0; background-size: 4rem;}
     .professor_table .tb_row.board-type td {font-weight: 400;font-size: 1.2rem;}
+    .professor_table.professor_learning_table .tb_row.board-type td:nth-of-type(4) {padding-left: 0;}
 
     .professor_table.data_share_table .board-type .data_share_type {position: absolute; font-size: 1.2rem; top: 1rem; left: 3rem; padding: 0.3rem 0.9rem; display: block; height: 2.2rem; border: 0.1rem solid #222; }
     .professor_table.data_share_table .board-type .must_read .board-tit + .data_share_type {position: absolute; font-size: 1.2rem; top: 1.3rem; left: 5.6rem; padding: 0.3rem 0.9rem; display: block; height: 2.2rem; border: 0.1rem solid #222; }
-    .professor_table.data_share_table td:nth-of-type(4) {margin-left: 0rem; padding-left: 0rem;}
-
+   
     .professor_table .tb_row.board-type td:nth-of-type(5),.professor_table .tb_row.board-type td:nth-of-type(6){ background-repeat: no-repeat; background-size: 1.8rem; padding-left: 2.3rem; background-position: 0 0.9rem;  }
     .professor_table .tb_row.board-type td:nth-of-type(5) {background-image: url(../images/icon/ico_eye.png); }
     .professor_table .tb_row.board-type td:nth-of-type(6) { background-image: url(../images/icon/ico_comment.png); }
     .pagination,#table .pagination {margin: 5rem 0 0; }
+    
     .professor_table #table {padding-bottom: 10rem;}
+    .professor_table.mypage_table01 #table {padding-top:4rem; padding-bottom: 0;}
+    .professor_table.mypage_table02 #table {padding-bottom: 10rem;}
+    .professor_table.data_share_table .tb_row.board-type td:nth-of-type(4),.professor_table.ai_pengtalk_table .tb_row.board-type td:nth-of-type(4)  {padding-left: 0; margin-left: 0;}
+    
     .professor_table .register_btn {width: 10rem; font-size: 1.4rem;}
-
 
     tbody tr.no_data {height: 23.7rem;}
     tbody tr.no_data td {float: none; background-position: 50% 32%; padding-top: 13rem;}
@@ -932,6 +970,10 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .board_btn {font-size: 1.4rem; width: 10rem; -webkit-box-flex: .5; -ms-flex: .5; flex: .5;} 
     .board_btn.add_btn,.board_btn.del_btn {width: 10rem; -webkit-box-flex: 1; -ms-flex: 1; flex: 1;}
     .board_btn.register_btn {-webkit-box-flex: 1;-ms-flex: 1;flex: 1;}
+
+    .board_write_content {margin: 4rem 0 8rem;}
+    .board_detail_content {margin: 4rem 0 8rem;}
+    .vod_list_wrap {margin: 4rem 0 8rem;}
 
     .board_detail_content .box_board_detail .header_tit { font-size: 2.4rem; letter-spacing: -.11rem; font-weight: 500; }
     .board_detail_content .board_body .board_tit h2 {font-size: 1.6rem; letter-spacing: -.04rem;}
@@ -951,20 +993,22 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
     .chk_box input[type="checkbox"] + label:before {width: 2rem; height: 2rem;}
     .board_write_content .board_body > ul h3 {background-color: #fff; padding-left: 0; height: 2rem;width: 100%; margin-bottom: 1.2rem;}
     .board_write_content .board_body > ul {-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
-    .board_write_content .board_body > ul:nth-of-type(2) {height: 18.8rem; }
+    .board_write_content .board_body > ul.learning_target_box {height: 18.8rem; }
     .board_write_content .board_body > ul > li {padding: 0;}
     .board_write_content .board_body > ul li .chk_box_group {-ms-flex-wrap: wrap;flex-wrap: wrap;}
-    .board_write_content .board_body > ul:nth-of-type(4) { height: 14.4rem;}
-    .board_write_content .board_body > ul:nth-of-type(4) li .chk_box {margin-right: 0; margin-top: 1.2rem;width: calc(25% - 0.1rem);}
-    .board_write_content .board_body > ul:nth-of-type(4) h3 {margin-bottom: 0;}
+    .board_write_content .board_body > ul.learning_type_box { height: 14.4rem;}
+    .board_write_content .board_body > ul.learning_type_box li .chk_box {margin-right: 0; margin-top: 1.2rem;width: calc(25% - 0.1rem);}
+    .board_write_content .board_body > ul.learning_type_box h3 {margin-bottom: 0;}
 
     .board_write_content .board_body .file_desc {font-size: 1.2rem;}
     .board_write_content .board_body > ul li .filelist {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .board_write_content .filebox {position: relative; margin-bottom: 0;}
     .board_write_content .filelist li {margin-bottom: 0.5rem;}
-    .board_write_content .filebox > label {position: absolute; top: -5rem; left: 8rem;}
+    .board_write_content .filebox > label {position: absolute; top: -5.4rem; left: 8rem;}
     .board_write_content .board_body > ul:last-child {height: auto; padding: 2.5rem 0; background-color: #fff;}
     
+    .board_write_content .data_modify_type li {margin-right: 2.5rem;}
+
     .list.four li { width: 48%; }
     .list.four li:nth-child(even) { float: right; }
     .list.four li:nth-child(4n-2) { margin: 2.5rem 0; }
@@ -987,26 +1031,32 @@ article.popup .box .title .bt.x { position: absolute; right: 2rem; top: 2.5rem; 
 
 
     .ttalk_search {margin: 4rem 0 0;}
-    .ttalk_search .common_inner {flex-direction: column;}
+    .ttalk_search .common_inner {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .ttalk_search .common_inner .select {width: 100%;}
     .ttalk_search input {width: 100%; margin-top: 1rem;}
     .ttalk_search .search_con {margin-left: 0;}
     .ttalk_search .search_btn { top: 57%; }
     
-    .sorting_wrap .talk_sorting_wrap {flex-wrap: wrap; width: 46%; align-items: flex-end;}
+    .sorting_wrap .talk_sorting_wrap {-ms-flex-wrap: wrap;flex-wrap: wrap; width: 46%; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end;}
     .operation_btn {margin-top: 2.2rem;margin-bottom: 0;}
 
     article.popup.bbs .box.md { width: auto;}
     article.popup .box .title {padding: 2rem 2rem;}
     article.popup .box .content { padding: 2rem 3rem; }
 
-    .must_read_badge {transform: translateX(-2rem);}
+    .must_read_badge {-webkit-transform: translateX(-2rem);-ms-transform: translateX(-2rem);transform: translateX(-2rem);}
 
-    .professor_table.mypage_table01 tbody tr,.professor_table.mypage_table02 tbody tr {height: 13.6rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
+    .professor_table.mypage_table01 tbody tr,.professor_table.mypage_table02 tbody tr {height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start;}
     .professor_table.mypage_table01 .tb_row.board-type td,.professor_table.mypage_table02 .tb_row.board-type td {margin-left: 0; padding-left: 0;}
     .professor_table.mypage_table01 .tb_row.board-type td:nth-of-type(3),.professor_table.mypage_table02 .tb_row.board-type td:nth-of-type(3) {margin-left: 0; padding-left: 0; padding-top: 0;text-align: left;}
-    .professor_table.mypage_table01 .tb_row.board-type .board-tit p,.professor_table.mypage_table02 .tb_row.board-type .board-tit p {height: 3.5rem; -webkit-line-clamp: 1;}
+    .professor_table.mypage_table01 .tb_row.board-type .board-tit p,.professor_table.mypage_table02 .tb_row.board-type .board-tit p {height: 2rem; -webkit-line-clamp: 1;}
     .professor_table.mypage_table01 td:not(.board-tit) + td:not(.board-tit),.professor_table.mypage_table02 td:not(.board-tit) + td:not(.board-tit) { margin-left: 0; padding-left: 0;}
+
+    .professor_table.mypage_table01 #table .tb_row table td:nth-of-type(3),.professor_table.mypage_table02 #table .tb_row table td:nth-of-type(3) {max-width: 100%; width: 100%;font-size: 1.5rem; padding: 1rem 0 0;}
+    .board_detail_content .board_body ul .board_clip_wrap {width: 100%; line-height: 1.5;}
+
+    .reply_nodata_board p {font-weight: 400; font-size: 1.2rem;}
+    .tb_row.board-type.group_membership_table .board-tit p {text-align: left;}
 }
 
 

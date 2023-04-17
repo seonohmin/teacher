@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /* ========================================================================
  * main CSS
@@ -47,7 +46,7 @@
 .notice_wrap .T-Talk .text_under:after { background-color: #BDDBFC; }
 
 .notice_wrap .body {margin-top: 3.2rem;}
-.notice_wrap .body > ul {height: 13.6rem; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; }
+.notice_wrap .body > ul {height: auto; max-height: 14.6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; -webkit-box-flex: 1; flex: 1; -ms-flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
 .notice_wrap .body > ul > li { margin-bottom: 1.5rem;}
 .notice_wrap .body > ul > li:last-child { margin-bottom: 0;}
 .notice_wrap .body > ul > li > a, .recent_visit .body > ul > li > a, .teacher_learning_data > ul > li > a  { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
@@ -60,9 +59,9 @@
 .post_wrap {width: 100%; background-color: #F5F5F5; padding: 6rem 0;}
 .post_wrap .common_inner {display: -webkit-box;display: -ms-flexbox;display: flex;}
 .post_wrap .recent_visit .head {-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-bottom: 3rem;}
-.post_wrap .recent_visit .body {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding:2rem; background-color: #fff; border-radius: 1rem; width: 100%; height: 19.8rem;}
+.post_wrap .recent_visit .body {display: -webkit-box;display: -ms-flexbox;display: flex; padding:2rem; background-color: #fff; border-radius: 1rem; width: 100%; height: 19.8rem;}
 .post_wrap .teacher_register .post_list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 1rem; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-.recent_visit .body > ul {height: 15rem; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; }
+.recent_visit .body > ul {height: auto; max-height: 15rem; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; -webkit-box-flex: 1; flex: 1; -ms-flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
 .recent_visit .body > ul > li { margin-bottom: 1.8rem;}
 .recent_visit .body > ul > li:last-child { margin-bottom: 0;}
 
@@ -95,9 +94,11 @@
 .teacher_learning_data .head .teacher_tit > p { width: 100%; max-width: 60.4rem; height: 4.6rem; margin-right: 1.5rem; padding: 1.1rem 0 1.1rem 2rem; line-height: 1.5; background-color: #F3F3F3; border-radius: 1rem; font-size: 1.6rem; letter-spacing: -.04rem; }
 .teacher_learning_data .head h2 { margin-right: 3rem; font-size: 3rem; font-weight: bold; letter-spacing: -.15rem; line-height: 1.35; white-space: nowrap; }
 .teacher_learning_data .body {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-top: 4rem;}
-.teacher_learning_data .body .learning_list {height: 7.8rem; -webkit-box-flex: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-pack: justify; -ms-flex-pack: justify; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column;}
-.teacher_learning_data .body .learning_list li {margin-bottom: 1.5rem; }
-.teacher_learning_data .body .learning_list:first-child { margin-right: 4rem; }
+.teacher_learning_data .body .learning_list {width: 100%;height: auto; max-height: 7.8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+.teacher_learning_data .body .learning_list li {margin-bottom: 1.5rem; max-width: 49rem; width: calc(50% - 2rem); }
+.teacher_learning_data .body .learning_list li:nth-of-type(1),.teacher_learning_data .body .learning_list li:nth-of-type(3),.teacher_learning_data .body .learning_list li:nth-of-type(5){margin-right: 4rem;}
+.teacher_learning_data .body .learning_list li:nth-of-type(2),.teacher_learning_data .body .learning_list li:nth-of-type(4),.teacher_learning_data .body .learning_list li:nth-of-type(6){margin-right: 0;}
+/* .teacher_learning_data .body .learning_list:first-child { margin-right: 4rem; } */
 .teacher_learning_data .body .learning_list li a {-webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
 .teacher_learning_data .body .learning_list li a p {font-size: 1.5rem; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;}
 .teacher_learning_data .body .learning_list li a .date {-webkit-box-flex: 0; color: #9C9C9C; -ms-flex: none; flex: none; font-size: 1.5rem; letter-spacing: -.038rem; padding-left: 4rem;}
@@ -161,10 +162,14 @@
   .teacher_con .teacher_list_item:nth-of-type(3) .teacher_text, .group_con .group_list_item:nth-of-type(3) .group_text {bottom: 0.9rem;}
   .post_wrap .teacher_register .post_list li a {padding: 1.5rem 2rem;}
   .notice_wrap .teacher_data_sharing,.post_wrap .teacher_register { margin-right: 2rem; }
-  .teacher_learning_data .body .learning_list:first-child { margin-right: 0; }
+
   .notice_wrap .teacher_data_sharing ul > li .date, .recent_visit .body > ul > li .date {display: none;} 
   .notice_wrap .T-Talk .notice_banner, .notice_wrap .teacher_data_sharing .notice_banner {height: 11rem;}
-  .teacher_learning_data .body .learning_list:last-child {display: none;}
+  .teacher_learning_data .body .learning_list li:nth-of-type(n) {margin-right: 0; max-width: 100%; width: 100%;}
+  .teacher_learning_data .body .learning_list li:nth-of-type(4),.teacher_learning_data .body .learning_list li:nth-of-type(5),.teacher_learning_data .body .learning_list li:nth-of-type(6) {display: none;}
+
+  .teacher_learning_data .body .learning_list {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+
   .notice_wrap .T-Talk .banner_title .pc_break {display: none;}
   
   .pengtalk_wrap ul { -ms-flex-wrap: wrap; flex-wrap: wrap; }
@@ -219,7 +224,7 @@
   .teacher_learning_data .head > a, .vod_data .head > a {position: absolute; right: 0; top: 1rem}
   .vod_data .head > a {right: 1rem;}
   .teacher_learning_data .body {margin-top: 2.2rem;}
-  .teacher_learning_data .body .learning_list:first-child {margin-right: 0;}
+  /* .teacher_learning_data .body .learning_list:first-child {margin-right: 0;} */
 
   .post_wrap .teacher_register .head { display: block !important; }
   .post_wrap .teacher_register .post_list li { margin-right: 0 !important; }

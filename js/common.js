@@ -112,45 +112,32 @@ $(function () {
       });
   }
 
-
-  // PC와 모바일 모드 감지
   function isMobile() {
     return window.matchMedia("(max-width: 740px)").matches;
   }
 
-  // 탭 초기화
   function initializeTabs() {
     if (!isMobile()) {
-      // PC 모드에서 탭 기능 활성화
       $(".tab_button").on("click", function(e) {
         e.preventDefault();
 
-        // 다른 탭 비활성화
         $(".tab_button").removeClass("active");
         $(".tab_panel").removeClass("active").attr("hidden", true);
 
-        // 선택한 탭 활성화
         $(this).addClass("active");
         $("#" + $(this).attr("aria-controls")).addClass("active").removeAttr("hidden");
         localStorage.setItem("selectedTabIndex", $(this).index());
       });
 
-      // 저장된 탭 인덱스 불러오기 및 적용
       var selectedTabIndex = localStorage.getItem("selectedTabIndex") || 0;
       $(".tab_button").eq(selectedTabIndex).trigger("click");
     } else {
-      // 모바일 모드에서 탭 기능 비활성화
       $(".tab_button").off("click");
       $(".tab_button").removeClass("active");
       $(".tab_panel").removeClass("active").removeAttr("hidden");
     }
   }
-  initializeTabs();
-  // 창 크기 조절시 탭 초기화
-  $(window).on("resize", function() {
-    initializeTabs();
-  });
-
+  
   function toggleFixClass() {
     $(window).scroll(function() {
       if ($(this).scrollTop() > 10) {
@@ -195,6 +182,20 @@ $('.operation_btn').click(function(){
   $('.popup.bbs').removeClass('hide');
 });
 
+function updatePlaceholder() {
+  if ($(window).width() < 741) {
+    $('#formTitle').attr('placeholder', '제목*');
+  } else {
+    $('#formTitle').removeAttr('placeholder');
+  }
+}
+
+function resizeFunctions() {
+  initializeTabs();
+  updatePlaceholder();
+}
+
+$(window).on("resize", resizeFunctions);
 
   $(function () {
     detectDevice();
@@ -204,10 +205,8 @@ $('.operation_btn').click(function(){
     initInstitutionSelect();
     initBackToTop();
     toggleFixClass();
-    // initTab();
-    // initResizeEvent();
-    // handleResize();
-
+    initializeTabs();
+    updatePlaceholder();
   });
 });
 

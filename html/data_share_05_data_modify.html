@@ -134,9 +134,8 @@
             <div class="board_write_content">
                 <div class="common_inner">
                 <div class="box_board_write">
-
                     <div class="board_header">
-                        <strong class="header_tit">자료공유 등록</strong>
+                        <strong class="header_tit">자료공유 수정</strong> <!-- 수정으로 문구 변경 -->
                         <p class="header_txt">직접 작성하신 워크시트를 올려주세요. 본인이 작성하지 않은 자료는 반드시 출처를 기재해 주세요.</p>
                     </div>
                     <div class="board_body">
@@ -150,7 +149,34 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- 분류 행추가 -->
                         <ul>
+                            <h3 class="required_tit">분류</h3>
+                            <li>
+                                <ul class="data_modify_type">
+                                    <li>
+                                        <label class="checkable_label">
+                                            <input class="checkable_input" type="radio" id="dataType1" name="dataType" value="A"/>
+                                            <span class="checkable_text">워크시트</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkable_label">
+                                            <input class="checkable_input" type="radio" id="dataType2" name="dataType" value="B"/>
+                                            <span class="checkable_text">퀴즈</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkable_label">
+                                            <input class="checkable_input" type="radio" id="dataType3" name="dataType" value="C"/>
+                                            <span class="checkable_text">기타</span>
+                                        </label>
+                                    </li>                                   
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- 분류 행추가 -->
+                        <ul class="learning_target_box"> <!-- learning_target_box 클래스 추가 -->
                             <h3 class="required_tit">학습대상</h3>
                             <li>
                                 <div class="chk_box_group">
@@ -161,15 +187,15 @@
                                         </div>
                                         <div class="chk_box">
                                             <input type="checkbox" name="optionItem2" id="optionItem2" >
-                                            <label for="optionItem2">초3</label>
+                                            <label for="optionItem2">초4</label> <!-- 문구 변경 -->
                                         </div>
                                         <div class="chk_box">
                                             <input type="checkbox" name="optionItem3" id="optionItem3" >
-                                            <label for="optionItem3">초3</label>
+                                            <label for="optionItem3">초5</label> <!-- 문구 변경 -->
                                         </div>
                                         <div class="chk_box">
                                             <input type="checkbox" name="optionItem4" id="optionItem4" >
-                                            <label for="optionItem4">초3</label>
+                                            <label for="optionItem4">초6</label> <!-- 문구 변경 -->
                                         </div>
                                     </div>
                                     <div class="chk_box_con">
@@ -203,7 +229,8 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul>
+                        <!-- AI펭톡 행삭제 -->
+                        <!-- <ul>
                             <h3>AI펭톡</h3>
                             <li>
                                 <div class="chk_box">
@@ -211,8 +238,9 @@
                                     <label for="formChoice">선택</label>
                                 </div>
                             </li>
-                        </ul>
-                        <ul>
+                        </ul> -->
+                        <!-- //AI펭톡 행삭제 -->
+                        <ul class="learning_type_box"> <!-- learning_type_box 클래스 추가 -->
                             <h3 class="required_tit">유형</h3>
                             <li>
                                 <div class="chk_box_group">                        
@@ -251,6 +279,7 @@
                                 </div>
                             </li>
                         </ul>
+
                         <ul>
                             <h3 class="required_tit">첨부파일</h3>
                             <li>
@@ -291,7 +320,7 @@
                 </div>
                 <!-- 수정, 삭제 버튼 추가 -->
                 <div class="board_btn_wrap">
-                    <button class="board_btn del_btn">삭제</button>
+                    <button class="board_btn del_btn">취소</button> <!-- 취소로 문구 변경 -->
                     <button class="board_btn add_btn">수정</button>
                 </div>
                 <!-- //수정, 삭제 버튼 추가 -->
